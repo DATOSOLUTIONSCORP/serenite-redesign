@@ -1,0 +1,1218 @@
+{
+  "source_deployment": "8yAXSNHEd7sZ45yeHXWCCHMRXEJS",
+  "files": [
+    {
+      "path": "img/o/1-7fad0.jpg",
+      "bytes": 39427,
+      "sha256": "18f10cb81978ffe9adfe65f5cd767553f02e509e7137881f6b30a66e32efa042",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/2-28dd1.jpg",
+      "bytes": 102381,
+      "sha256": "05bc6c7dcada3ee22be53fb584afb4753db268aa33d92a82ab92d29c5b48ca87",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_HMN_HomeHair_1_HQ_93f72e-9c225.jpg",
+      "bytes": 74837,
+      "sha256": "cafbe31309898fe5f5cc99878ccdf47bc290d7055bc75ef15b99a1bb8845894e",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_HMN_HomeHair_2B_HQ_d2f8d-6590c.jpg",
+      "bytes": 64712,
+      "sha256": "1dc47b18ec9dd2d8db8ea16907bb3d9b6cc87e0d9df3f892ee29dc06cf563021",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_HMN_HomeHair_3A_HQ_2b26d-39fea.jpg",
+      "bytes": 101581,
+      "sha256": "007bf94b9ae820697f782a9032da9a0e852eb55d5d92ae97ba51927019c57a89",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_HMN_HomeHair_4_HQ_499838-a685d.jpg",
+      "bytes": 88173,
+      "sha256": "c74b81363cacadcb4c15bd6d8d17c79d520ff4ccbf8c1e8558386367d86ed6f3",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_MN_11B_HQ_800x-0d835.jpg",
+      "bytes": 86783,
+      "sha256": "bade2e6a5e8455701a12e88d1b4e68596f1307ed50184e2ac290e55e670a0715",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_MN_1_HQ_4b1fff2a-8ffa-48-2206f.jpg",
+      "bytes": 64761,
+      "sha256": "59e048cf67ced4bed15b927684e552797996df3e77be870b82973bb55ac62f07",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_MN_2_HQ_2ad15351-6b50-4a-2279c.jpg",
+      "bytes": 108282,
+      "sha256": "f35d139a4565d0bd63fdc26b90b4c55470580682a1fcbcb96e74e2e8a61cc31a",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_MN_5B_HQ_f1f7f9dd-61ba-4-08961.jpg",
+      "bytes": 60197,
+      "sha256": "e15333e5775ee11a40846471ea8f91cbfb44b74e9cc3b3c1638f940b68cd80a1",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_MN_6_HQ_629d5dbf-e8dc-4a-5b03c.jpg",
+      "bytes": 82657,
+      "sha256": "7aea1135a17dff5305907dc12610521c417f4675e13915f2cf944a431f3c2381",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_MN_7_HQ_3225e227-44bc-48-d99a5.jpg",
+      "bytes": 69707,
+      "sha256": "a91787be9cd2c24e0a103c8bd6b5b01de9cc5988b8065f0661395f0ff8836b8f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_MN_8_HQ_800x-b2acb.jpg",
+      "bytes": 102426,
+      "sha256": "31d453c5f9e4a41305250f35cb663fa446c7c257261971d518e3f576f7b64b6b",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/AnteAGE_HairB_A_MN_9_HQ_800x-cc65e.jpg",
+      "bytes": 53648,
+      "sha256": "e045cdbbf191cca7087f1f3cfd4c7a1c587deb94e018f5dcc432212e4239f080",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/american-express-d5565.png",
+      "bytes": 2994,
+      "sha256": "d4fa6481730cf4262f7615f469927f346ff54de17a44182eb15df491ecd6233d",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-image1-f2174.jpg",
+      "bytes": 21294,
+      "sha256": "c85e822f566dc15aeb2987c00cd4e39cafd4423a446f4b6cfd2b895dc1559b74",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-image2-89356.jpg",
+      "bytes": 15112,
+      "sha256": "77bd4742eb3742d6da12ec42cc3bd3ae4a85c2bd0a54f21527ce0f7efb3f3397",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-image3-54ca8.jpg",
+      "bytes": 10543,
+      "sha256": "7027d347570797133121d4c095990ff226224308bbd0d97b67f0ac1c8d8eeac6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-image4-a1b67.jpg",
+      "bytes": 23719,
+      "sha256": "a19ad49b9b19c734926ff851d5cd2886a87b79fd7d5255a2710e852d8edc4bb5",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-logo-20b36.png",
+      "bytes": 5060,
+      "sha256": "de3d31e4210c61fb27ca17d8b87d02bd2a2e52fcd2052ecc7976815d83947708",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-slide-1-78348.jpg",
+      "bytes": 84867,
+      "sha256": "7afa7136551d7b46b6ffff46c32767f92aab9c3bed1cdcc35dbe4caadf31ed60",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-slide-2-62623.jpg",
+      "bytes": 52602,
+      "sha256": "f692013404d30e4c310226b239575415c1d11678e1a420fc42493682757f2dc1",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-slide-3-2425b.jpg",
+      "bytes": 45862,
+      "sha256": "411a6bbbde35c34928707d0c9d7aacf2269f6772a8b565ebc1c990c201e1a14b",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-slide-4-f3423.jpg",
+      "bytes": 60685,
+      "sha256": "406c050f99b3f57e92483c680ea3bc0acb63c5b5424b5742562422fcccac5d9f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-slide-5-a84c7.jpg",
+      "bytes": 51115,
+      "sha256": "bf03d73738365aeb2d75d6f4a1bbca65e7815b89061523bb1a3a19aaa428c4bf",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-slide-6-6d8d3.jpg",
+      "bytes": 43474,
+      "sha256": "3d9cee3336cf0753a0645ca27779b6c6c161a4a43fcba7d72b342b28eb940e0c",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/attiva-slide-7-d4cba.jpg",
+      "bytes": 40618,
+      "sha256": "da85ec1a7498542c9edf457286fe3926b2cd2df82228c32c8703da18e4a8fd00",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-21111514635Ue2853i-fea6c.jpg",
+      "bytes": 32167,
+      "sha256": "f3d654bc4de9a721bd59cdb59cdf71baa6e22e6dd15bd4100b78cd7c6fb1635e",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-2172630320U435t70-0321c.jpg",
+      "bytes": 24346,
+      "sha256": "e88f02b67968852b1234e6d677336dcb562c2c24c2e5280f6db9c916c8f1a543",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-2172633150U794m53-f2a77.jpg",
+      "bytes": 34175,
+      "sha256": "a2431db72063e4922030bef52c3912e55e15658951760d4283fe9f2a8c68d78e",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-2172644928U2m6i0s-71e93.jpg",
+      "bytes": 23322,
+      "sha256": "b7c77d01633b8c98a8a20b211c521725b385ca91893e1a63424eaf98a521e69e",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-22102133936U938a61-a9ca0.jpg",
+      "bytes": 27674,
+      "sha256": "71564d071b2de1003f83be6fcb771037c6ede820d29e03e1a063c53128edfeab",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-22110315235U85e14t-f8750.jpg",
+      "bytes": 25979,
+      "sha256": "6459768d7296528e92cdc7b9acb03cfc915fdbe31281ba0ad70d922713a783bd",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-22209122902Us9m0a3-d6b32.jpg",
+      "bytes": 33805,
+      "sha256": "2fc4e9125a765b643e71d5092068d7af7bbac1f306bdd7b2454ccd14b9f57ab6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-2221713344U52aei7-0d242.jpg",
+      "bytes": 23353,
+      "sha256": "8a64d7433ac6557d8baedb87ee7c7914235f884849422b0bb158f452d57960d7",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-2222192824U56470a-e8b5b.jpg",
+      "bytes": 21163,
+      "sha256": "45c1721d2fe12b23f868ef396f3e352f6c97258158bdeda7ffb3cc48fa121970",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-23103123810U65a1s7-7bfc3.jpg",
+      "bytes": 21168,
+      "sha256": "465421353a7a872ba006debaa65ae384fef2b0de0f5d20d434bbe47d0d5674e8",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-2310524928Ue26ias-a0325.jpg",
+      "bytes": 17785,
+      "sha256": "5795affc3f6a8fdcd838885e6e943c7fc111c56ddd127eaab3f67a7789cd990e",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-231221110527U273tes-7b929.jpg",
+      "bytes": 20756,
+      "sha256": "0cfdacbeb3f8e14d440c5d811f214cc5e5bd63846f3893c7148f53b565e56d5c",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-23410111609Us274i0-11399.jpg",
+      "bytes": 25158,
+      "sha256": "01186d4cd406f0c552f99aed924e2adf0d75b67118b4902965a44ce706ab56f3",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-236542772-a336a.jpg",
+      "bytes": 22208,
+      "sha256": "be7d84519bacebc52e8195ca80eeb626419c17ab24ea0815c30d3e04ea15173f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-2381611346U1is0e2-e1a5f.jpg",
+      "bytes": 21536,
+      "sha256": "3a1966aedaf0b69a6b1131579006aae8b09d754037c62a69ead2532e32ad6a26",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-2382911532U93e46s-bcc07.jpg",
+      "bytes": 17142,
+      "sha256": "683e3f58da0eed856b92298eb7fe47a301cc149e394588ed37bbf4d8ef71be3f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-2411110211U3m57se-248a1.jpg",
+      "bytes": 15329,
+      "sha256": "ee865c76f70cf9ef628479de58aafebb17adbde29b71085f9f2a7cf3cfea1cce",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-24527112835Ua01547-08c47.jpg",
+      "bytes": 20430,
+      "sha256": "ca4f4d02def470d7533f53c44d678b89a153234ffedf237c73121d63e8b6bb7c",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1-449403043-3c7ee.jpg",
+      "bytes": 21055,
+      "sha256": "e9f853fae6706f761a390d503385e74e4859e2872170c02012068492ce06e89e",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1_box_img11-3b09c.jpg",
+      "bytes": 19905,
+      "sha256": "1edf8bf77cbe0916e492173f613bffb8d6ea6575a84291f9569e45c1f4e5e60a",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1_box_img2-86f53.jpg",
+      "bytes": 18471,
+      "sha256": "d50dd5a9fa127f7852434cfd383fc87de765a01361490fbb41089da52e5fd380",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm1_box_img3-1e685.jpg",
+      "bytes": 19394,
+      "sha256": "6a40032d0cfd1a3098a66c526d65cc51340a7190e779b9df87bdaa20b5058119",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm3_box1-4738f.jpg",
+      "bytes": 21245,
+      "sha256": "423e21856337cd86e4239b2e00fa909a5e2cf763a6b6b5b86020ceb4440910ac",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm3_box2-a290f.jpg",
+      "bytes": 23199,
+      "sha256": "b97d31abc8495e76d1f3c89031550ce952adb4f580dfa57776fd98e422e35854",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm3_box3-e6f3d.jpg",
+      "bytes": 18426,
+      "sha256": "1b73c588d4d46065c59c9b92a3e7ea734d7ffb9d28defb156ccfbdad28c25545",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm3_box4-6a1ae.jpg",
+      "bytes": 22556,
+      "sha256": "31cbcb5bd6e9bf2423c79158f08d6c94ed72aaee55edfd80a136e2e92f54722a",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm5-img1-ce7fa.jpg",
+      "bytes": 22478,
+      "sha256": "b16ec36d22443639bc125379b53eef382c412ce668abadc4107061da8ecaf6fd",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm5-img2-f43e3.jpg",
+      "bytes": 31715,
+      "sha256": "dded124e4d2ff871890bbd37feaaf0b353254a8c92e66e14f11b5b649c94644d",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/btm5-img3-5358a.jpg",
+      "bytes": 28883,
+      "sha256": "e0d810594315cb8ddd331eeb643ae885eb08fa4908dfd6c970ea47ac3a4c4c98",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/discover-a837b.png",
+      "bytes": 2125,
+      "sha256": "dc00e186adc1a94e4619c5c561d14533db8e6df6aa3283d667034cc701d176c6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/dr-ador-mansat-8ea38.jpg",
+      "bytes": 16802,
+      "sha256": "507423e3c2c163d1fade156faf2f3ce00382168d758e3400a83e50b1d085cad4",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/dr-heidi-regenass-1-380f7.jpg",
+      "bytes": 26369,
+      "sha256": "5c28adc92b0a5633c1e100eb2ed81e7374b44188be106c413a54c57b5304b6e1",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/fb-icon-3839e.png",
+      "bytes": 884,
+      "sha256": "d3b18ecef72edc59d62148e2aaa991b4839dd0db39bac3903d375ab55acb2fe4",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/footer_rate-12140.jpg",
+      "bytes": 6647,
+      "sha256": "6a485e5b3b93736028ce7a048a5828e75037e77a21f76815a9922e4d0fdd5d53",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/instagram-icon-3e9ca.png",
+      "bytes": 2489,
+      "sha256": "a93a964ebf7cc3153bd99b9adab4f65ab3b0a0cf427ab8f08479afc59154ee9d",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/logos-1be86.png",
+      "bytes": 31498,
+      "sha256": "51a80ef7194cf1d8333f5bb30b413119d49f56fec611f6aad76ceda1d6ade7f9",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-8445-med-spa-previe-6fa4a.jpg",
+      "bytes": 87192,
+      "sha256": "8d6ab202210c0dc2884cb8631d1c279b9005ba31dab1b0e35b385d6e534a221f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-h-roberts-previe-24f2b.jpg",
+      "bytes": 65060,
+      "sha256": "2ac470eee8acd06ab21575ac8758cb183dd1e69592b2cbbc18b64d9b842ab904",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-h-roberts-previe-3a29f.jpg",
+      "bytes": 100799,
+      "sha256": "2aad49ba3caac7831c0873c4f52b4fe0bc166980e9ee1f8636ebf9f41b82d3f5",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-h-roberts-previe-4e30e.jpg",
+      "bytes": 108131,
+      "sha256": "5904ce728c2b0ef5993cc706d0d8f05e0449869da656580cdb149c75b153b546",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-l-hartman-previe-9cc3c.jpg",
+      "bytes": 26182,
+      "sha256": "0bb53e66b4c41dd1fb674f5bedb271093374a1e085ba5b69fcd38e7b253ba2d4",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-l-hartman-previe-b38a8.jpg",
+      "bytes": 22373,
+      "sha256": "5316538f22271076de0ce92353c5f1df70157b256655983490dee0d75a73e8cc",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-m-taylor-preview-617fb.jpg",
+      "bytes": 21754,
+      "sha256": "8973b3d78b15041ab4ea34ce271751617c67433b16ae59e8c5eb5da1a5dd44ec",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-m-taylor-preview-b1288.jpg",
+      "bytes": 16952,
+      "sha256": "72b6022235bb5f58b5fd17574eb57c1b8025c3363fed29b7920f3f573c10ffbc",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-m-taylor-preview-c9a56.jpg",
+      "bytes": 16952,
+      "sha256": "72b6022235bb5f58b5fd17574eb57c1b8025c3363fed29b7920f3f573c10ffbc",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-toni-burke-cosme-dee19.jpg",
+      "bytes": 100360,
+      "sha256": "9e288932a16b88c82365aa33b0d55bae162940f713657d665c819f2b16d3a643",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-dr-toni-burke-cosme-e610c.jpg",
+      "bytes": 88075,
+      "sha256": "e826573469f7ea48712667ea31c7755eecfba7f08bb1958691c53bdbbc8c319a",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-lauren-abramowitz-r-9d7b0.jpg",
+      "bytes": 96659,
+      "sha256": "cf118da227d1113dcfd33b7b40b144977406f76b097dfc0ea4a72e47aab7c8f2",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-lux-skin-lab-previe-722f2.jpg",
+      "bytes": 51284,
+      "sha256": "f6d4d338fc7101df034b77a383cc6505777d8e8a898a9a55e46e55a03ddd288c",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca-before-after-lux-skin-lab-previe-d1264.jpg",
+      "bytes": 60747,
+      "sha256": "8588d760ef22f0c1fa0715d967c24beabed957c13626f8f0884e620c696189c3",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca1-aeac4.jpg",
+      "bytes": 42809,
+      "sha256": "f6c4f51268fe297affddbcfcf9ca5f65df41f8db9b759e11d7bbebdc6f3a3c10",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca2-25917.jpg",
+      "bytes": 18042,
+      "sha256": "8c6f6b686ee82f3dc37c5b98d89a27fdda8e919bc53ea4dbfab4737386a96bf1",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca3-bfe24.jpg",
+      "bytes": 42625,
+      "sha256": "b50d8b000fee200d9d8708ab629d350855b673bef6fc6ace30b47c10509ce373",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/lumecca4-92250.jpg",
+      "bytes": 16303,
+      "sha256": "b5d240b0b2ce47d981ea1b23af5397b353160d81cd7d6c5e4334e796fe5b1d0b",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/mastercard-3e3a9.png",
+      "bytes": 2781,
+      "sha256": "8360a67c93750d981413848e3194c8b586cb029d1b601da57d591e720f3031a4",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/morpheus8-logo-bea4f.png",
+      "bytes": 36279,
+      "sha256": "3527dc2d935c4016c2c82ed74e3b14597c8543f95757d9a8150cc4ab7b13cd97",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/morpheus8-sec1-img-1-42de4.jpg",
+      "bytes": 22041,
+      "sha256": "dc4577b71ccf0434f6463c81dc00588bd52602888ca79aec12780179e29a1761",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/morpheus8-sec1-img-2-c301b.jpg",
+      "bytes": 18001,
+      "sha256": "17567163ef526c88b3ec6e360c911ce419a7f25e1cca1f90bccc70f3d9c7f6c6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/morpheus8-sec3-img-1-d2e13.jpg",
+      "bytes": 14888,
+      "sha256": "a1648a3f5a107a0405b71bfa74bd400e81151b5ca6c84a4fb09eec696a2aae14",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/morpheus8-sec3-img-2-c13ed.jpg",
+      "bytes": 22708,
+      "sha256": "9f6786e57d86b4a4e2dfc8802c15931cdc0911e710717e96c72091d2b8bcb6b7",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/paypal-dbb85.png",
+      "bytes": 1919,
+      "sha256": "aa8447b5b3e6eb16d738d4855b8f8ba6ddd4bb1b1213b507ecf30424ed289d5f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/qr-1f5fd.png",
+      "bytes": 68065,
+      "sha256": "33b5bd195d4f38131cf03da2bf88fc9082a9be6f2693c295aca961023d473a46",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-100108361-921c6.jpg",
+      "bytes": 15293,
+      "sha256": "1dff4ea85739593997ea03e306e0cbc8b59fb6dea77daf2db628aa892009eb58",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-1041373417-e6585.jpg",
+      "bytes": 15085,
+      "sha256": "d5baa4fa6218c64d8cefdde069c7a6d16cbdff743f5fba81f6dd1c6f6444485b",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-116344397-a6f51.jpg",
+      "bytes": 23064,
+      "sha256": "fc2a92a1094c8695752adbe02a3c1dc39235d6c31cdd80acc8c557ddd5e1b506",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-137818778-f3095.jpg",
+      "bytes": 20020,
+      "sha256": "169c07fecd89e4bce9cd06fc63050370f4642e4f7bbe2f20b5cc5467ed6e9df8",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-150555911-944e2.jpg",
+      "bytes": 19920,
+      "sha256": "bb0bd8bd62c75a35663ae9881ed37c95421d715d0c7eced8e0816b215b555daa",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-1559872667-5a1ce.jpg",
+      "bytes": 29185,
+      "sha256": "5dd593f330e29b6b36221c8aa40d0192b5c9662ba34f67550e6f75d96d58a81c",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-161447406-95ca8.jpg",
+      "bytes": 34059,
+      "sha256": "a85e917e289c19c77f7b11daee48c75efb359ecc77b3d93b2ba41531f0aa2c06",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-161745336-d2089.jpg",
+      "bytes": 21746,
+      "sha256": "f86957b88d346305082866ad442eec8da443c8785a2fe3096a4474b04ce9b0ce",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-162498106-4739b.jpg",
+      "bytes": 30990,
+      "sha256": "d64ad5faa7bb2150546a521002dd395e054987d1303765125de9e2915d5ecf84",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-1676154958-b22d1.jpg",
+      "bytes": 15949,
+      "sha256": "60ae1df7012f02b87ac96e3408541d6441f3386134dd77cf47637fc7402ef2d8",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-169682885-d8d55.jpg",
+      "bytes": 21344,
+      "sha256": "11e9c0762fbc1c5615da7b13a1440586ca3faf6b41140d33cef22ab33e369022",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-173972051-f807a.jpg",
+      "bytes": 25738,
+      "sha256": "c5edf2af3efbcdfcb4531e7e69a1e8ab339a7db7ee2f09b53646da2b318765ba",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-177784327-c9826.jpg",
+      "bytes": 16414,
+      "sha256": "fc99d232ac2893b50d9552764660c3d94a405f3a54ee0333c8883a856f48250f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-17918531-6828e.jpg",
+      "bytes": 25286,
+      "sha256": "974def2a5c8ba9ce17f91f375b817224028b0ba794ddf3c6d78bc4ff1841905d",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-181443529-525ee.jpg",
+      "bytes": 13328,
+      "sha256": "6dd5fbd5b3314ba17b7e533319c3d808dcf4cbcf860116fee1147d861dc0011d",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-1907135956-fea63.jpg",
+      "bytes": 10929,
+      "sha256": "90a72f425efc1af9277bea80e8cb73cbeb30ebe5441b41f590e843aa7c35a680",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-1911727348-e6ffb.jpg",
+      "bytes": 15081,
+      "sha256": "a3fb249bd427b0790467ba9f870ad27248ff6a1243fd582dac3f9697d7fcf9cc",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2041974179-a6696.jpg",
+      "bytes": 18659,
+      "sha256": "29567164afbe88b3eb28a66298a9ed016a3b7efb73bb368cfd4fad54c9f69b7e",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-204857167-a00b1.jpg",
+      "bytes": 12759,
+      "sha256": "0d730eeeaf8fa9e0aa3d2f38d3d7704e7725b35da27f89155f942c51f9fd24d7",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-20730149-e2f67.jpg",
+      "bytes": 26389,
+      "sha256": "e7d3b52e6de72b2e07383dfb96b99d543b0322b2c694d260aac09b304981fdbe",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-211208114235Uea6s81-d9d6b.jpg",
+      "bytes": 19287,
+      "sha256": "b80f089f80fa351af8ddd4633c840e13bc59b7086f80d6e2ba22ec95230128a2",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2127115895-df72b.jpg",
+      "bytes": 22532,
+      "sha256": "bfc2b3c09b711fe6913602604db234e8499328feb73002c9815957b419aa7a63",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-213366151-35f97.jpg",
+      "bytes": 18809,
+      "sha256": "eaed0137fcfe236d51ceb30fc7f9078594042950aeb11381c513622247ab8c1f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-214074611-ebc4e.jpg",
+      "bytes": 14916,
+      "sha256": "b0d09c96e2979d6ada14e87d0b1152b554896680fbdc3b6463c299213648c218",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-21716113644U3aes59-5d43c.jpg",
+      "bytes": 14940,
+      "sha256": "a43ee0e4d51786d3dedb242c99c8e2f9acfc4ed5c44b47674f263c748fd2103d",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2172611815U53s109-77c36.jpg",
+      "bytes": 14261,
+      "sha256": "65f364d34bb3d0181073dc6cfd43420d573b4b11ea75a58b2efb77888980ce52",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-218664293-e3acf.jpg",
+      "bytes": 21819,
+      "sha256": "8f65d25a6f7d326313ef1db504679c66de9a27a3339ca97ac15ba10ed44b53a6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-22102133901U2078et-d9e0f.jpg",
+      "bytes": 19816,
+      "sha256": "93497eab0d9f21f0f18dc753e10fda16e1ea3755a9e548eaa7903e188404efd1",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-22102134057U497am6-2c656.jpg",
+      "bytes": 14727,
+      "sha256": "f7543c18ef846b6f926ef255555c31e8002428a204884fcab9e37892361bfe01",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2212760430U0s24t9-3fdb2.jpg",
+      "bytes": 18699,
+      "sha256": "4b43f5fd7ae792d59b84134f3c5c1ff1142b6679f9e81c1b50b51bfc263dda7c",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2230444818U61i9ta-457e3.jpg",
+      "bytes": 14818,
+      "sha256": "aac7a3a20db2a557086d1d153eabfb253af0f970ed15639d24af28ff70e1a11c",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2271324859U6e375t-00429.jpg",
+      "bytes": 28880,
+      "sha256": "baca548bdeda00978a352b95a67e4e753240265410c57d12a2e2c664b32f0749",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-227692381-ba676.jpg",
+      "bytes": 21119,
+      "sha256": "b7af29414c1f1ce926791a8444113fea2958952ec75a7dba3f8ccec1523428a6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-23410111609Us274i0-7d4fa.jpg",
+      "bytes": 16442,
+      "sha256": "2cdabda0b0059a47a1a5e5faa60fb91c1d31a2469c34554c6e3f4f8fe80aa8ac",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2341340757U9emi13-79ce1.jpg",
+      "bytes": 29519,
+      "sha256": "270d9a42c77bf3943b45ab6a75607d715b489048f0c867436c68f56633a23f46",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2371311607U62amts-76c0e.jpg",
+      "bytes": 24312,
+      "sha256": "f76cdf931094d4165b17c950d6e324cdc648efa0f9d88573a36e09ae1620e4ad",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-240603233-34306.jpg",
+      "bytes": 24390,
+      "sha256": "cece957846913b9187a472419e4ba6da18c58a8feb6cc0a7729dd49575801204",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2410212320Ue145am-e2c08.jpg",
+      "bytes": 14325,
+      "sha256": "d0b58f2b3a1f96f4a7352b9e8ff8cc5265a2b5f62b436f127b22720802caa199",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-24123102944U643t1m-bfef4.jpg",
+      "bytes": 13136,
+      "sha256": "00e941ef118b35f6df9d33b49880a62f14096e17bdacff3913fd674d8f3da4b1",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-24145648-11150.jpg",
+      "bytes": 10215,
+      "sha256": "9070fb4e71c38bf2526ca378139a2eef5b9fdf867dbbd14d831ab9fe3659dbaf",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-24424105839U1476ts-c3a3d.jpg",
+      "bytes": 12564,
+      "sha256": "d31cbca8235005dc3910444e1e2a5acc1781329ca6f12f6cb215a91bc1da6542",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-24424105850Ue904ai-dadbe.jpg",
+      "bytes": 25308,
+      "sha256": "1ca55cbe06d35db27129dc942846403157a8668a68d3eab17d1c99111d3d5fab",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2450842529U23a761-9c5bf.jpg",
+      "bytes": 17423,
+      "sha256": "aeff84d0317013db8a0bea8721ecfad903a8f0091ff1babbb13c744737da63aa",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2450842544Uie145s-b9b51.jpg",
+      "bytes": 13925,
+      "sha256": "3c0f42423355fed978a03f3eb95df348db8f01a3f3d4702fd3f13c3a0dcd31de",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-24522104847U9s1a05-8f9db.jpg",
+      "bytes": 13742,
+      "sha256": "f6447b3fe3864d7925f4f6d404d0d3e6c4b0cf2cd96e27d54d4168d9498da6d7",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-2452490529Us24i57-65bfd.jpg",
+      "bytes": 22324,
+      "sha256": "283f5479dd99b31ccefb8ba7706eae9fa0124f5197aa75f263db3f566a469ecf",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-24529124348U3am502-9e21a.jpg",
+      "bytes": 24141,
+      "sha256": "7611f3632e8932a028c729f64d6238256f0a9be950a04c8e9cca8081ebd780df",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-253477555-6dd65.jpg",
+      "bytes": 14638,
+      "sha256": "f9ed2272878ceda207b293029d146cd6c4c2002c2c4dda1caccf1b1ef5b2d0f7",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-27202133-3a116.jpg",
+      "bytes": 24092,
+      "sha256": "0794c416f608114270b9b6e3525a60a7a1b7f5e2736ddbf059761c9d4f74f795",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-27387557-1d85a.jpg",
+      "bytes": 19626,
+      "sha256": "d5d67751a07c0b795f3984e7ce201833861b0d5d9c41802f5acd3ef5ee6d164b",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-31423634-fbad5.jpg",
+      "bytes": 9909,
+      "sha256": "cb6c80fbbcae53a1ca60250b2ef8684910d25bf9db4b3b51611701feb935d20f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-319723513-273d3.jpg",
+      "bytes": 22301,
+      "sha256": "9e9198fe71648c93533b29c30c6132a0bdb87b23d44b94d2a65dd611f3ff3992",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-339499739-c38ca.jpg",
+      "bytes": 14930,
+      "sha256": "e690494c41aa0514ed70b0256e18f557aab2e5097cff8671977de596906129cf",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-393550841-71f1c.jpg",
+      "bytes": 12200,
+      "sha256": "27804fada200fc7514bbb892e454ce474e797c121b26df45969dbdb60d724499",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-433221062-bd1de.jpg",
+      "bytes": 11048,
+      "sha256": "5d9a302a100410d072fcfb2466899c8b78f47968a2f6e137a87d8b4fca9ea4a0",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-472159589-bafc0.jpg",
+      "bytes": 20740,
+      "sha256": "5612586e11a1fc75fbd8cbdb8f8068dc69049f09e19c78198d61aa500484caa4",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-4751995-7bb7e.jpg",
+      "bytes": 9012,
+      "sha256": "6ecf6aed6649c3b5a40a2eec9281c1e8afa6abc51be9845516f5ae113205c563",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-51325312-2621f.jpg",
+      "bytes": 21732,
+      "sha256": "6665224e1fa20d43f5e224e4073cb800fb517c82a63ed2056b34013fddddcfce",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-526933915-0e924.jpg",
+      "bytes": 12372,
+      "sha256": "d93b704d1ca3af40180b775bc85bc06b5c4d64c63723a24ccedb06a68dc5c111",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/thumb-98381505-32947.jpg",
+      "bytes": 27084,
+      "sha256": "e77031378bf9e7abaceb9075eb5640b8d0412c7bcd417b08eb01c81dec1fa63a",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/visa-6ad8d.png",
+      "bytes": 1821,
+      "sha256": "ff5aa114cb8f432973e80955121c26769a0e73d1e608cdc913ee778802eca94c",
+      "decode": "passed"
+    },
+    {
+      "path": "img/o/yt-icon-a2332.png",
+      "bytes": 986,
+      "sha256": "7196f6cf28ff3d585b6f2280f79ca3ffecaf9241fc571bbf6ee0908a3f6f2c5d",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/attiva-promo.jpg",
+      "bytes": 10581,
+      "sha256": "3412ffda00190935f29c1f40fa5a4dbeceaa816b4f4ca1637ef2251dcf51e163",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/hero-bg.jpg",
+      "bytes": 18924,
+      "sha256": "94aac1f20d38a84d4393197cb5d5bd31f08c59f544628c11ee6acf167b609a7c",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-1.jpg",
+      "bytes": 32253,
+      "sha256": "b3defc35547aacb5ee458bfca5fb387422a026a40d04b3c0c0dddf5dea572e61",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-10.jpg",
+      "bytes": 35020,
+      "sha256": "2700f124b519e574f0b7a4b6e5ce347530b8f1247159c58e5dfd5880d9a44501",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-2.jpg",
+      "bytes": 35158,
+      "sha256": "c2fa0c98c9ae29e7eb2a80d7ac6153e7f9af6caf73bdc3c515eaf6936198d1de",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-3.jpg",
+      "bytes": 49001,
+      "sha256": "d7ebde16a26286a87762371628a79a4c670c9b389b3ecc5a90f1350ee393666f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-4.jpg",
+      "bytes": 40592,
+      "sha256": "861b3b074375f43b7dfda23361e0a1070f498b140221ead93dbeb3b6edf8a2e9",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-5.jpg",
+      "bytes": 38245,
+      "sha256": "f5ac8c03a42ba8b4e8d555f9c08f71d5e251b36ed6cc4096223211d620324d80",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-6.jpg",
+      "bytes": 40692,
+      "sha256": "a6dd4dca737c09d31bf5d6d74038464f661167d63291b05f0d51f94e4852c499",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-7.jpg",
+      "bytes": 36179,
+      "sha256": "5ce0b0f08dc88715b919b11560515f2b31aea98fc41876b90739d6b53cd35dba",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-8.jpg",
+      "bytes": 32902,
+      "sha256": "0f028424483e63e17cbb57c4015f38e844edcc7f19cb03f8446f5cb0757a2e80",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/patient-9.jpg",
+      "bytes": 39173,
+      "sha256": "d4cf977e8e0fdf184d7507d5bb785fdfb84860478b63d69b3844518df2b577d0",
+      "decode": "passed"
+    },
+    {
+      "path": "img/v/welcome-popup.jpg",
+      "bytes": 32531,
+      "sha256": "f1cee6946820b86918354907e813be9abde43200145f93666de7282b519b7b07",
+      "decode": "passed"
+    },
+    {
+      "path": "img/ador.jpg",
+      "bytes": 17361,
+      "sha256": "f14e5f3728d07e2e59e6974f48ac9c4477d6bcc8d69a58ec8fe626a694768e08",
+      "decode": "passed"
+    },
+    {
+      "path": "img/attiva-ba-abdomen.jpg",
+      "bytes": 48729,
+      "sha256": "726d527fce3e846aaa8a0950b2352cbd700985f9869a786f0fc413580d63c4f3",
+      "decode": "passed"
+    },
+    {
+      "path": "img/attiva-ba-eyes.jpg",
+      "bytes": 89980,
+      "sha256": "d6d0070522f43a2dc482cef97d435eab5a8fda944d5de48aa2f9c0086273aada",
+      "decode": "passed"
+    },
+    {
+      "path": "img/attiva-ba-neck.jpg",
+      "bytes": 55925,
+      "sha256": "e9199001fe42d28b3e895dad4696d0fa998d97ad157fb96dfc907ee2ef41d571",
+      "decode": "passed"
+    },
+    {
+      "path": "img/attiva-device.jpg",
+      "bytes": 15637,
+      "sha256": "51cbff0ea8abb701b1ad387d822f2a114b9141a0d7c3d18f8244dced90a91ea6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/attiva-thermal.jpg",
+      "bytes": 22141,
+      "sha256": "ffa9c251ea778357306fe8d450ae1026259c111141f90c4532fc0194df77d4a5",
+      "decode": "passed"
+    },
+    {
+      "path": "img/band-model.jpg",
+      "bytes": 71203,
+      "sha256": "2ecbffa2f43af120829d17e65d6352c6ffcd8c379da9a75bc088876adaa90959",
+      "decode": "passed"
+    },
+    {
+      "path": "img/dr-heidi.jpg",
+      "bytes": 27416,
+      "sha256": "a7115e206b2be95eb3b8f38c3a775b7b6c7bcd7e2d6b4987d9ffcdb5a41b61b9",
+      "decode": "passed"
+    },
+    {
+      "path": "img/face-portrait.jpg",
+      "bytes": 17802,
+      "sha256": "f0055e8b162bf730d49823bbe9af6b3dbea59efe749bc14090e502469fa3f5c6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/facial.jpg",
+      "bytes": 25348,
+      "sha256": "6c997da64037b1663df8f68b2e2736b18eeba5f12b3d6d1bdc0fb3e0e62b5f2f",
+      "decode": "passed"
+    },
+    {
+      "path": "img/hair-ba.jpg",
+      "bytes": 105483,
+      "sha256": "4e9e5c6f989d350e8dedb0af2c3c1af849c5ddb012947080404859f374c1d281",
+      "decode": "passed"
+    },
+    {
+      "path": "img/hair-scalp.jpg",
+      "bytes": 18099,
+      "sha256": "b926315934f3b129f32e23e16e83f6b0a87229836ed0ccbaf5b97baa22a6fed6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/hair-tools.jpg",
+      "bytes": 15462,
+      "sha256": "c4d1eb9f9d0cfd401a38bb811280fd6f078d965e972b487e5ec40e1f4cedd3af",
+      "decode": "passed"
+    },
+    {
+      "path": "img/hair-wash.jpg",
+      "bytes": 30347,
+      "sha256": "29f4923d06ae4ec243c7d34a8f57c29c09ccc56fed9fac0c9e2d1c13a9e30331",
+      "decode": "passed"
+    },
+    {
+      "path": "img/logo-light.png",
+      "bytes": 20133,
+      "sha256": "695588fc950573fde43a7c208757b21ea1dcb31e640af12eba9c81b6de7c54b8",
+      "decode": "passed"
+    },
+    {
+      "path": "img/logo-light.svg",
+      "bytes": 47356,
+      "sha256": "3cf892aa6b183561ea51b9ef5a5aa021469d3cfdd96a05b545df691cdc857f81",
+      "decode": "passed"
+    },
+    {
+      "path": "img/logo.png",
+      "bytes": 22289,
+      "sha256": "edbd14d0635af6de7beb1ab39be861af856300a7c70e063fe674b890553d17d7",
+      "decode": "passed"
+    },
+    {
+      "path": "img/logo.svg",
+      "bytes": 47356,
+      "sha256": "89602f51cf815ce23f20c966345007755ebb1ac5df687433c56569753b900453",
+      "decode": "passed"
+    },
+    {
+      "path": "img/m8-cheek.jpg",
+      "bytes": 15421,
+      "sha256": "7636e590fc94a8dc31d5c91b993abd105172db4a5d97089023962a27bed31367",
+      "decode": "passed"
+    },
+    {
+      "path": "img/m8-jaw.jpg",
+      "bytes": 18702,
+      "sha256": "e0322f08cffc1a886a5d8990da54bf0c9081347dbefd9f4c488190a12d9b7cb7",
+      "decode": "passed"
+    },
+    {
+      "path": "img/m8-neck.jpg",
+      "bytes": 22975,
+      "sha256": "3b17999aa9f7c9110c21d3ae9cae03f586e3913079ebb2d2999873513765ddd6",
+      "decode": "passed"
+    },
+    {
+      "path": "img/skin-dropper.jpg",
+      "bytes": 23324,
+      "sha256": "93a60d3169a44d4fb99fd3d581c642fbdecb26a5ca41cee467c6a254284e2d21",
+      "decode": "passed"
+    },
+    {
+      "path": "img/skin-jars.jpg",
+      "bytes": 10577,
+      "sha256": "82ddae9e9d80ed3a8481d431dda82325387b368451ba5f7fdddbd45c7d33cb4e",
+      "decode": "passed"
+    },
+    {
+      "path": "img/skin-rose.jpg",
+      "bytes": 32358,
+      "sha256": "dcc32eeecba17937d917a7d07f25ceddfad889df40d43778aec525b6e1148c4c",
+      "decode": "passed"
+    },
+    {
+      "path": "video/attiva-promo.mp4",
+      "bytes": 1473006,
+      "sha256": "8a555fc22875090f6ecd3438ba7cc2e219e183ec5c148d746405e64c125a7d82"
+    },
+    {
+      "path": "video/background-music.mp4",
+      "bytes": 2275910,
+      "sha256": "5e6bd68509b6cde347416260b13ae779ca03784bd64f94f0888862e53ac25141"
+    },
+    {
+      "path": "video/hero-bg.mp4",
+      "bytes": 241345,
+      "sha256": "a0415f8557b5427ad6489d312cb4c2bca78ed77f1e6a642fedfbea5cace2bceb"
+    },
+    {
+      "path": "video/patient-1.mp4",
+      "bytes": 780350,
+      "sha256": "e486abf84ca07338c41f77ada608f55c919d62f5051a196e01c2b7aade2351da"
+    },
+    {
+      "path": "video/patient-10.mp4",
+      "bytes": 7412400,
+      "sha256": "266be0908a987ddab295e488303f26a182bcd4a917dd1d7dcbff162298531a52"
+    },
+    {
+      "path": "video/patient-2.mp4",
+      "bytes": 2183446,
+      "sha256": "1686ebfd26e98f1947934b8e3ded8e3d08e8cdc02d7b0033ac17f6d110392b85"
+    },
+    {
+      "path": "video/patient-3.mp4",
+      "bytes": 2659732,
+      "sha256": "43c072023bf97caed07de43b42dd0cb1045e1261a0f3194100127e6704a2d604"
+    },
+    {
+      "path": "video/patient-4.mp4",
+      "bytes": 2604679,
+      "sha256": "75389afd0aeb5681ae53f82abe2bf3c22ecbc1e5184a028eae0ba9d226cbd4d8"
+    },
+    {
+      "path": "video/patient-5.mp4",
+      "bytes": 3722230,
+      "sha256": "1ab0dbcba71f746b256c8b71e67811de7cf06c17c2a2034b20d8ddd8f35f86c2"
+    },
+    {
+      "path": "video/patient-6.mp4",
+      "bytes": 5999756,
+      "sha256": "1742dc49dbf78dae1df17539850cd25f2520d22688672152da449c136f44e2d1"
+    },
+    {
+      "path": "video/patient-7.mp4",
+      "bytes": 8730868,
+      "sha256": "5b654e6a16fcd5d2aa812211b22061dbbade0567c88975babfa0dad5db7644c5"
+    },
+    {
+      "path": "video/patient-8.mp4",
+      "bytes": 3749855,
+      "sha256": "30d544d323837b752e268afaa9edcbeff44da68279b3675216343f0ea9650f3e"
+    },
+    {
+      "path": "video/patient-9.mp4",
+      "bytes": 1711476,
+      "sha256": "4f0a177d0d68d31b5e049cf0b468c18f5aa44c7534aeaf05e1ece323c0f2b5da"
+    },
+    {
+      "path": "video/welcome-popup.mp4",
+      "bytes": 7852490,
+      "sha256": "4ec6670713302ce3ddad2181d2cc9b6ba2e9334b63d1bf1ef8dfcd6a8005de98"
+    },
+    {
+      "path": "index.html",
+      "bytes": 899192,
+      "sha256": "6f70d691063cb23d09d1d0c57b5c2a0ec2f3df884296fceb1912f6b01a09c958"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 25,
+      "sha256": "efdb5938a9736727f5cce2b60355588e4fa541d19d022d222d8a09b8efd5dcce"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 178,
+      "sha256": "5c7089bd86d1f5d16b71f6dd5120b3cb4efde9e6fada2632124e60bf6da742ff"
+    }
+  ]
+}
