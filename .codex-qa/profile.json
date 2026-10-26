@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "name": "Serenit\u00e9 Atelier public design demo",
+  "category": "public-site",
+  "preflightCommands": [
+    "node --check app.js",
+    "git diff --check"
+  ],
+  "buildCommand": "",
+  "startCommand": "python3 -m http.server 8848 --bind 127.0.0.1",
+  "baseUrl": "http://127.0.0.1:8848",
+  "outputDirectory": ".codex-qa",
+  "routes": [
+    {
+      "path": "/#a-home",
+      "label": "Atelier home",
+      "lighthouse": true,
+      "requiredText": [
+        "Look younger.",
+        "Watch our introduction"
+      ]
+    },
+    {
+      "path": "/#a-book",
+      "label": "Consultation preview",
+      "lighthouse": false,
+      "requiredText": [
+        "Preview only",
+        "no appointment will be booked"
+      ]
+    },
+    {
+      "path": "/#a-morpheus8",
+      "label": "Morpheus8",
+      "lighthouse": false
+    },
+    {
+      "path": "/#a-hair",
+      "label": "Hair restoration",
+      "lighthouse": false
+    }
+  ],
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 844
+    },
+    {
+      "name": "tablet",
+      "width": 820,
+      "height": 1180
+    },
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 800
+    }
+  ],
+  "reducedMotionRoutes": [
+    "/#a-home",
+    "/#a-book"
+  ],
+  "lighthouse": {
+    "enabled": true,
+    "minimumScores": {
+      "performance": 0.7,
+      "accessibility": 0.9,
+      "best-practices": 0.9,
+      "seo": 0.7
+    }
+  },
+  "security": {
+    "dependencyAudit": false,
+    "trivy": true
+  }
+}

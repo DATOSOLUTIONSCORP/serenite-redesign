@@ -1,32 +1,31 @@
-# Serenité website redesign demo
+# Serenité — Atelier client preview
 
-A complete static copy of the Serenité Wellness Medicine redesign demo, recovered from Vercel deployment `8yAXSNHEd7sZ45yeHXWCCHMRXEJS` on October 26, 2026.
+Atelier is the main design. The homepage now focuses on signature treatments, the team, a first-visit explanation and a consultation action. The introduction video opens only when requested, with playback controls and keyboard focus handling.
 
-- Three design versions: Atelier, Clinic and Gold Hour.
-- Forty selectable pages covering treatments, programs, clinic information and team profiles.
-- All 188 image files and 14 video files from the source tree.
-- Original HTML, CSS, JavaScript, crawler rules and Vercel configuration.
+The phone navigation uses a menu instead of a scrolling link row. The review controls are collapsed by default; open **Review options** to browse the 40 pages or compare the retained Clinic and Gold Hour designs. The browser Back and Forward buttons follow page navigation.
 
 ## Run locally
 
-From this repository folder, run:
-
 ```sh
-python3 -m http.server 8000 --bind 127.0.0.1
+python3 -m http.server 8847 --bind 127.0.0.1
 ```
 
-Open [the local demo](http://127.0.0.1:8000/). No package installation or build step is required.
+Open [the local Atelier preview](http://127.0.0.1:8847/). No package installation or build step is required. Keep `app.js`, `styles.css`, `img/` and `video/` beside `index.html`.
 
-Use the controls at the top to choose a design version and page. Keep the `img/` and `video/` folders beside `index.html`.
+## Booking preview
 
-## Recovery checks
+The consultation form uses sample details only. It validates required fields locally, clearly states that no appointment is booked, and does not send or persist input. It does not connect to clinic systems. External account, cart, store and contact links retain their existing clinic destinations.
 
-All 205 original source files are present. Every raster image decoded, both SVG files parsed, and all 14 videos passed full audio/video decoding. JavaScript syntax and embedded JSON parsing passed. All 120 combinations of page and design version opened locally. `ASSET-MANIFEST.json` records source file sizes and SHA-256 hashes.
+## Content status
 
-The original `index.html` is unchanged. The two configuration files preserve the text shown in Vercel; their original trailing newline was not established. No clinic content, prices, claims, testimonials or design details were revised.
+On October 26, 2026, the user confirmed that the supplied prices, staff credentials, Center of Excellence labels, review counts/ratings and media permissions are approved and cleared. This is USER-ATTESTED approval, not an independent audit.
 
-## Demo limits
+The revised Morpheus8, Attiva and hair pages avoid promises of no risk, no downtime or guaranteed growth. The Morpheus8 and hair pages link to the relevant FDA guidance. Revised medical wording remains a draft for clinical review; this preview is not clinical advice or production signoff.
 
-This is a design and content demo. Clinical accuracy, organizational details, media rights and production authorization have not been independently verified by this recovery. Existing booking, account, store and contact links retain their original destinations or demo behavior. No live form submission or clinic integration was tested.
+## Source and validation
 
-The original layout has some horizontal overflow at tablet and mobile widths. The source remains intact for review. Crawler rules still request no indexing; those rules do not restrict access to this public repository. Vercel authentication settings were not changed.
+The original embedded content, fonts, 188 images and 14 videos are retained. `app.js` and `styles.css` now hold the page behavior and styling. `ASSET-MANIFEST.json` records current source hashes and the original recovery hash where a source file changed. The original recovery is preserved in Git commit `9aff48ff18311484ad4c52d560e957a584b1432f`.
+
+The public client demo is [serenite-redesign.vercel.app](https://serenite-redesign.vercel.app/). Release revisions are recorded through the `codex/atelier-client-preview` branch and its pull request. The site retains its no-index directives.
+
+The repeatable local release profile is `.codex-qa/profile.json`. Its generated evidence stays local and is excluded from Git. The static site has no application package dependencies.

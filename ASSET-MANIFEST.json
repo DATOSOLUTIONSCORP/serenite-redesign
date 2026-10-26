@@ -1,5 +1,7 @@
 {
   "source_deployment": "8yAXSNHEd7sZ45yeHXWCCHMRXEJS",
+  "revision": "Atelier client preview",
+  "publication_status": "Release source; deployment version is tracked by Git commit and Vercel deployment history.",
   "files": [
     {
       "path": "img/o/1-7fad0.jpg",
@@ -1201,8 +1203,9 @@
     },
     {
       "path": "index.html",
-      "bytes": 899192,
-      "sha256": "6f70d691063cb23d09d1d0c57b5c2a0ec2f3df884296fceb1912f6b01a09c958"
+      "bytes": 745258,
+      "sha256": "e09ecfcc2a6f8cafc64394ab13fad5e6faa8a6018b0990cedc4a0d5c4d530f9e",
+      "recovered_sha256": "6f70d691063cb23d09d1d0c57b5c2a0ec2f3df884296fceb1912f6b01a09c958"
     },
     {
       "path": "robots.txt",
@@ -1213,6 +1216,16 @@
       "path": "vercel.json",
       "bytes": 178,
       "sha256": "5c7089bd86d1f5d16b71f6dd5120b3cb4efde9e6fada2632124e60bf6da742ff"
+    },
+    {
+      "path": "app.js",
+      "bytes": 111365,
+      "sha256": "31f22e3c7ccdcec7cad488de4e200fa7d5ff46b948e2f877a2f19705b6070720"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 71193,
+      "sha256": "3c590ca0f4305f929329b56fbcd67141ee271320a65559b1d504906b1d67fad3"
     }
   ]
 }

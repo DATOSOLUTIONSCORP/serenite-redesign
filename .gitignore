@@ -5,3 +5,7 @@
 *.pem
 *.key
 node_modules/
+
+# Keep release evidence local; share only the repeatable profile.
+.codex-qa/*
+!.codex-qa/profile.json
