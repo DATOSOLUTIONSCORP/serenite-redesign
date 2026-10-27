@@ -4,15 +4,19 @@
   "category": "public-site",
   "preflightCommands": [
     "node --check app.js",
+    "node --check routes.js",
+    "node --check content-data.js",
+    "node --check site-runtime.js",
+    "node --check scripts/build-static.mjs",
     "git diff --check"
   ],
-  "buildCommand": "",
-  "startCommand": "python3 -m http.server 8848 --bind 127.0.0.1",
+  "buildCommand": "node scripts/build-static.mjs",
+  "startCommand": "python3 scripts/preview_server.py --port 8848",
   "baseUrl": "http://127.0.0.1:8848",
   "outputDirectory": ".codex-qa",
   "routes": [
     {
-      "path": "/#a-home",
+      "path": "/",
       "label": "Atelier home",
       "lighthouse": true,
       "requiredText": [
@@ -21,7 +25,7 @@
       ]
     },
     {
-      "path": "/#a-book",
+      "path": "/wellness-clinic-book-an-appointment",
       "label": "Consultation preview",
       "lighthouse": false,
       "requiredText": [
@@ -30,13 +34,27 @@
       ]
     },
     {
-      "path": "/#a-morpheus8",
+      "path": "/wellness-clinic-services/morpheus8",
       "label": "Morpheus8",
       "lighthouse": false
     },
     {
-      "path": "/#a-hair",
-      "label": "Hair restoration",
+      "path": "/wellness-clinic-services/new-hair-growth-with-exosomes",
+      "label": "Hair-care information",
+      "lighthouse": false
+    },
+    {
+      "path": "/wellness-clinic-team",
+      "label": "Team overview",
+      "lighthouse": false,
+      "requiredText": [
+        "Our team",
+        "Ador"
+      ]
+    },
+    {
+      "path": "/wellness-clinic-pricing",
+      "label": "Pricing",
       "lighthouse": false
     }
   ],
@@ -58,8 +76,8 @@
     }
   ],
   "reducedMotionRoutes": [
-    "/#a-home",
-    "/#a-book"
+    "/",
+    "/wellness-clinic-team"
   ],
   "lighthouse": {
     "enabled": true,

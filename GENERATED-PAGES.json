@@ -1,0 +1,375 @@
+{
+  "mode": "public-design-demo",
+  "origin": "https://serenite-redesign.vercel.app",
+  "pages": [
+    {
+      "key": "home",
+      "path": "/",
+      "file": "index.html",
+      "title": "Aesthetics and wellness in Ontario, CA — Serenité Wellness Medicine",
+      "description": "Explore Serenité aesthetic treatments, wellness programs and the clinic team in Ontario, California. Start with information for a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/",
+      "sha256": "8b96b6264a265912597bb0c8a884a108011d1c11453dcb4cf7a3da99b3127ea4"
+    },
+    {
+      "key": "morpheus8",
+      "path": "/wellness-clinic-services/morpheus8",
+      "file": "wellness-clinic-services/morpheus8.html",
+      "title": "Morpheus8 — Serenité Wellness Medicine",
+      "description": "Explore Morpheus8 at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/morpheus8",
+      "sha256": "54c67b439c144080a9cc331804db12e41d44ee552dc6dce3ea591e6f3889d16b"
+    },
+    {
+      "key": "attiva",
+      "path": "/wellness-clinic-services/attiva",
+      "file": "wellness-clinic-services/attiva.html",
+      "title": "Attiva — Serenité Wellness Medicine",
+      "description": "Explore Attiva at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/attiva",
+      "sha256": "67a2a8de98360d794b71c86d2ac24c824d3318ee73d3412d1bc330aa702f99fa"
+    },
+    {
+      "key": "hair",
+      "path": "/wellness-clinic-services/new-hair-growth-with-exosomes",
+      "file": "wellness-clinic-services/new-hair-growth-with-exosomes.html",
+      "title": "Hair-care options — Serenité Wellness Medicine",
+      "description": "Explore Hair-care options at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/new-hair-growth-with-exosomes",
+      "sha256": "5f979d5669c9b2ce240827c18a5cab952d7532855dea6297bd6ce0f3d4649a1a"
+    },
+    {
+      "key": "skin",
+      "path": "/wellness-clinic-store/serenite-skin-care-products",
+      "file": "wellness-clinic-store/serenite-skin-care-products.html",
+      "title": "Serenite Skin Care Products — Serenité Wellness Medicine",
+      "description": "Explore Serenite Skin Care Products at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-store/serenite-skin-care-products",
+      "sha256": "89efcf5605d608a119b920bddefc39be7cfef016d7861df9662f1524bbb350c2"
+    },
+    {
+      "key": "lumecca",
+      "path": "/wellness-clinic-services/lumecca-ipl",
+      "file": "wellness-clinic-services/lumecca-ipl.html",
+      "title": "Lumecca / IPL — Serenité Wellness Medicine",
+      "description": "Explore Lumecca / IPL at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/lumecca-ipl",
+      "sha256": "af30cee07e232b9a678c806494a5562997704ccf21f3c162564e72c6d82e5a2c"
+    },
+    {
+      "key": "nsfacelift",
+      "path": "/wellness-clinic-services/ns-non-surgical-face-lift",
+      "file": "wellness-clinic-services/ns-non-surgical-face-lift.html",
+      "title": "NS (Non-Surgical) Face Lift — Serenité Wellness Medicine",
+      "description": "Explore NS (Non-Surgical) Face Lift at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/ns-non-surgical-face-lift",
+      "sha256": "c63d626fe0ae66edda571256ef2270e7059c1fe44d1ffbb41d01e7e5c5604a4b"
+    },
+    {
+      "key": "bodysculpt",
+      "path": "/wellness-clinic-services/body-sculpting-and-body-contouring",
+      "file": "wellness-clinic-services/body-sculpting-and-body-contouring.html",
+      "title": "Body Sculpting and Body Contouring — Serenité Wellness Medicine",
+      "description": "Explore Body Sculpting and Body Contouring at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/body-sculpting-and-body-contouring",
+      "sha256": "55a00c1e22fae4d6187cd8cbd2c0ffd3fb85fd112da4b8244618e6da6ec5a83f"
+    },
+    {
+      "key": "laserhair",
+      "path": "/wellness-clinic-services/laser-hair-removal",
+      "file": "wellness-clinic-services/laser-hair-removal.html",
+      "title": "Laser Hair Removal — Serenité Wellness Medicine",
+      "description": "Explore Laser Hair Removal at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/laser-hair-removal",
+      "sha256": "494fedf5df35f400d9e0a88d294ac45396a8cda92a98ab607eff147128c58519"
+    },
+    {
+      "key": "microneedling",
+      "path": "/wellness-clinic-services/microneedling",
+      "file": "wellness-clinic-services/microneedling.html",
+      "title": "Microneedling — Serenité Wellness Medicine",
+      "description": "Explore Microneedling at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/microneedling",
+      "sha256": "c1f9ef5a402d7f6653f56695f53d71bbabce59df8f456a7d07e409fa61501289"
+    },
+    {
+      "key": "pico",
+      "path": "/wellness-clinic-services/pico-laser-tattoo-removal-skin-pigmentation-removal",
+      "file": "wellness-clinic-services/pico-laser-tattoo-removal-skin-pigmentation-removal.html",
+      "title": "Pico Laser: Tattoo and Pigmentation Removal — Serenité Wellness Medicine",
+      "description": "Explore Pico Laser: Tattoo and Pigmentation Removal at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/pico-laser-tattoo-removal-skin-pigmentation-removal",
+      "sha256": "4e011c26707e4c6d0b6b59e23d468387c21fa59040c8ae21a1f3e83e2b3c431e"
+    },
+    {
+      "key": "facials",
+      "path": "/wellness-clinic-services/facial-checmical-peel-acne-treatment",
+      "file": "wellness-clinic-services/facial-checmical-peel-acne-treatment.html",
+      "title": "Facial / Chemical / Carbon Peel / Acne Treatment — Serenité Wellness Medicine",
+      "description": "Explore Facial / Chemical / Carbon Peel / Acne Treatment at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/facial-checmical-peel-acne-treatment",
+      "sha256": "7c3e305c5483a5baf88f00407b2f0c218e75726ae126a5ef746b41aca89b585d"
+    },
+    {
+      "key": "lyl",
+      "path": "/wellness-clinic-services/lyl-serenite-wellness-program",
+      "file": "wellness-clinic-services/lyl-serenite-wellness-program.html",
+      "title": "LYL Serenite Wellness Program — Serenité Wellness Medicine",
+      "description": "Explore LYL Serenite Wellness Program at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/lyl-serenite-wellness-program",
+      "sha256": "633210571c2ebe1ab088d2d9c87fceda682d34188797328b338e150feacf19c0"
+    },
+    {
+      "key": "weightloss",
+      "path": "/wellness-clinic-services/medical-weight-loss",
+      "file": "wellness-clinic-services/medical-weight-loss.html",
+      "title": "Medical Weight Loss — Serenité Wellness Medicine",
+      "description": "Explore Medical Weight Loss at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/medical-weight-loss",
+      "sha256": "351b3a8cbf1d1f3709b05bd771c863dc5f4efea07db344ca66c9ef5d9d6c98bb"
+    },
+    {
+      "key": "bhrt",
+      "path": "/wellness-clinic-services/bio-identical-hormone-replacement-therapy",
+      "file": "wellness-clinic-services/bio-identical-hormone-replacement-therapy.html",
+      "title": "Bio-Identical Hormone Replacement Therapy — Serenité Wellness Medicine",
+      "description": "Explore Bio-Identical Hormone Replacement Therapy at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/bio-identical-hormone-replacement-therapy",
+      "sha256": "db1c2591fdf30e664801235eb964e8c8ccf92a0917c34b3754ccc0e2cc649df1"
+    },
+    {
+      "key": "iv",
+      "path": "/wellness-clinic-services/iv-therapy",
+      "file": "wellness-clinic-services/iv-therapy.html",
+      "title": "IV Therapy — Serenité Wellness Medicine",
+      "description": "Explore IV Therapy at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/iv-therapy",
+      "sha256": "6f442ea85ea319d19fa651701a2fff50a9e5c0c992fd1b5be393ae46e8594e8b"
+    },
+    {
+      "key": "nutra",
+      "path": "/wellness-clinic-services/neutraceuticals",
+      "file": "wellness-clinic-services/neutraceuticals.html",
+      "title": "Nutraceuticals — Serenité Wellness Medicine",
+      "description": "Explore Nutraceuticals at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/neutraceuticals",
+      "sha256": "fd3ada3361746266442081280d65cb4e5d65aaad117f65472a5d2e359e5a4ccd"
+    },
+    {
+      "key": "meals",
+      "path": "/wellness-clinic-services/healthy-gourmet-meals",
+      "file": "wellness-clinic-services/healthy-gourmet-meals.html",
+      "title": "Healthy Gourmet Meals — Serenité Wellness Medicine",
+      "description": "Explore Healthy Gourmet Meals at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/healthy-gourmet-meals",
+      "sha256": "9a7fd38946a869a0360565269ecea89a68f282e6f673f3db11839e9f55b05703"
+    },
+    {
+      "key": "sexual",
+      "path": "/wellness-clinic-services/sexual-rejuvenation",
+      "file": "wellness-clinic-services/sexual-rejuvenation.html",
+      "title": "Sexual Rejuvenation — Serenité Wellness Medicine",
+      "description": "Explore Sexual Rejuvenation at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-services/sexual-rejuvenation",
+      "sha256": "8983c81a1f306dea8b44d78783bdac80e1e54a82b687cebd7491a92f6c89b335"
+    },
+    {
+      "key": "haircare",
+      "path": "/wellness-clinic-store/serenite-hair-care-products",
+      "file": "wellness-clinic-store/serenite-hair-care-products.html",
+      "title": "Serenite Hair Care Products — Serenité Wellness Medicine",
+      "description": "Explore Serenite Hair Care Products at Serenité in Ontario, California. Review listed pricing and prepare questions about suitability, risks and next steps.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-store/serenite-hair-care-products",
+      "sha256": "5e2cebc54ee0116ae7b1b88dc583c224b064d4af62601441bdfcbca4010c2d1a"
+    },
+    {
+      "key": "mobile",
+      "path": "/wellness-clinic-mobile-clinic",
+      "file": "wellness-clinic-mobile-clinic.html",
+      "title": "Mobile Clinic — Serenité Wellness Medicine",
+      "description": "Read Serenité’s listed mobile-clinic information and contact routes. Ask the clinic about availability, location and visit arrangements.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-mobile-clinic",
+      "sha256": "cacb41848d179a439874bc7170ebfd26428c26af4a8b8b4aae7cf93486d2fbbe"
+    },
+    {
+      "key": "pricing",
+      "path": "/wellness-clinic-pricing",
+      "file": "wellness-clinic-pricing.html",
+      "title": "Pricing — Serenité Wellness Medicine",
+      "description": "Review Serenité’s listed treatment prices in Ontario, California. Your clinician confirms the proposed treatment plan and total cost at consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-pricing",
+      "sha256": "39a7a0539b13fc7e74bfdfd00ddc6a39f1fa010d396547145c4d671dc79636c9"
+    },
+    {
+      "key": "membership",
+      "path": "/wellness-clinic-membership",
+      "file": "wellness-clinic-membership.html",
+      "title": "Membership — Serenité Wellness Medicine",
+      "description": "Review Serenité membership tiers, listed prices and terms. Compare the existing plans and prepare questions for a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-membership",
+      "sha256": "7b0261ac31d889e0c9f680ce296d943c08a604457910b6e8cfca66695f37a003"
+    },
+    {
+      "key": "news",
+      "path": "/wellness-clinic-news",
+      "file": "wellness-clinic-news.html",
+      "title": "News — Serenité Wellness Medicine",
+      "description": "Read the retained Serenité clinic news and announcements. Explore more information about the Ontario, California clinic.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-news",
+      "sha256": "58c16c35dda07b9847bea617200be580a1ea9b242a469077c96bffb0e539a604"
+    },
+    {
+      "key": "concepts",
+      "path": "/wellness-clinic-key-concepts",
+      "file": "wellness-clinic-key-concepts.html",
+      "title": "Key Concepts — Serenité Wellness Medicine",
+      "description": "Read the wellness concepts presented by Serenité Wellness Medicine, with links to the existing clinic programs and consultation preview.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-key-concepts",
+      "sha256": "0b559e2e30e34b14bdd01aa98e1370043bfd3d905fb3d2f1d046989615370f5d"
+    },
+    {
+      "key": "location",
+      "path": "/wellness-clinic-location-and-hours",
+      "file": "wellness-clinic-location-and-hours.html",
+      "title": "Location and Hours — Serenité Wellness Medicine",
+      "description": "Find Serenité Wellness Medicine in Ontario, California. See the clinic address, contact details, map and appointment-only visit information.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-location-and-hours",
+      "sha256": "74bed35e7f24d528e27f538352d535c95ba0642f49e236156d6be36c73ac6292"
+    },
+    {
+      "key": "book",
+      "path": "/wellness-clinic-book-an-appointment",
+      "file": "wellness-clinic-book-an-appointment.html",
+      "title": "Book a consultation — Serenité Wellness Medicine",
+      "description": "Try Serenité’s sample consultation request. This design preview sends or saves nothing and does not book an appointment.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-book-an-appointment",
+      "sha256": "7ccbc37b49a0b5aa700ba1563355753a237ab17ef185eae1615e965f7057f9f8"
+    },
+    {
+      "key": "privacy",
+      "path": "/privacy-policy",
+      "file": "privacy-policy.html",
+      "title": "Privacy Policy — Serenité Wellness Medicine",
+      "description": "Read the retained Serenité privacy policy. This local design demo does not send or store sample form details.",
+      "canonical": "https://serenite-redesign.vercel.app/privacy-policy",
+      "sha256": "6482a46a0ed8a76ade6eab6ae0163aba11b3c4374f33493f52758dd6feb1961b"
+    },
+    {
+      "key": "t-heidi",
+      "path": "/wellness-clinic-team/dr-heidi-regenass-md",
+      "file": "wellness-clinic-team/dr-heidi-regenass-md.html",
+      "title": "Dr. Heidi Regenass, MD — Serenité Wellness Medicine",
+      "description": "Read the Dr. Heidi Regenass, MD profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/dr-heidi-regenass-md",
+      "sha256": "237486338268e544b7337b2832f12dd80f291b90d0fbb656997c438f685fd41f"
+    },
+    {
+      "key": "t-ador",
+      "path": "/wellness-clinic-team/ador-mansat-dnp-fnp-c-mba-bsche",
+      "file": "wellness-clinic-team/ador-mansat-dnp-fnp-c-mba-bsche.html",
+      "title": "Ador Mansat, DNP, FNP-C, MBA, BSChE — Serenité Wellness Medicine",
+      "description": "Read the Ador Mansat, DNP, FNP-C, MBA, BSChE profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/ador-mansat-dnp-fnp-c-mba-bsche",
+      "sha256": "d819a46f878329a04f665eba2663c81742898acb913a8879b92d86e7bc053310"
+    },
+    {
+      "key": "t-bel",
+      "path": "/wellness-clinic-team/admin-bel-mba",
+      "file": "wellness-clinic-team/admin-bel-mba.html",
+      "title": "Admin Bel, MBA — Serenité Wellness Medicine",
+      "description": "Read the Admin Bel, MBA profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/admin-bel-mba",
+      "sha256": "f7addeb8168a72420246dc9e5d554f058af169e3f3aadf6748def97d08cfaf98"
+    },
+    {
+      "key": "t-arnold",
+      "path": "/wellness-clinic-team/rn-arnold-clinical-director",
+      "file": "wellness-clinic-team/rn-arnold-clinical-director.html",
+      "title": "RN Arnold, Clinical Director — Serenité Wellness Medicine",
+      "description": "Read the RN Arnold, Clinical Director profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/rn-arnold-clinical-director",
+      "sha256": "e852759ffc4a5b5ac84c982d39487b1e10a3e8f7f1a68e07284cc71dddb9093c"
+    },
+    {
+      "key": "t-romella",
+      "path": "/wellness-clinic-team/lvn-romella-clinical-director",
+      "file": "wellness-clinic-team/lvn-romella-clinical-director.html",
+      "title": "LVN Romella, Clinical Director — Serenité Wellness Medicine",
+      "description": "Read the LVN Romella, Clinical Director profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/lvn-romella-clinical-director",
+      "sha256": "ec42bf9449a9edd2767db053c2689b6eaf6216a4efa3f9a29a669ff48c75cc14"
+    },
+    {
+      "key": "t-donna",
+      "path": "/wellness-clinic-team/rn-donna-master-injector",
+      "file": "wellness-clinic-team/rn-donna-master-injector.html",
+      "title": "RN Donna, Master Injector — Serenité Wellness Medicine",
+      "description": "Read the RN Donna, Master Injector profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/rn-donna-master-injector",
+      "sha256": "2d969cae800d9c6df77b85035e64b8dd20083da3f47b291abb8e4680ec2479c9"
+    },
+    {
+      "key": "t-ron",
+      "path": "/wellness-clinic-team/rn-ron-clinician",
+      "file": "wellness-clinic-team/rn-ron-clinician.html",
+      "title": "RN Ron, Clinician — Serenité Wellness Medicine",
+      "description": "Read the RN Ron, Clinician profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/rn-ron-clinician",
+      "sha256": "abb2ea9e933a1ddb4d2ea60fd4ba2ca86944a847cc1067c670aff434a9dbe385"
+    },
+    {
+      "key": "t-ninette",
+      "path": "/wellness-clinic-team/rn-ninette-clinician",
+      "file": "wellness-clinic-team/rn-ninette-clinician.html",
+      "title": "RN Ninette, Clinician — Serenité Wellness Medicine",
+      "description": "Read the RN Ninette, Clinician profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/rn-ninette-clinician",
+      "sha256": "1c0b042837c85742e9b5980ae5f4103c202039c1ad45a6c5f565009deac399a8"
+    },
+    {
+      "key": "t-myrtle",
+      "path": "/wellness-clinic-team/lvn-myrtle-hidalgo-clinician",
+      "file": "wellness-clinic-team/lvn-myrtle-hidalgo-clinician.html",
+      "title": "LVN Myrtle, Clinician — Serenité Wellness Medicine",
+      "description": "Read the LVN Myrtle, Clinician profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/lvn-myrtle-hidalgo-clinician",
+      "sha256": "d834f30e1a6f6c4aff8b0862b0a95c92e4ea70c0f5fdabd9158136a400d109db"
+    },
+    {
+      "key": "t-matthew",
+      "path": "/wellness-clinic-team/ma-matthew",
+      "file": "wellness-clinic-team/ma-matthew.html",
+      "title": "MA Matthew — Serenité Wellness Medicine",
+      "description": "Read the MA Matthew profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/ma-matthew",
+      "sha256": "5beb8a3c7417b7f0e4beaafd19bb1a39e5b41aefa3253fa37c24b7652429e20f"
+    },
+    {
+      "key": "t-josh",
+      "path": "/wellness-clinic-team/ma-josh",
+      "file": "wellness-clinic-team/ma-josh.html",
+      "title": "MA Josh — Serenité Wellness Medicine",
+      "description": "Read the MA Josh profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/ma-josh",
+      "sha256": "8203cc14b850f786e87528956307ee1c96ec1b9d545af5bfef5a147d66b58888"
+    },
+    {
+      "key": "t-joyce",
+      "path": "/wellness-clinic-team/ma-joyce",
+      "file": "wellness-clinic-team/ma-joyce.html",
+      "title": "MA Joyce — Serenité Wellness Medicine",
+      "description": "Read the MA Joyce profile and listed role at Serenité Wellness Medicine in Ontario, California. Meet the team and plan a consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team/ma-joyce",
+      "sha256": "f828d79770bd5be79ab4fd7ed8b6d1f74b6c275fafda3a46ac14e7b0138c8a4c"
+    },
+    {
+      "key": "team",
+      "path": "/wellness-clinic-team",
+      "file": "wellness-clinic-team.html",
+      "title": "Our team — Serenité Wellness Medicine",
+      "description": "Meet Serenité’s existing clinicians and staff in Ontario, California. Read their individual profiles and listed roles before your consultation.",
+      "canonical": "https://serenite-redesign.vercel.app/wellness-clinic-team",
+      "sha256": "ef199b01af2b40c5e9dbd1cc7311ff74c9a1d511495b7b8759270a1e9b1c3688"
+    }
+  ]
+}

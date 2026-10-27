@@ -1,4 +1,5 @@
-const C = JSON.parse(document.getElementById("content").textContent);
+const C = window.SERENITE_CONTENT;
+const ROUTES = window.SERENITE_SITE.routes;
 const H = C._home;
 
 const SITE = {
@@ -19,16 +20,16 @@ const SITE = {
 
 /* Videos live in the artifact's asset store; posters are published images. */
 const VID = {
-  hero: { src: "video/hero-bg.mp4", poster: "img/v/hero-bg.jpg" },
-  popup: { src: "video/welcome-popup.mp4", poster: "img/v/welcome-popup.jpg" },
-  attiva: { src: "video/attiva-promo.mp4", poster: "img/v/attiva-promo.jpg" },
-  music: "video/background-music.mp4",
+  hero: { src: "/video/hero-bg.mp4", poster: "/img/v/hero-bg.jpg" },
+  popup: { src: "/video/welcome-popup.mp4", poster: "/img/v/welcome-popup.jpg" },
+  attiva: { src: "/video/attiva-promo.mp4", poster: "/img/v/attiva-promo.jpg" },
+  music: "/video/background-music.mp4",
   patients: [
     "8d4a1afa3e3c7193e1aedf5e73c5053c", "c38ad2f77ee8db45db72beae761ccae8", "2838602ff924d97552a170f04421bc29",
     "9732198eeaa91afc18965e7f28fdee9c", "a82caae61e6c8617ec248db962bbf7f3", "4abc2df0e116e040bc06532f7797b96b",
     "1bdedc6c6b848395a6187f25fdb91ada", "5d3d748e9615a79d2a9e76c4a3145849", "b16e53f7d072c5ddace0362d19f286b9",
     "97b03c8b7cae63287b5c6db8588bbdb4"
-  ].map((id, i) => ({ src: `video/patient-${i + 1}.mp4`, poster: `img/v/patient-${i + 1}.jpg` }))
+  ].map((id, i) => ({ src: `/video/patient-${i + 1}.mp4`, poster: `/img/v/patient-${i + 1}.jpg` }))
 };
 
 const VERSIONS = {
@@ -79,24 +80,22 @@ const TEAM = [
 ];
 const CLINIC = [["mobile", "Mobile Clinic"], ["pricing", "Pricing"], ["membership", "Membership"], ["news", "News"], ["concepts", "Key Concepts"], ["location", "Location and Hours"], ["book", "Book an Appointment"], ["privacy", "Privacy Policy"]];
 
-const CURATED = { home: "Home", morpheus8: "Morpheus8", attiva: "Attiva", hair: "New Hair Growth", skin: "Serenite Skin Care Products" };
+const CURATED = { home: "Home", morpheus8: "Morpheus8", attiva: "Attiva", hair: "New Hair Growth", skin: "Serenite Skin Care Products", team: "Our team" };
 const TITLES = Object.assign({}, CURATED);
 Object.keys(C).forEach(k => { if (k[0] !== "_" && !k.startsWith("o-")) TITLES[k] = C[k].title; });
+TITLES.book = "Book a consultation";
 const PRICE = {};
 [...CARDS.beauty, ...CARDS.longevity].forEach(c => { PRICE[c[0]] = c[2]; });
 const GROUP = {};
 CARDS.beauty.forEach(c => { GROUP[c[0]] = "Beauty"; });
 CARDS.longevity.forEach(c => { GROUP[c[0]] = "Longevity"; });
 
+
 const NAV = [
-  { label: "Beauty", menu: CARDS.beauty.map(c => [c[0], c[1]]) },
-  { label: "Longevity", menu: CARDS.longevity.map(c => [c[0], c[1]]) },
-  { label: "Mobile Clinic", p: "mobile" },
-  { label: "Team", menu: TEAM.map(t => [t[0], t[1] + (t[2] && !t[1].includes(",") ? ", " + t[2] : "")]) },
-  { label: "Pricing", p: "pricing" },
-  { label: "Membership", p: "membership" },
-  { label: "Store", ext: SITE.store },
-  { label: "News", p: "news" }
+ {label:"Beauty",menu:CARDS.beauty.map(c=>[c[0],c[1]])},
+ {label:"Longevity",menu:CARDS.longevity.map(c=>[c[0],c[1]])},
+ {label:"Our team",menu:[["team","Meet the whole team"],...TEAM.map(t=>[t[0],t[1]])]},
+ {label:"Pricing",p:"pricing"},{label:"Visit",p:"location"}
 ];
 
 const PEOPLE = [
@@ -286,53 +285,64 @@ const LP = {
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const src = n => (n.includes("/") ? n : `img/${n}.jpg`);
 const IMAGE_SIZES = {"img/ador.jpg":[467,350],"img/attiva-ba-abdomen.jpg":[1100,619],"img/attiva-ba-eyes.jpg":[1100,619],"img/attiva-ba-neck.jpg":[1100,619],"img/attiva-device.jpg":[302,351],"img/attiva-thermal.jpg":[467,350],"img/band-model.jpg":[1600,653],"img/dr-heidi.jpg":[467,350],"img/face-portrait.jpg":[325,485],"img/facial.jpg":[467,350],"img/hair-ba.jpg":[800,400],"img/hair-scalp.jpg":[302,351],"img/hair-tools.jpg":[302,351],"img/hair-wash.jpg":[467,350],"img/logo-light.png":[415,153],"img/logo.png":[415,153],"img/m8-cheek.jpg":[300,302],"img/m8-jaw.jpg":[302,351],"img/m8-neck.jpg":[467,350],"img/o/1-7fad0.jpg":[1100,425],"img/o/2-28dd1.jpg":[1100,425],"img/o/AnteAGE_HairB_A_HMN_HomeHair_1_HQ_93f72e-9c225.jpg":[800,400],"img/o/AnteAGE_HairB_A_HMN_HomeHair_2B_HQ_d2f8d-6590c.jpg":[800,400],"img/o/AnteAGE_HairB_A_HMN_HomeHair_3A_HQ_2b26d-39fea.jpg":[800,400],"img/o/AnteAGE_HairB_A_HMN_HomeHair_4_HQ_499838-a685d.jpg":[800,400],"img/o/AnteAGE_HairB_A_MN_11B_HQ_800x-0d835.jpg":[800,400],"img/o/AnteAGE_HairB_A_MN_1_HQ_4b1fff2a-8ffa-48-2206f.jpg":[800,400],"img/o/AnteAGE_HairB_A_MN_2_HQ_2ad15351-6b50-4a-2279c.jpg":[800,400],"img/o/AnteAGE_HairB_A_MN_5B_HQ_f1f7f9dd-61ba-4-08961.jpg":[800,400],"img/o/AnteAGE_HairB_A_MN_6_HQ_629d5dbf-e8dc-4a-5b03c.jpg":[800,400],"img/o/AnteAGE_HairB_A_MN_7_HQ_3225e227-44bc-48-d99a5.jpg":[800,400],"img/o/AnteAGE_HairB_A_MN_8_HQ_800x-b2acb.jpg":[800,400],"img/o/AnteAGE_HairB_A_MN_9_HQ_800x-cc65e.jpg":[800,400],"img/o/american-express-d5565.png":[65,41],"img/o/attiva-image1-f2174.jpg":[467,350],"img/o/attiva-image2-89356.jpg":[302,351],"img/o/attiva-image3-54ca8.jpg":[300,302],"img/o/attiva-image4-a1b67.jpg":[445,397],"img/o/attiva-logo-20b36.png":[500,131],"img/o/attiva-slide-1-78348.jpg":[1100,619],"img/o/attiva-slide-2-62623.jpg":[1100,619],"img/o/attiva-slide-3-2425b.jpg":[1100,619],"img/o/attiva-slide-4-f3423.jpg":[1100,619],"img/o/attiva-slide-5-a84c7.jpg":[1100,619],"img/o/attiva-slide-6-6d8d3.jpg":[1100,619],"img/o/attiva-slide-7-d4cba.jpg":[1100,619],"img/o/btm1-21111514635Ue2853i-fea6c.jpg":[325,485],"img/o/btm1-2172630320U435t70-0321c.jpg":[325,485],"img/o/btm1-2172633150U794m53-f2a77.jpg":[325,485],"img/o/btm1-2172644928U2m6i0s-71e93.jpg":[325,485],"img/o/btm1-22102133936U938a61-a9ca0.jpg":[325,485],"img/o/btm1-22110315235U85e14t-f8750.jpg":[325,485],"img/o/btm1-22209122902Us9m0a3-d6b32.jpg":[325,485],"img/o/btm1-2221713344U52aei7-0d242.jpg":[325,485],"img/o/btm1-2222192824U56470a-e8b5b.jpg":[325,485],"img/o/btm1-23103123810U65a1s7-7bfc3.jpg":[325,485],"img/o/btm1-2310524928Ue26ias-a0325.jpg":[325,485],"img/o/btm1-231221110527U273tes-7b929.jpg":[325,485],"img/o/btm1-23410111609Us274i0-11399.jpg":[325,485],"img/o/btm1-236542772-a336a.jpg":[325,485],"img/o/btm1-2381611346U1is0e2-e1a5f.jpg":[325,485],"img/o/btm1-2382911532U93e46s-bcc07.jpg":[325,485],"img/o/btm1-2411110211U3m57se-248a1.jpg":[325,485],"img/o/btm1-24527112835Ua01547-08c47.jpg":[325,485],"img/o/btm1-449403043-3c7ee.jpg":[325,485],"img/o/btm1_box_img11-3b09c.jpg":[325,485],"img/o/btm1_box_img2-86f53.jpg":[325,485],"img/o/btm1_box_img3-1e685.jpg":[325,485],"img/o/btm3_box1-4738f.jpg":[393,460],"img/o/btm3_box2-a290f.jpg":[393,460],"img/o/btm3_box3-e6f3d.jpg":[393,460],"img/o/btm3_box4-6a1ae.jpg":[393,460],"img/o/btm5-img1-ce7fa.jpg":[526,325],"img/o/btm5-img2-f43e3.jpg":[526,325],"img/o/btm5-img3-5358a.jpg":[526,325],"img/o/discover-a837b.png":[65,41],"img/o/dr-ador-mansat-8ea38.jpg":[467,350],"img/o/dr-heidi-regenass-1-380f7.jpg":[467,350],"img/o/fb-icon-3839e.png":[37,37],"img/o/footer_rate-12140.jpg":[436,164],"img/o/instagram-icon-3e9ca.png":[37,37],"img/o/logos-1be86.png":[800,129],"img/o/lumecca-before-after-8445-med-spa-previe-6fa4a.jpg":[1100,475],"img/o/lumecca-before-after-dr-h-roberts-previe-24f2b.jpg":[1100,487],"img/o/lumecca-before-after-dr-h-roberts-previe-3a29f.jpg":[1100,789],"img/o/lumecca-before-after-dr-h-roberts-previe-4e30e.jpg":[1100,906],"img/o/lumecca-before-after-dr-l-hartman-previe-9cc3c.jpg":[688,311],"img/o/lumecca-before-after-dr-l-hartman-previe-b38a8.jpg":[714,310],"img/o/lumecca-before-after-dr-m-taylor-preview-617fb.jpg":[476,272],"img/o/lumecca-before-after-dr-m-taylor-preview-b1288.jpg":[384,267],"img/o/lumecca-before-after-dr-m-taylor-preview-c9a56.jpg":[384,267],"img/o/lumecca-before-after-dr-toni-burke-cosme-dee19.jpg":[1100,856],"img/o/lumecca-before-after-dr-toni-burke-cosme-e610c.jpg":[1100,779],"img/o/lumecca-before-after-lauren-abramowitz-r-9d7b0.jpg":[1100,1100],"img/o/lumecca-before-after-lux-skin-lab-previe-722f2.jpg":[1100,475],"img/o/lumecca-before-after-lux-skin-lab-previe-d1264.jpg":[1100,475],"img/o/lumecca1-aeac4.jpg":[445,468],"img/o/lumecca2-25917.jpg":[302,303],"img/o/lumecca3-bfe24.jpg":[445,468],"img/o/lumecca4-92250.jpg":[302,303],"img/o/mastercard-3e3a9.png":[65,41],"img/o/morpheus8-logo-bea4f.png":[800,131],"img/o/morpheus8-sec1-img-1-42de4.jpg":[467,350],"img/o/morpheus8-sec1-img-2-c301b.jpg":[302,351],"img/o/morpheus8-sec3-img-1-d2e13.jpg":[300,302],"img/o/morpheus8-sec3-img-2-c13ed.jpg":[445,397],"img/o/paypal-dbb85.png":[65,41],"img/o/qr-1f5fd.png":[800,800],"img/o/thumb-100108361-921c6.jpg":[302,351],"img/o/thumb-1041373417-e6585.jpg":[300,302],"img/o/thumb-116344397-a6f51.jpg":[467,350],"img/o/thumb-137818778-f3095.jpg":[467,350],"img/o/thumb-150555911-944e2.jpg":[445,397],"img/o/thumb-1559872667-5a1ce.jpg":[467,350],"img/o/thumb-161447406-95ca8.jpg":[467,350],"img/o/thumb-161745336-d2089.jpg":[445,397],"img/o/thumb-162498106-4739b.jpg":[445,397],"img/o/thumb-1676154958-b22d1.jpg":[300,302],"img/o/thumb-169682885-d8d55.jpg":[445,397],"img/o/thumb-173972051-f807a.jpg":[467,350],"img/o/thumb-177784327-c9826.jpg":[467,350],"img/o/thumb-17918531-6828e.jpg":[445,397],"img/o/thumb-181443529-525ee.jpg":[302,351],"img/o/thumb-1907135956-fea63.jpg":[300,302],"img/o/thumb-1911727348-e6ffb.jpg":[300,302],"img/o/thumb-2041974179-a6696.jpg":[302,351],"img/o/thumb-204857167-a00b1.jpg":[300,302],"img/o/thumb-20730149-e2f67.jpg":[467,350],"img/o/thumb-211208114235Uea6s81-d9d6b.jpg":[467,350],"img/o/thumb-2127115895-df72b.jpg":[467,350],"img/o/thumb-213366151-35f97.jpg":[302,351],"img/o/thumb-214074611-ebc4e.jpg":[302,351],"img/o/thumb-21716113644U3aes59-5d43c.jpg":[300,302],"img/o/thumb-2172611815U53s109-77c36.jpg":[300,302],"img/o/thumb-218664293-e3acf.jpg":[302,351],"img/o/thumb-22102133901U2078et-d9e0f.jpg":[445,397],"img/o/thumb-22102134057U497am6-2c656.jpg":[302,351],"img/o/thumb-2212760430U0s24t9-3fdb2.jpg":[445,397],"img/o/thumb-2230444818U61i9ta-457e3.jpg":[302,351],"img/o/thumb-2271324859U6e375t-00429.jpg":[445,397],"img/o/thumb-227692381-ba676.jpg":[445,397],"img/o/thumb-23410111609Us274i0-7d4fa.jpg":[467,350],"img/o/thumb-2341340757U9emi13-79ce1.jpg":[445,397],"img/o/thumb-2371311607U62amts-76c0e.jpg":[467,350],"img/o/thumb-240603233-34306.jpg":[445,397],"img/o/thumb-2410212320Ue145am-e2c08.jpg":[302,351],"img/o/thumb-24123102944U643t1m-bfef4.jpg":[300,302],"img/o/thumb-24145648-11150.jpg":[302,351],"img/o/thumb-24424105839U1476ts-c3a3d.jpg":[300,302],"img/o/thumb-24424105850Ue904ai-dadbe.jpg":[445,397],"img/o/thumb-2450842529U23a761-9c5bf.jpg":[302,351],"img/o/thumb-2450842544Uie145s-b9b51.jpg":[300,302],"img/o/thumb-24522104847U9s1a05-8f9db.jpg":[302,351],"img/o/thumb-2452490529Us24i57-65bfd.jpg":[467,350],"img/o/thumb-24529124348U3am502-9e21a.jpg":[467,350],"img/o/thumb-253477555-6dd65.jpg":[445,397],"img/o/thumb-27202133-3a116.jpg":[467,350],"img/o/thumb-27387557-1d85a.jpg":[302,351],"img/o/thumb-31423634-fbad5.jpg":[300,302],"img/o/thumb-319723513-273d3.jpg":[445,397],"img/o/thumb-339499739-c38ca.jpg":[302,351],"img/o/thumb-393550841-71f1c.jpg":[302,351],"img/o/thumb-433221062-bd1de.jpg":[300,302],"img/o/thumb-472159589-bafc0.jpg":[467,350],"img/o/thumb-4751995-7bb7e.jpg":[300,302],"img/o/thumb-51325312-2621f.jpg":[445,397],"img/o/thumb-526933915-0e924.jpg":[300,302],"img/o/thumb-98381505-32947.jpg":[300,302],"img/o/visa-6ad8d.png":[65,41],"img/o/yt-icon-a2332.png":[37,37],"img/skin-dropper.jpg":[467,350],"img/skin-jars.jpg":[302,351],"img/skin-rose.jpg":[445,397],"img/v/attiva-promo.jpg":[720,405],"img/v/hero-bg.jpg":[720,294],"img/v/patient-1.jpg":[405,720],"img/v/patient-10.jpg":[405,720],"img/v/patient-2.jpg":[405,720],"img/v/patient-3.jpg":[405,720],"img/v/patient-4.jpg":[405,720],"img/v/patient-5.jpg":[405,720],"img/v/patient-6.jpg":[405,720],"img/v/patient-7.jpg":[405,720],"img/v/patient-8.jpg":[405,720],"img/v/patient-9.jpg":[405,720],"img/v/welcome-popup.jpg":[720,480]};
+const HD_PHOTOS = {
+  hero: "img/hd/attiva-banner.jpg",
+  morpheus8: "img/hd/morpheus8-banner.jpg",
+  attiva: "img/hd/attiva-banner.jpg",
+  hair: "img/hd/hair-banner.jpg"
+};
+Object.values(HD_PHOTOS).forEach(path => { IMAGE_SIZES[path] = [1920, 600]; });
 const img = (n, alt, attrs = "") => {
   const url = src(n), size = IMAGE_SIZES[url];
   const dimensions = size ? ` width="${size[0]}" height="${size[1]}"` : "";
   const loading = /\bloading\s*=/.test(attrs) ? "" : ' loading="lazy"';
   return `<img src="${url}" alt="${esc(alt || "")}"${dimensions}${loading} decoding="async" ${attrs}>`;
 };
-const go = (p, label, cls = "", anchor = "") => `<a href="#${state.v}-${p}" data-go="${p}"${anchor ? ` data-anchor="${anchor}"` : ""}${cls ? ` class="${cls}"` : ""}>${label}</a>`;
+const go = (p, label, cls = "", anchor = "") => `<a href="${esc(routeUrl(state.v,p,anchor))}" data-go="${p}"${anchor ? ` data-anchor="${anchor}"` : ""}${cls ? ` class="${cls}"` : ""}>${label}</a>`;
 const ext = (href, label, cls = "") => `<a href="${href}" target="_blank" rel="noopener"${cls ? ` class="${cls}"` : ""}>${label}</a>`;
 const bookBtn = (label = "Book a consultation") => go("book", label, "btn btn-primary");
 const secHd = (eyebrow, title, sub = "") => `<header class="sec-hd">${eyebrow ? `<p class="eyebrow">${eyebrow}</p>` : ""}<h2>${title}</h2>${sub ? `<p class="lead">${sub}</p>` : ""}</header>`;
 const video = (v, attrs = "") => `<video class="vid" controls playsinline preload="none" poster="${v.poster}" src="${v.src}" ${attrs}></video>`;
 const dropBracketed = t => t.split(/(?<=[.!?])\s+/).filter(x => !/\[[^\]]*\]/.test(x)).join(" ");
 const ICON = {
-  search: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>',
-  user: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>',
-  cart: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>',
-  sparkle: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg>',
-  shield: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>',
-  clock: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
-  heart: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>',
-  leaf: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19l7-7"/></svg>',
-  drop: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>',
-  star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>',
-  tag: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg>',
-  pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>',
-  phone: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
-  mail: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
-  calendar: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
-  play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor" stroke="none"/></svg>',
-  close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
-  left: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
-  right: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>'
+ info:'<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5h.01"/></svg>',
+ menu:'<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg>',
+ arrow:'<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>',
+ chevron:'<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>',
+ external:'<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6m0-6L9 15M10 4H4v16h16v-6"/></svg>',
+
+  search: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>',
+  user: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>',
+  cart: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>',
+  sparkle: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg>',
+  shield: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>',
+  clock: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  heart: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>',
+  leaf: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19l7-7"/></svg>',
+  drop: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>',
+  star: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>',
+  tag: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg>',
+  pin: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>',
+  phone: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
+  mail: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
+  calendar: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+  play: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z" fill="currentColor" stroke="none"/></svg>',
+  close: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  left: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>',
+  right: '<svg class="ui-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg>'
 };
 const ICON_RULES = [
+  [/risk|complication|evidence|limitation|suitability|assess|safe|clinical|skin type|results|effective/i, "info"],
   [/price|cost|starting|value|afford/i, "tag"],
-  [/time|quick|downtime|minute|schedule|fast|convenien|booking/i, "clock"],
-  [/safe|skin type|gentle|certified|clinical|trusted|expert|medical/i, "shield"],
-  [/natural|eco|ingredient|cruelty|nutri|meal|organic/i, "leaf"],
+  [/time|downtime|minute|schedule|booking|recovery/i, "clock"],
+  [/nutri|meal|ingredient|natural|eco/i, "leaf"],
   [/hydrat|moist|iv |fluid|drip/i, "drop"],
-  [/result|lasting|long-term|visible|effective|immediate/i, "star"],
-  [/confiden|outlook|self|life|well-being|happ|intima|relationship/i, "heart"],
+  [/goal|confiden|self|well-being|relationship/i, "heart"],
   [/location|area|where/i, "pin"]
 ];
-const ROTATE = ["sparkle", "shield", "star", "heart", "leaf", "clock"];
-const iconFor = (text, i) => ICON[(ICON_RULES.find(([re]) => re.test(text)) || [0, ROTATE[i % ROTATE.length]])[1]];
+const iconFor = text => ICON[(ICON_RULES.find(([re])=>re.test(text)) || [null,"info"])[1]];
 const ico = (text, i) => `<span class="ico" aria-hidden="true">${iconFor(text, i)}</span>`;
-const initials = n => n.replace(/^(Dr\.?|RN|LVN|MA|Admin)\s+/i, "").split(/[\s,]+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase();
+const initials = n => n.replace(/^(Dr\.?|RN|LVN|MA|Admin)\s+/i, "").split(",")[0].split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase();
 const TEAM_PHOTO = { "t-heidi": "dr-heidi", "t-ador": "ador" };
 const avatar = (slug, name) => TEAM_PHOTO[slug] ? img(TEAM_PHOTO[slug], name) : `<span class="avatar-initials" aria-hidden="true">${initials(name)}</span>`;
 /* "Welcome to X: The Future of Y" becomes a short headline plus a subtitle; no words are dropped */
@@ -346,64 +356,113 @@ function splitHead(h) {
 
 let state = { v: "a", p: "home" };
 
-/* ---------- flyouts: open beside the control, right if room, else left ---------- */
-let fly = null, flyAnchor = null, flyTimer = 0, flyOpenedAt = 0;
-function closeFly() {
-  clearTimeout(flyTimer);
-  if (fly) { fly.remove(); fly = null; }
-  if (flyAnchor) { flyAnchor.setAttribute("aria-expanded", "false"); flyAnchor = null; }
+/* One route catalog drives native links, static pages and client navigation. */
+function routeUrl(v, p, anchor = "") {
+  const path = (ROUTES[p] || ROUTES.home).path;
+  const params = new URLSearchParams();
+  if (v !== "a" && VERSIONS[v]) params.set("design", v);
+  if (new URLSearchParams(location.search).get("review") === "1") params.set("review", "1");
+  return path + (params.size ? "?" + params : "") + (anchor ? "#" + encodeURIComponent(anchor) : "");
 }
-function placeBeside(el, a) {
-  const r = a.getBoundingClientRect(), w = el.offsetWidth, h = el.offsetHeight, vw = innerWidth, vh = innerHeight, g = 6, m = 8;
-  let x, y = r.top;
-  if (r.right + g + w <= vw - m) x = r.right + g;
-  else if (r.left - g - w >= m) x = r.left - g - w;
-  else {
-    x = Math.min(Math.max(m, r.left), vw - w - m);
-    y = r.bottom + g;
-    if (y + h > vh - m && r.top - g - h >= m) y = r.top - g - h;
-  }
-  y = Math.min(Math.max(m, y), Math.max(m, vh - h - m));
-  el.style.left = x + "px";
-  el.style.top = y + "px";
+function rootAssets(html) {
+  return html.replace(/\b(src|poster|href)="((?:img|video|fonts)\/[^"<>]*)"/g, '$1="/$2"');
 }
-function openFly(anchor, html) {
-  closeFly();
-  fly = document.createElement("div");
-  fly.className = "flyout";
-  fly.innerHTML = html;
-  document.getElementById("site").appendChild(fly);
-  placeBeside(fly, anchor);
-  flyAnchor = anchor;
-  flyOpenedAt = Date.now();
-  anchor.setAttribute("aria-expanded", "true");
-  fly.addEventListener("pointerenter", () => clearTimeout(flyTimer));
-  fly.addEventListener("pointerleave", e => { if (e.pointerType === "mouse" && !fly.contains(document.activeElement)) flyTimer = setTimeout(closeFly, 180); });
-  return fly;
+function breadcrumbItems(p, origin = location.origin) {
+  const route = ROUTES[p];
+  const items = [{ name: "Home", url: new URL("/", origin).href, key: "home" }];
+  if (p === "home") return items;
+  if (route.group === "Beauty" || route.group === "Longevity") {
+    const anchor = route.group.toLowerCase();
+    items.push({ name: route.group, url: new URL("/#" + anchor, origin).href, key: "home", anchor });
+  } else if (p.startsWith("t-")) items.push({ name: "Our team", url: new URL(ROUTES.team.path, origin).href, key: "team" });
+  items.push({ name: route.label, url: new URL(route.path, origin).href, key: p });
+  return items;
 }
-function menuHtml(i) {
-  const n = NAV[i];
-  const card = Object.fromEntries([...CARDS.beauty, ...CARDS.longevity].map(c => [c[0], c]));
-  const team = Object.fromEntries(TEAM.map(t => [t[0], t]));
-  return `<div role="menu" aria-label="${esc(n.label)}" class="fly-rich">${n.menu.map(([p, l]) => {
-    const c = card[p], t = team[p];
-    const thumb = c ? img(H.cardImgs[c[3]], "") : t ? avatar(p, t[1]) : "";
-    const meta = c ? c[2] : t ? t[2] : "";
-    return `<a role="menuitem" href="#${state.v}-${p}" data-go="${p}"${p === state.p ? ' aria-current="page"' : ""}><span class="fly-thumb">${thumb}</span><span class="fly-text"><strong>${esc(c ? c[1] : t ? t[1] : l)}</strong>${meta ? `<small>${esc(meta)}</small>` : ""}</span></a>`;
-  }).join("")}</div>`;
+function breadcrumbs() {
+  if (state.p === "home") return "";
+  const items = breadcrumbItems(state.p);
+  return `<nav class="breadcrumbs wrap" aria-label="Breadcrumb"><ol>${items.map((item,i) => `<li>${i === items.length-1 ? `<span aria-current="page">${esc(item.name)}</span>` : go(item.key,esc(item.name),"",item.anchor || "")}</li>`).join("")}</ol></nav>`;
 }
-function searchHtml() {
-  return `<label class="fly-label" for="site-search">Search the site</label><input id="site-search" type="search" placeholder="Morpheus8, IV therapy, pricing..." autocomplete="off"><div id="search-results" role="list"></div>`;
+function seoMeta(p, origin = location.origin) {
+  const route = ROUTES[p];
+  const url = new URL(route.path, origin).href;
+  const clinicId = new URL("/#clinic", origin).href;
+  const graph = [
+    { "@type":"MedicalClinic", "@id":clinicId, name:"Serenité Wellness Medicine", url:new URL("/",origin).href,
+      logo:new URL("/img/logo.svg",origin).href, telephone:"+1-909-947-1216",
+      address:{ "@type":"PostalAddress", streetAddress:SITE.addr1, addressLocality:"Ontario", addressRegion:"CA", postalCode:"91761", addressCountry:"US" } },
+    { "@type":"WebPage", "@id":url+"#webpage", url, name:route.title, description:route.description, inLanguage:"en", about:{"@id":clinicId} }
+  ];
+  if (p !== "home") graph.push({ "@type":"BreadcrumbList", "@id":url+"#breadcrumb", itemListElement:breadcrumbItems(p,origin).map((item,i)=>({"@type":"ListItem",position:i+1,name:item.name,item:item.url})) });
+  return { title:route.title, description:route.description, url, image:new URL("/img/social-preview.jpg",origin).href, schema:{"@context":"https://schema.org","@graph":graph} };
 }
-function runSearch(q) {
-  const box = document.getElementById("search-results");
-  if (!box) return;
-  q = q.trim().toLowerCase();
-  const all = Object.keys(TITLES).map(k => [k, TITLES[k]]);
-  const hits = q ? all.filter(([k, t]) => t.toLowerCase().includes(q) || k.includes(q)) : all.filter(([k]) => CURATED[k] || GROUP[k]).slice(0, 8);
-  box.innerHTML = hits.length ? hits.slice(0, 12).map(([k, t]) => `<a role="listitem" href="#${state.v}-${k}" data-go="${k}">${esc(t)}</a>`).join("") : `<p class="fly-empty">No pages match "${esc(q)}". Try a treatment name.</p>`;
+function updateMetadata() {
+  const meta = seoMeta(state.p);
+  document.title = meta.title;
+  const setMeta = (selector,value) => { const node=document.querySelector(selector); if(node) node.setAttribute("content",value); };
+  setMeta('meta[name="description"]',meta.description);
+  setMeta('meta[property="og:title"]',meta.title);
+  setMeta('meta[property="og:description"]',meta.description);
+  setMeta('meta[property="og:url"]',meta.url);
+  setMeta('meta[property="og:image"]',meta.image);
+  setMeta('meta[name="twitter:title"]',meta.title);
+  setMeta('meta[name="twitter:description"]',meta.description);
+  setMeta('meta[name="twitter:image"]',meta.image);
+  document.querySelector('link[rel="canonical"]').href=meta.url;
+  document.getElementById("page-schema").textContent=JSON.stringify(meta.schema);
+}
+function teamOverview() {
+  return pageHead("Our team","People at Serenité","Meet the clinic’s existing clinicians and staff, then read their individual profiles.") +
+    `<section class="sec"><div class="wrap">${teamGrid(TEAM)}</div></section>` + cta() + visit();
+}
+function relatedPages() {
+  const keys = ROUTES[state.p]?.related || [];
+  if (!keys.length) return "";
+  return `<section class="sec sec-alt related-pages"><div class="wrap">${secHd("More to explore","Keep useful information close.","Compare the listed services, check costs or meet the team before your consultation.")}<ul class="related-list">${keys.map(key=>`<li>${go(key,esc(ROUTES[key].label)+" "+ICON.arrow)}</li>`).join("")}</ul></div></section>`;
+}
+function siteMarkup() {
+  return rootAssets(header() + `<main id="main-content" tabindex="-1">${breadcrumbs()}${page()}${relatedPages()}</main>` + footer());
 }
 
+
+/* ---------- flyouts: open beside the control, right if room, else left ---------- */
+
+let fly=null,flyAnchor=null,flyReturnFocus=null;
+function closeFly(restoreFocus=false){
+ const back=flyReturnFocus;fly?.remove();fly=null;
+ document.querySelectorAll("[data-search]").forEach(el=>el.setAttribute("aria-expanded","false"));
+ flyAnchor=null;flyReturnFocus=null;if(restoreFocus&&back?.isConnected)back.focus();
+}
+function placeBeside(el){
+ const hd=document.querySelector(".hd").getBoundingClientRect();
+ el.style.top=(hd.bottom+8)+"px";el.style.right="16px";
+ el.style.maxHeight=Math.max(120,innerHeight-hd.bottom-24)+"px";
+}
+function openFly(anchor,html){
+ closeFly();flyReturnFocus=anchor.closest(".mobile-nav")?document.querySelector("[data-mobile-toggle]"):anchor;
+ closeMobileMenu();document.querySelectorAll(".nav-group[open]").forEach(d=>d.open=false);
+ fly=document.createElement("section");fly.className="flyout search-panel";fly.setAttribute("aria-label","Site search");fly.innerHTML=html;
+ document.querySelector(".hd").appendChild(fly);flyAnchor=anchor;
+ document.querySelectorAll("[data-search]").forEach(el=>el.setAttribute("aria-expanded","true"));
+ placeBeside(fly);return fly;
+}
+function menuHtml(i){
+ const n=NAV[i],cards=Object.fromEntries([...CARDS.beauty,...CARDS.longevity].map(c=>[c[0],c])),team=Object.fromEntries(TEAM.map(t=>[t[0],t]));
+ return `<ul class="nav-rich">${n.menu.map(([p,l])=>{
+ const c=cards[p],t=team[p],thumb=c?img(H.cardImgs[c[3]],""):t?avatar(p,t[1]):"",meta=c?c[2]:t?t[2]:"";
+ return `<li><a href="${esc(routeUrl(state.v,p))}" data-go="${p}"${p===state.p?' aria-current="page"':""}><span class="fly-thumb">${thumb}</span><span class="fly-text"><strong>${esc(l)}</strong>${meta?`<small>${esc(meta)}</small>`:""}</span></a></li>`;
+ }).join("")}</ul>`;
+}
+function searchHtml(){
+ return `<label class="fly-label" for="site-search">Search the site</label><div class="search-field">${ICON.search}<input id="site-search" type="search" placeholder="Treatment, pricing or location" autocomplete="off"><button type="button" data-clear-search>Clear</button></div><p id="search-status" role="status" aria-live="polite"></p><div id="search-results"></div>`;
+}
+function runSearch(q){
+ const box=document.getElementById("search-results");if(!box)return;
+ q=q.trim().toLowerCase();const all=Object.keys(TITLES).map(k=>[k,TITLES[k]]);
+ const hits=q?all.filter(([k,t])=>t.toLowerCase().includes(q)||k.includes(q)):all.filter(([k])=>CURATED[k]||GROUP[k]).slice(0,8);
+ document.getElementById("search-status").textContent=hits.length?`${hits.length} ${hits.length===1?"page":"pages"} found.${hits.length>12?" Showing the first 12.":""}`:"No pages found. Try one of these starting points.";
+ box.innerHTML=hits.length?hits.slice(0,12).map(([k,t])=>`<a href="${esc(routeUrl(state.v,k))}" data-go="${k}" data-search-hit>${esc(t)}</a>`).join(""):`<p class="fly-empty">Try a treatment name, or browse pricing and location details.</p>${go("pricing","Pricing")}${go("location","Location and hours")}`;
+}
 
 /* Client approved the supplied prices, credentials, designations, ratings and media
    on October 26, 2026. This does not establish scientific substantiation. */
@@ -438,41 +497,34 @@ Object.assign(LP.hair, {
   faq: [["Where should I start?", "Discuss your concerns and possible contributing factors with a qualified clinician before choosing a treatment."], ["Are exosome products FDA-approved?", "The FDA states that there are no FDA-approved exosome products. Ask about regulatory status, evidence, risks and alternatives."], ["Can hair growth be guaranteed?", "No. Results depend on the cause of thinning and the approach taken. Review realistic expectations before deciding."], ["Is there recovery time?", "Recovery depends on the specific approach. Ask about discomfort, downtime and aftercare rather than assuming there is none."]]
 });
 
+FEATURED.slice(0,3).forEach(item => {
+  item.img=HD_PHOTOS[item.p];
+  item.alt={morpheus8:"Illustrative aesthetic consultation",attiva:"Illustrative skin-care portrait",hair:"Illustrative scalp-care procedure"}[item.p];
+});
+LP.morpheus8.imgs[0]=[HD_PHOTOS.morpheus8,"Illustrative aesthetic consultation"];
+LP.attiva.imgs[0]=[HD_PHOTOS.attiva,"Illustrative skin-care portrait"];
+LP.hair.imgs[0]=[HD_PHOTOS.hair,"Illustrative scalp-care procedure"];
+
 /* ---------- shared blocks ---------- */
 
-function header() {
-  const logo = state.v === "c" ? "logo-light.svg" : "logo.svg";
-  const inMenu = i => NAV[i].menu && NAV[i].menu.some(([p]) => p === state.p);
-  const links = NAV.map((n, i) => {
-    if (n.menu) return `<button type="button" class="nav-dd${inMenu(i) ? " is-cur" : ""}" data-menu="${i}" aria-haspopup="true" aria-expanded="false">${n.label}</button>`;
-    if (n.ext) return ext(n.ext, n.label + ' <span aria-hidden="true">↗</span>');
-    return `<a href="#${state.v}-${n.p}" data-go="${n.p}"${n.p === state.p ? ' aria-current="page"' : ""}>${n.label}</a>`;
-  }).join("");
-  const mobileLinks = NAV.map(n => n.menu
-    ? `<details><summary>${n.label}</summary>${n.menu.map(([slug, label]) => go(slug, esc(label))).join("")}</details>`
-    : n.ext ? ext(n.ext, n.label + ' <span aria-hidden="true">↗</span>') : go(n.p, n.label)).join("");
-  return `<header class="hd"><div class="wrap hd-in">
-    <a class="brand" href="#${state.v}-home" data-go="home"><img src="img/${logo}" alt="Serenite Wellness Medicine" width="114" height="42"></a>
-    <nav class="nav" aria-label="Main">${links}</nav>
-    <div class="hd-cta"><div class="hd-icons">
-      <button type="button" class="icon-btn" data-search aria-label="Search" aria-haspopup="true" aria-expanded="false">${ICON.search}</button>
-      <a class="icon-btn" href="${SITE.account}" target="_blank" rel="noopener" aria-label="My account — opens the clinic website">${ICON.user}</a>
-      <a class="icon-btn" href="${SITE.cart}" target="_blank" rel="noopener" aria-label="Cart — opens the clinic website">${ICON.cart}</a>
-    </div>${bookBtn("Book now")}
-    <button type="button" class="mobile-toggle" data-mobile-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
-  </div><nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>
-    ${go("home", "Home")}${mobileLinks}
-    <button type="button" data-search aria-haspopup="true" aria-expanded="false">Search the site</button>
-    <div class="mobile-utilities">${ext(SITE.account, "Clinic account ↗")}${ext(SITE.cart, "Clinic cart ↗")}</div>
-  </nav></header>`;
+
+function header(){
+ const logo=state.v==="c"?"logo-light.svg":"logo.svg";
+ const links=NAV.map((n,i)=>n.menu?`<details class="nav-group"><summary class="nav-dd">${n.label}${ICON.chevron}</summary>${menuHtml(i)}</details>`:go(n.p,n.label)).join("");
+ const mobileLinks=NAV.map(n=>n.menu?`<details><summary>${n.label}${ICON.chevron}</summary>${n.menu.map(([p,l])=>go(p,esc(l))).join("")}</details>`:go(n.p,n.label)).join("");
+ return `<header class="hd"><div class="wrap hd-in"><a class="brand" href="${esc(routeUrl(state.v,"home"))}" data-go="home"><img src="img/${logo}" alt="Serenite Wellness Medicine" width="114" height="42"></a>
+ <nav class="nav" aria-label="Main">${links}</nav><div class="hd-cta"><div class="hd-icons"><button type="button" class="icon-btn" data-search aria-label="Search" aria-expanded="false">${ICON.search}</button></div>${bookBtn()}
+ <button type="button" class="mobile-toggle" data-mobile-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">${ICON.menu}</button></div></div>
+ <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" hidden>${go("home","Home")}${mobileLinks}<button type="button" data-search aria-expanded="false">Search the site${ICON.search}</button>
+ ${go("membership","Membership")}${go("mobile","Mobile Clinic")}${go("news","News")}<div class="mobile-utilities">${ext(SITE.store,"Store "+ICON.external)}${ext(SITE.account,"Clinic account "+ICON.external)}${ext(SITE.cart,"Clinic cart "+ICON.external)}</div></nav></header>`;
 }
-function closeMobileMenu(restoreFocus = false) {
-  const menu = document.getElementById("mobile-menu"), button = document.querySelector("[data-mobile-toggle]");
-  if (!menu || !button) return;
-  menu.hidden = true;
-  button.setAttribute("aria-expanded", "false");
-  button.setAttribute("aria-label", "Open menu");
-  if (restoreFocus) button.focus();
+function closeMobileMenu(restoreFocus=false){
+ const menu=document.getElementById("mobile-menu"),button=document.querySelector("[data-mobile-toggle]");
+ if(!menu||!button)return;menu.hidden=true;button.setAttribute("aria-expanded","false");button.setAttribute("aria-label","Open menu");button.innerHTML=ICON.menu;if(restoreFocus)button.focus();
+}
+function reviewUrl(){
+ const url=new URL(location.href);if(url.searchParams.has("review"))url.searchParams.delete("review");else url.searchParams.set("review","1");
+ return url.pathname+url.search+url.hash;
 }
 
 function facts(list) {
@@ -560,7 +612,7 @@ function standards(d) {
 function pair(d) {
   if (!d.pair) return "";
   return `<section class="sec"><div class="wrap">${secHd("Better together", "Pairs with your treatments")}
-    <div class="pair">${d.pair.map(([p, t, s]) => `<a href="#${state.v}-${p}" data-go="${p}"><strong>${t}</strong><span>${s}</span></a>`).join("")}</div></div></section>`;
+    <div class="pair">${d.pair.map(([p, t, s]) => `<a href="${esc(routeUrl(state.v,p))}" data-go="${p}"><strong>${t}</strong><span>${s}</span></a>`).join("")}</div></div></section>`;
 }
 
 function reel(items, wide = false) {
@@ -585,7 +637,7 @@ function visit() {
     <div class="visit">
       <div><h3><span class="ico">${ICON.pin}</span>Address</h3><p>${SITE.addr1}<br>${SITE.addr2}</p><p class="gap-top">${go("location", "Map and directions")}</p></div>
       <div><h3><span class="ico">${ICON.clock}</span>Hours</h3><p>${SITE.hours}</p><p class="gap-top">Mobile clinic visits to your home or office are available. ${go("mobile", "Learn more")}</p></div>
-      <div><h3><span class="ico">${ICON.phone}</span>Contact</h3><p class="tnum">${SITE.phone}</p><p class="wrap-any">${SITE.email}</p></div>
+      <div><h3><span class="ico">${ICON.phone}</span>Contact</h3><p class="tnum"><a href="tel:+19099471216">${SITE.phone}</a></p><p class="wrap-any"><a href="mailto:${SITE.email}">${SITE.email}</a></p></div>
     </div></div></section>`;
 }
 
@@ -594,46 +646,46 @@ function footer() {
   const m = H.misc;
   return `<footer class="ft"><div class="wrap">
     <div class="ft-in">
-      <div><img src="img/logo-light.svg" alt="Serenite Wellness Medicine" width="125" height="46"><p>${SITE.addr1}<br>${SITE.addr2}</p><p class="gap-top tnum">${SITE.phone}</p><p class="wrap-any">${SITE.email}</p><p class="gap-top">${go("location", "View map and directions")}</p></div>
-      ${col("Explore", [go("home", "Home"), go("home", "Beauty", "", "beauty"), go("mobile", "Mobile Clinic"), go("home", "Longevity", "", "longevity"), go("home", "Team", "", "team"), go("pricing", "Pricing"), go("membership", "Membership"), ext(SITE.store, "Store"), go("news", "News")])}
-      ${col("Featured", [go("morpheus8", "Morpheus8"), go("attiva", "Attiva"), go("hair", "New hair growth"), go("skin", "Skin care products"), go("haircare", "Hair care products"), go("concepts", "Key concepts"), go("book", "Book an appointment")])}
-      ${col("Follow", [ext(SITE.ig, "Instagram"), ext(SITE.fb, "Facebook"), ext(SITE.yt, "YouTube")])}
+      <div><img src="img/logo-light.svg" alt="Serenite Wellness Medicine" width="125" height="46"><p>${SITE.addr1}<br>${SITE.addr2}</p><p class="gap-top tnum"><a href="tel:+19099471216">${SITE.phone}</a></p><p class="wrap-any"><a href="mailto:${SITE.email}">${SITE.email}</a></p><p class="gap-top">${go("location", "View map and directions")}</p></div>
+      ${col("Explore", [go("home", "Home"), go("home", "Beauty", "", "beauty"), go("mobile", "Mobile Clinic"), go("home", "Longevity", "", "longevity"), go("team", "Team"), go("pricing", "Pricing"), go("membership", "Membership"), ext(SITE.store, "Store"), go("news", "News")])}
+      ${col("Featured", [go("morpheus8", "Morpheus8"), go("attiva", "Attiva"), go("hair", "New hair growth"), go("skin", "Skin care products"), go("haircare", "Hair care products"), go("concepts", "Key concepts"), go("book", "Book a consultation")])}
+      ${col("Follow", [ext(SITE.ig, "Instagram"), ext(SITE.fb, "Facebook"), ext(SITE.yt, "YouTube"), ext(SITE.account, "Clinic account"), ext(SITE.cart, "Clinic cart")])}
     </div>
-    <div class="ft-base"><span>&copy; 2026 Serenite Wellness Medicine. Individual results vary.</span>${go("privacy", "Privacy Policy")}<span class="demo-footnote">Design preview. Demo forms do not send or store information.</span></div>
+    <div class="ft-base"><span>&copy; 2026 Serenite Wellness Medicine. Individual results vary.</span>${go("privacy", "Privacy Policy")}<a href="${esc(reviewUrl())}">${document.getElementById("review-tools").hidden?"Design review":"Hide review tools"}</a><span class="demo-footnote">Design preview. Demo forms do not send or store information.</span></div>
   </div></footer>`;
 }
 
 /* ---------- home ---------- */
 
 function homeHero() {
-  const portrait = `<div class="lh-media"><img src="${VID.hero.poster}" alt="Serenité aesthetics and wellness" width="480" height="600" loading="eager">${img("skin-dropper", "Serenite facial serum", 'loading="eager"')}</div>`;
-  const copy = `<div class="lh-copy"><p class="eyebrow">Aesthetics and longevity · Ontario, California</p>
+  const portrait = `<div class="lh-media">${img(HD_PHOTOS.hero,"Illustrative skin-care portrait",'class="hero-portrait" loading="eager" fetchpriority="high"')}${img("skin-dropper", "Serenite facial serum", 'class="hero-product" loading="lazy"')}</div>`;
+  const copy = `<div class="lh-copy"><p class="eyebrow hero-eyebrow"><span>Aesthetics and longevity</span><span>Ontario, California</span></p>
     <h1>Look younger.<br><em>Live younger, longer.</em></h1>
     <p class="lead">Serenite brings physician-led aesthetic treatments and wellness care together in one calm, personal clinic.</p>
-    <div class="actions">${bookBtn()}${go("home", "Explore treatments", "btn btn-ghost", "treatments")}</div>
-    <button type="button" class="watch-intro" data-watch-intro>${ICON.play}<span>Watch our introduction <small>· 30 sec</small></span></button>
+    <div class="actions">${bookBtn()}${go("home", "Explore treatments "+ICON.arrow, "text-action", "treatments")}</div>
+    <button type="button" class="watch-intro" data-watch-intro>${ICON.play}<span>Watch our introduction <small>30 seconds · play when you’re ready</small></span></button>
     <div class="marks"><span>Morpheus8 Center of Excellence</span><span>Attiva Center of Excellence</span></div></div>`;
   return `<section class="lh home-hero"><div class="wrap"><div class="lh-in">${copy}${portrait}</div></div></section>`;
 }
 
 function trustBar() {
   return `<div class="trust"><div class="wrap trust-in">
-    <img src="${H.misc.seenon}" alt="As seen on Fox News, CBS, NBC and ABC" loading="lazy">
-    <img class="rating" src="${H.misc.rating}" alt="Rated 5.0 from 500+ reviews" loading="lazy">
+    <img src="${H.misc.seenon}" alt="As seen on Fox News, CBS, NBC and ABC" width="800" height="129" loading="lazy">
+    <div class="rating-summary" role="img" aria-label="Rated 5.0 out of 5, from more than 500 reviews"><span class="rating-score" aria-hidden="true">5.0</span><span class="rating-detail" aria-hidden="true"><span class="rating-stars">${ICON.star.repeat(5)}</span><span>500+ reviews</span></span></div>
   </div></div>`;
 }
 
 
 function featured() {
   return `<section class="sec" id="treatments"><div class="wrap">${secHd("Signature treatments", "Find your starting point", "Explore a few of our most-requested services, then talk through your goals with the team.")}
-    <div class="tiles signature-tiles">${FEATURED.slice(0, 3).map(f => `<a class="tile" href="#${state.v}-${f.p}" data-go="${f.p}"><span class="ph">${img(f.img, f.alt)}</span><div class="tile-body"><h3>${f.name}</h3><p>${f.blurb}</p><span class="more">Explore ${f.name.toLowerCase()} →</span></div></a>`).join("")}</div>
+    <div class="tiles signature-tiles">${FEATURED.slice(0, 3).map(f => `<a class="tile" href="${esc(routeUrl(state.v,f.p))}" data-go="${f.p}"><span class="ph">${img(f.img, f.alt)}</span><div class="tile-body"><h3>${f.name}</h3><p>${f.blurb}</p><span class="more">Explore ${esc(f.name)} ${ICON.arrow}</span></div></a>`).join("")}</div>
     <div class="service-index"><details id="beauty"><summary>More aesthetic treatments</summary><ul>${CARDS.beauty.filter(c => !FEATURED.slice(0, 3).some(f => f.p === c[0])).map(c => `<li>${go(c[0], esc(c[1]))}</li>`).join("")}</ul></details>
     <details id="longevity"><summary>Wellness and longevity programs</summary><ul>${CARDS.longevity.map(c => `<li>${go(c[0], esc(c[1]))}</li>`).join("")}</ul></details></div>
   </div></section>`;
 }
 
 function serviceCards() {
-  const card = ([p, t, from, i, blurb]) => `<a class="card" href="#${state.v}-${p}" data-go="${p}"><span class="ph">${img(H.cardImgs[i], t)}</span>
+  const card = ([p, t, from, i, blurb]) => `<a class="card" href="${esc(routeUrl(state.v,p))}" data-go="${p}"><span class="ph">${img(H.cardImgs[i], t)}</span>
     <span class="card-body"><h3>${t}</h3><span class="from">${from}</span><p>${blurb}</p></span></a>`;
   return `<section class="sec sec-alt" id="treatments"><div class="wrap">
     <div class="cards-group" id="beauty">${secHd("Beauty services", "Beauty Services", "Explore our range of services designed to enhance your well-being. Here, we offer comprehensive solutions tailored to your unique health and wellness needs.")}
@@ -703,7 +755,7 @@ function team() {
 }
 
 function teamGrid(list) {
-  return `<div class="team-grid">${list.map(([s, n, r]) => `<a class="member" href="#${state.v}-${s}" data-go="${s}"><span class="member-ph">${avatar(s, n)}</span><strong>${n}</strong><small>${r}</small></a>`).join("")}</div>`;
+  return `<div class="team-grid">${list.map(([s, n, r]) => `<a class="member" href="${esc(routeUrl(state.v,s))}" data-go="${s}"><span class="member-ph">${avatar(s, n)}</span><strong>${n}</strong><small>${r}</small></a>`).join("")}</div>`;
 }
 
 function statsStrip() {
@@ -751,8 +803,8 @@ function contactSection() {
     <div class="contact-side">
       <h2 class="side-title">Get in touch</h2>
       <p class="muted">Reach out to us through our contact details. We're here to guide you toward wellness.</p>
-      <div class="cs-row"><span class="ico">${ICON.phone}</span><div><h3>Phone number</h3><p class="tnum">${SITE.phone}</p></div></div>
-      <div class="cs-row"><span class="ico">${ICON.mail}</span><div><h3>Email address</h3><p class="wrap-any">${SITE.email}</p></div></div>
+      <div class="cs-row"><span class="ico">${ICON.phone}</span><div><h3>Phone number</h3><p class="tnum"><a href="tel:+19099471216">${SITE.phone}</a></p></div></div>
+      <div class="cs-row"><span class="ico">${ICON.mail}</span><div><h3>Email address</h3><p class="wrap-any"><a href="mailto:${SITE.email}">${SITE.email}</a></p></div></div>
       <div class="cs-row"><span class="ico">${ICON.pin}</span><div><h3>Location</h3><p>${SITE.addr1}<br>${SITE.addr2}</p><p class="gap-top">${go("location", "View map and directions")}</p></div></div>
       <div class="cs-row"><span class="ico">${ICON.clock}</span><div><h3>Hours</h3><p>${SITE.hours}</p></div></div>
     </div>
@@ -869,7 +921,7 @@ function sectionEyebrow(h, fallback) {
 
 function pageHead(title, eyebrow, lead = "", photo = "") {
   return `<section class="ph-hd"><div class="wrap ph-hd-in">
-    <div class="ph-copy"><p class="crumbs">${go("home", "Home")} <span aria-hidden="true">/</span> ${eyebrow}</p><h1>${esc(title)}</h1>${lead ? `<p class="lead">${esc(lead)}</p>` : ""}</div>
+    <div class="ph-copy"><p class="crumbs">${eyebrow}</p><h1>${esc(title)}</h1>${lead ? `<p class="lead">${esc(lead)}</p>` : ""}</div>
     ${photo ? `<div class="ph-photo">${img(photo, title, 'loading="eager"')}</div>` : ""}
   </div></section>`;
 }
@@ -911,7 +963,7 @@ function genericPage(slug) {
   if (pg.group === "team") {
     const t = TEAM.find(x => x[0] === slug);
     const photo = introImgs[0] ? introImgs[0].src : "";
-    return pageHead(pg.title, go("home", "Team", "", "team"), t ? t[2] : "", photo) + renderSections(secs, { group: "About" }) +
+    return pageHead(pg.title, go("team", "Team"), t ? t[2] : "", photo) + renderSections(secs, { group: "About" }) +
       `<section class="sec sec-alt"><div class="wrap">${secHd("Our team", "Meet the rest of the team")}${teamGrid(TEAM.filter(x => x[0] !== slug))}</div></section>` + cta();
   }
 
@@ -927,29 +979,26 @@ function genericPage(slug) {
 }
 
 
-function bookingForm() {
-  const today = new Date();
-  const minDate = [today.getFullYear(), String(today.getMonth() + 1).padStart(2, "0"), String(today.getDate()).padStart(2, "0")].join("-");
-  return `<section class="sec" id="appointment"><div class="wrap booking">${secHd("A simple first step", "Plan your consultation", "Tell the team what you would like to discuss and when you are available.")}
-    <p class="demo-note" id="booking-preview"><strong>Preview only — no appointment will be booked.</strong>Use sample details to try this form. Nothing is sent or saved. Please do not enter personal or medical information.</p>
-    <form class="form booking" data-form="booking" novalidate autocomplete="off" aria-describedby="booking-preview">
-      <div class="row2"><div class="field"><label for="bk-name">Name (required)</label><input id="bk-name" name="name" type="text" autocomplete="off" placeholder="Sample name" required aria-describedby="form-feedback"></div>
-      <div class="field"><label for="bk-email">Email (required)</label><input id="bk-email" name="email" type="email" autocomplete="off" placeholder="sample@example.com" required aria-describedby="form-feedback"></div></div>
-      <div class="field"><label for="bk-service">What would you like to discuss?</label><select id="bk-service" name="service"><option value="">Help me choose</option>${FEATURED.slice(0, 3).map(f => `<option>${esc(f.name)}</option>`).join("")}<option>Wellness and longevity</option><option>Another service</option></select></div>
-      <div class="row2"><div class="field"><label for="bk-date">Preferred date (optional)</label><input id="bk-date" name="date" type="date" min="${minDate}"></div>
-      <div class="field"><label for="bk-time">Preferred time (optional)</label><select id="bk-time" name="time"><option value="">Any time</option><option>Morning</option><option>Afternoon</option></select></div></div>
-      <label class="check" for="bk-preview"><input id="bk-preview" type="checkbox" required aria-describedby="form-feedback"><span>I’m using sample details for this preview.</span></label>
-      <div class="actions"><button type="submit" class="btn btn-primary">Try the request preview</button></div>
-      <p class="form-msg" id="form-feedback" role="status" aria-live="polite"></p>
-    </form>
-  </div></section>`;
+
+function bookingForm(){
+ const today=new Date(),minDate=[today.getFullYear(),String(today.getMonth()+1).padStart(2,"0"),String(today.getDate()).padStart(2,"0")].join("-");
+ return `<section class="sec" id="appointment"><div class="wrap booking">${secHd("A simple first step","Plan your consultation","Tell the team what you would like to discuss and when you are available.")}
+ <p class="demo-note" id="booking-preview"><strong>Preview only — no appointment will be booked.</strong>Use sample details to try this form. Nothing is sent or saved. Please do not enter personal or medical information.</p>
+ <form class="form booking" data-form="booking" novalidate autocomplete="off" aria-describedby="booking-preview"><div class="error-summary" id="form-errors" role="alert" tabindex="-1" hidden></div>
+ <div class="row2"><div class="field"><label for="bk-name">Name (required)</label><input id="bk-name" name="name" type="text" placeholder="Sample name" required aria-describedby="bk-name-error"><p class="field-error" id="bk-name-error"></p></div>
+ <div class="field"><label for="bk-email">Email (required)</label><input id="bk-email" name="email" type="email" placeholder="sample@example.com" required aria-describedby="bk-email-error"><p class="field-error" id="bk-email-error"></p></div></div>
+ <div class="field"><label for="bk-service">What would you like to discuss?</label><select id="bk-service" name="service"><option value="">Help me choose</option>${FEATURED.slice(0,3).map(f=>`<option>${esc(f.name)}</option>`).join("")}<option>Wellness and longevity</option><option>Another service</option></select></div>
+ <div class="row2"><div class="field"><label for="bk-date">Preferred date (optional)</label><input id="bk-date" name="date" type="date" min="${minDate}" aria-describedby="bk-date-error"><p class="field-error" id="bk-date-error"></p></div>
+ <div class="field"><label for="bk-time">Preferred time (optional)</label><select id="bk-time" name="time"><option value="">Any time</option><option>Morning</option><option>Afternoon</option></select></div></div>
+ <label class="check" for="bk-preview"><input id="bk-preview" type="checkbox" required aria-describedby="bk-preview-error"><span>I’m using sample details for this preview.</span></label><p class="field-error" id="bk-preview-error"></p>
+ <div class="actions"><button type="submit" class="btn btn-primary">Try the request preview ${ICON.arrow}</button></div><p class="form-msg" id="form-feedback" role="status" aria-live="polite"></p></form></div></section>`;
 }
 
 function locationBlock() {
   return `<section class="sec"><div class="wrap visit">
     <div><h3><span class="ico">${ICON.pin}</span>Address</h3><p>${SITE.addr1}<br>${SITE.addr2}</p><p class="gap-top">${ext(SITE.map, "Open in Google Maps", "btn btn-ghost")}</p></div>
     <div><h3><span class="ico">${ICON.clock}</span>Hours</h3><p><strong>Strictly by appointment only.</strong><br>No weekends, no holidays.</p></div>
-    <div><h3><span class="ico">${ICON.phone}</span>Contact</h3><p class="tnum">${SITE.phone}</p><p class="wrap-any">${SITE.email}</p><p class="gap-top">${go("book", "Book an appointment", "btn btn-primary")}</p></div>
+    <div><h3><span class="ico">${ICON.phone}</span>Contact</h3><p class="tnum"><a href="tel:+19099471216">${SITE.phone}</a></p><p class="wrap-any"><a href="mailto:${SITE.email}">${SITE.email}</a></p><p class="gap-top">${go("book", "Book an appointment", "btn btn-primary")}</p></div>
   </div></section>`;
 }
 
@@ -1139,8 +1188,8 @@ function landingPage(p) {
 
 function teamIntro() {
   return `<section class="sec sec-alt team-intro" id="team"><div class="wrap">${secHd("Meet the team", "Care starts with a conversation.", "Get to know the people behind your care before your first visit.")}
-    <div class="team">${PEOPLE.map(p => `<article class="person">${img(p.img, p.name)}<div><h3>${p.name}</h3><p class="role">${p.role}</p><p>${go(p.slug, "Meet " + (p.slug === "t-heidi" ? "Dr. Heidi" : "Ador") + " →")}</p></div></article>`).join("")}</div>
-    <p class="gap-top">${go("t-arnold", "Explore the rest of the team →")}</p>
+    <div class="team">${PEOPLE.map(p => `<article class="person">${img(p.img, p.name)}<div><h3>${p.name}</h3><p class="role">${p.role}</p><p>${go(p.slug, "Meet " + (p.slug === "t-heidi" ? "Dr. Heidi" : "Ador") + " " + ICON.arrow)}</p></div></article>`).join("")}</div>
+    <p class="gap-top">${go("team", "Explore the rest of the team "+ICON.arrow)}</p>
   </div></section>`;
 }
 function consultationSteps() {
@@ -1150,6 +1199,7 @@ function consultationSteps() {
 }
 function page() {
   const p = state.p;
+  if (p === "team") return teamOverview();
   if (p === "home") return homeHero() + trustBar() + featured() + teamIntro() + consultationSteps() + cta();
   if (p === "book") return pageHead("Book a consultation", "Let’s talk", "A short request preview, with no commitment to treatment.") + bookingForm() + visit();
   if (LP[p]) return landingPage(p);
@@ -1181,19 +1231,25 @@ function dismissDialog(selector) {
   if (dialogReturnFocus?.isConnected) dialogReturnFocus.focus();
   dialogReturnFocus = null;
 }
-function showPopup(trigger) {
-  if (document.querySelector('[role="dialog"]')) return;
-  const m = document.createElement("div");
-  m.className = "modal";
-  m.setAttribute("role", "dialog");
-  m.setAttribute("aria-modal", "true");
-  m.setAttribute("aria-labelledby", "intro-title");
-  m.innerHTML = `<div class="modal-box"><button type="button" class="modal-x" data-close aria-label="Close introduction">&times;</button>
-    <video controls playsinline preload="metadata" poster="${VID.popup.poster}" src="${VID.popup.src}" tabindex="0" aria-label="Serenité introduction video"></video>
-    <div class="modal-bar"><h2 id="intro-title">A short introduction to Serenité</h2><p>Third-party appearances in this film do not imply endorsement of Serenité.</p><button type="button" class="btn btn-gold" data-close data-book>Explore a consultation</button></div></div>`;
-  mountDialog(m, trigger);
+
+function introState(modal,state){
+ const failed=state==="error";modal.querySelector("video").hidden=failed;modal.querySelector(".intro-fallback").hidden=!failed;modal.querySelector("[data-retry-video]").hidden=!failed;
+ modal.querySelector(".intro-status").textContent=failed?"Video unavailable. You can try again or continue exploring.":state==="ready"?"Ready to play. Select Play to watch the introduction.":"Loading the introduction. You can continue exploring while it loads.";
 }
-function closePopup() { dismissDialog(".modal"); }
+function loadIntro(modal){
+ introState(modal,"loading");const v=modal.querySelector("video");v.src=VID.popup.src;v.load();
+}
+function showPopup(trigger){
+ if(document.querySelector('[role="dialog"]'))return;
+ const m=document.createElement("div");m.className="modal";m.setAttribute("role","dialog");m.setAttribute("aria-modal","true");m.setAttribute("aria-labelledby","intro-title");
+ m.innerHTML=`<div class="modal-box"><div class="intro-head"><h2 id="intro-title">A short introduction to Serenité</h2><button type="button" class="modal-x" data-close aria-label="Close introduction">${ICON.close}</button></div>
+ <div class="intro-media"><video controls playsinline preload="metadata" poster="${VID.popup.poster}" tabindex="0" aria-label="Serenité introduction video"></video><div class="intro-fallback" hidden>${ICON.play}<h3>The introduction couldn’t load.</h3><p>You can retry, or explore our treatments and team.</p></div></div>
+ <div class="modal-bar"><p class="intro-status" role="status" aria-live="polite"></p><div class="actions"><button type="button" class="btn btn-primary" data-retry-video hidden>Try again</button><button type="button" class="btn btn-primary" data-close data-book>Book a consultation</button><button type="button" class="btn btn-ghost" data-close>Continue exploring</button></div><p class="intro-disclosure">Third-party appearances in this film do not imply endorsement of Serenité.</p></div></div>`;
+ m.querySelector("video").addEventListener("loadedmetadata",()=>introState(m,"ready"));m.querySelector("video").addEventListener("error",()=>introState(m,"error"));
+ m.querySelector("video").addEventListener("waiting",()=>introState(m,"loading"));m.querySelector("video").addEventListener("playing",()=>{m.querySelector(".intro-status").textContent="Playing the introduction.";});
+ mountDialog(m,trigger);loadIntro(m);
+}
+function closePopup(){dismissDialog(".modal");}
 
 function toggleMusic(btn) {
   if (!music) { music = new Audio(VID.music); music.loop = true; }
@@ -1243,9 +1299,10 @@ function render(anchor, options = {}) {
   closePopup();
   closeLB();
   const site = document.getElementById("site");
+  document.getElementById("review-tools").hidden = new URLSearchParams(location.search).get("review") !== "1";
   site.className = "v-" + state.v;
-  site.innerHTML = header() + `<main id="main-content" tabindex="-1">${page()}</main>` + footer();
-  document.title = TITLES[state.p] + " — Serenité Wellness Medicine";
+  site.innerHTML = siteMarkup();
+  updateMetadata();
   chrome();
   const target = anchor && document.getElementById(anchor);
   if (target) {
@@ -1259,64 +1316,44 @@ function render(anchor, options = {}) {
   countUp();
   syncHeader();
 }
-function routeFromHash() {
-  const m = /^#([abc])-([a-z0-9-]+)(?:\/([a-z0-9-]+))?$/.exec(location.hash || "");
-  return m && TITLES[m[2]] ? { v: m[1], p: m[2], anchor: m[3] || "" } : { v: "a", p: "home", anchor: "" };
+function routeFromLocation() {
+  const legacy = /^#([abc])-([a-z0-9-]+)(?:\/([a-z0-9-]+))?$/.exec(location.hash || "");
+  if (legacy && ROUTES[legacy[2]]) return {v:legacy[1],p:legacy[2],anchor:legacy[3] || ""};
+  const path = location.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
+  const p = Object.keys(ROUTES).find(key=>ROUTES[key].path === path) || "home";
+  const design = new URLSearchParams(location.search).get("design");
+  return {v:VERSIONS[design] ? design : "a",p,anchor:location.hash.slice(1)};
 }
-function routeHash(v, p, anchor = "") { return "#" + v + "-" + p + (anchor ? "/" + anchor : ""); }
-let renderedHash = "";
+let renderedUrl = "";
 function setView(v, p, anchor = "") {
   if (!VERSIONS[v]) v = "a";
-  if (!TITLES[p]) p = "home";
-  const next = routeHash(v, p, anchor);
+  if (!ROUTES[p]) p = "home";
+  const next = routeUrl(v,p,anchor);
   try {
-    history.replaceState({ ...(history.state || {}), scrollY: window.scrollY }, "", location.href);
-    if (location.hash !== next) history.pushState({ v, p, anchor, scrollY: 0 }, "", next);
-  } catch (error) { location.hash = next; }
-  state = { v, p };
-  renderedHash = next;
-  render(anchor, { focus: true });
+    history.replaceState({ ...(history.state || {}), scrollY:window.scrollY }, "", location.href);
+    if (location.pathname+location.search+location.hash !== next) history.pushState({v,p,anchor,scrollY:0}, "", next);
+  } catch (error) { location.assign(next); return; }
+  state = {v,p}; renderedUrl = next;
+  render(anchor,{focus:true});
 }
 function restoreRoute() {
-  const route = routeFromHash();
-  const hash = routeHash(route.v, route.p, route.anchor);
-  if (renderedHash === hash) return;
-  state = { v: route.v, p: route.p };
-  renderedHash = hash;
-  render(route.anchor, { scrollY: history.state?.scrollY || 0, focus: true });
+  const route = routeFromLocation();
+  const next = routeUrl(route.v,route.p,route.anchor);
+  if (renderedUrl === next) return;
+  state={v:route.v,p:route.p}; renderedUrl=next;
+  if (/^#[abc]-/.test(location.hash)) history.replaceState({...route,scrollY:0},"",next);
+  render(route.anchor,{scrollY:history.state?.scrollY || 0,focus:true});
 }
-window.addEventListener("popstate", restoreRoute);
-window.addEventListener("hashchange", restoreRoute);
+window.addEventListener("popstate",restoreRoute);
+window.addEventListener("hashchange",restoreRoute);
 
 /* Scroll reveal, like the original site's fade and zoom effects. Only content
    below the first screen waits to animate, so the opening view is always complete. */
 let revealObs;
 function reveal() {
+  // Content stays visible immediately; interaction feedback is handled by CSS.
   if (revealObs) revealObs.disconnect();
-  if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const site = document.getElementById("site");
-  const fold = window.innerHeight;
-  revealObs = new IntersectionObserver(entries => entries.forEach(en => {
-    if (en.isIntersecting) { en.target.classList.remove("rv-pending"); revealObs.unobserve(en.target); }
-  }), { rootMargin: "0px 0px -8% 0px" });
-  const groups = [
-    [".sec-hd, .band-copy, .group-band h2, .gen > h2, .prose", "rv-up", 0],
-    [".benefit, .steps li, .tile, .card, .quote, .tier, .pair a, .visit > div, .faq details, .item, .health > div, .contact-side > div, .spot, .member, .pkg, .plist, .stat, .opt", "rv-up", 90],
-    [".split-copy", "rv-left", 0],
-    [".split-media, .price-wrap, .price-box, .datatable-wrap, .form", "rv-right", 0],
-    [".ba figure, .person, .band-media, .celebs figure, .reel figure", "rv-zoom", 120],
-    [".crew a, .standards span", "rv-up", 40],
-    [".lyl, .cta-in > *", "rv-up", 150]
-  ];
-  groups.forEach(([sel, fx, step]) => site.querySelectorAll(sel).forEach(el => {
-    if (el.classList.contains("rv") || el.getBoundingClientRect().top <= fold) return;
-    const i = Array.prototype.indexOf.call(el.parentElement.children, el);
-    el.style.setProperty("--d", Math.min(i * step, 600) + "ms");
-    el.classList.add("rv", "rv-pending", fx);
-    revealObs.observe(el);
-  }));
 }
-
 
 document.addEventListener("click", e => {
   const t = e.target;
@@ -1324,11 +1361,13 @@ document.addEventListener("click", e => {
   if (t.closest("[data-skip]")) { e.preventDefault(); document.getElementById("main-content").focus(); return; }
   const mobileButton = t.closest("[data-mobile-toggle]");
   if (mobileButton) {
+    closeFly();
     const menu = document.getElementById("mobile-menu");
     menu.hidden = !menu.hidden;
     if (!menu.hidden) menu.style.maxHeight = Math.max(120, innerHeight - document.querySelector(".hd").getBoundingClientRect().bottom - 12) + "px";
     mobileButton.setAttribute("aria-expanded", String(!menu.hidden));
     mobileButton.setAttribute("aria-label", menu.hidden ? "Open menu" : "Close menu");
+    mobileButton.innerHTML = menu.hidden ? ICON.menu : ICON.close;
     return;
   }
   if (!t.closest(".hd")) closeMobileMenu();
@@ -1336,18 +1375,14 @@ document.addEventListener("click", e => {
   if (watch) { showPopup(watch); return; }
   const b = t.closest("button[data-v]");
   if (b) { setView(b.dataset.v, state.p); return; }
-  const menuBtn = t.closest("[data-menu]");
-  if (menuBtn) {
-    if (flyAnchor !== menuBtn) openFly(menuBtn, menuHtml(+menuBtn.dataset.menu));
-    else if (Date.now() - flyOpenedAt > 500) closeFly();
-    return;
-  }
-  const search = t.closest("[data-search]");
-  if (search) {
-    if (flyAnchor === search) { closeFly(); return; }
-    openFly(search, searchHtml()); runSearch("");
-    document.getElementById("site-search").focus(); return;
-  }
+
+  if(!t.closest(".nav-group"))document.querySelectorAll(".nav-group[open]").forEach(d=>d.open=false);
+  const search=t.closest("[data-search]");
+  if(search){if(fly){closeFly(true);return;}openFly(search,searchHtml());runSearch("");document.getElementById("site-search").focus();return;}
+  if(t.closest("[data-clear-search]")){const input=document.getElementById("site-search");input.value="";runSearch("");input.focus();return;}
+  const errorLink=t.closest("[data-error-target]");if(errorLink){e.preventDefault();document.getElementById(errorLink.dataset.errorTarget)?.focus();return;}
+  if(t.closest("[data-retry-video]")){loadIntro(t.closest(".modal"));return;}
+
   if (fly && !t.closest(".flyout")) closeFly();
   if (t.closest("[data-lb-close]") || t.classList.contains("lb")) { closeLB(); return; }
   const step = t.closest("[data-lb-step]");
@@ -1376,17 +1411,13 @@ document.addEventListener("click", e => {
   setView(state.v, a.dataset.go || state.p, a.dataset.anchor || "");
 });
 
-document.addEventListener("pointerover", e => {
-  if (e.pointerType !== "mouse") return;
-  const menuBtn = e.target.closest("[data-menu]");
-  if (menuBtn && flyAnchor !== menuBtn) openFly(menuBtn, menuHtml(+menuBtn.dataset.menu));
-  else if (menuBtn) clearTimeout(flyTimer);
-});
-document.addEventListener("pointerout", e => {
-  if (e.pointerType !== "mouse" || !flyAnchor || !flyAnchor.dataset.menu) return;
-  const from = e.target.closest("[data-menu]");
-  if (from === flyAnchor && !(e.relatedTarget && (e.relatedTarget.closest(".flyout") || e.relatedTarget.closest("[data-menu]") === flyAnchor))) flyTimer = setTimeout(closeFly, 180);
-});
+
+document.addEventListener("toggle",e=>{
+ const d=e.target;if(!(d instanceof Element)||!d.matches(".nav-group[open]"))return;
+ closeFly();document.querySelectorAll(".nav-group[open]").forEach(other=>{if(other!==d)other.open=false;});
+},true);
+document.addEventListener("focusout",e=>{const d=e.target.closest?.(".nav-group");if(d&&!d.contains(e.relatedTarget))d.open=false;});
+
 document.addEventListener("input", e => { if (e.target.id === "site-search") runSearch(e.target.value); });
 document.addEventListener("change", e => { if (e.target.id === "page-select") setView(state.v, e.target.value); });
 
@@ -1406,40 +1437,39 @@ document.addEventListener("keydown", e => {
   }
   if ((e.key === "Enter" || e.key === " ") && e.target.hasAttribute?.("data-lb")) { e.preventDefault(); openLB(e.target); return; }
   if (e.key === "Escape") {
-    if (fly) { const anchor = flyAnchor; closeFly(); anchor?.focus(); return; }
-    closeMobileMenu(true);
+    if(fly){closeFly(true);return;}
+    const group=document.querySelector(".nav-group[open]");if(group){group.open=false;group.querySelector("summary").focus();return;}
+    if(!document.getElementById("mobile-menu").hidden)closeMobileMenu(true);
   }
-  if (e.key === "Enter" && e.target.id === "site-search") document.querySelector("#search-results a")?.click();
+  if (e.key === "Enter" && e.target.id === "site-search") document.querySelector("#search-results [data-search-hit]")?.click();
 });
 
 function syncHeader() { const hd = document.querySelector(".hd"); if (hd) hd.classList.toggle("is-scrolled", window.scrollY > 40); }
-window.addEventListener("scroll", () => { if (fly && flyAnchor && flyAnchor.dataset.menu) closeFly(); syncHeader(); }, { passive: true });
+window.addEventListener("scroll", () => { if(fly)placeBeside(fly);syncHeader(); }, { passive: true });
 window.addEventListener("resize", () => { if (fly && flyAnchor) placeBeside(fly, flyAnchor); });
 
-document.addEventListener("submit", e => {
-  const form = e.target.closest("[data-form]");
-  if (!form) return;
-  e.preventDefault();
-  const message = form.querySelector(".form-msg");
-  form.querySelectorAll('[aria-invalid="true"]').forEach(el => el.removeAttribute("aria-invalid"));
-  const invalid = [...form.elements].find(el => el.willValidate && (!el.validity.valid || (el.required && el.type !== "checkbox" && !el.value.trim())));
-  if (invalid) {
-    const errors = { "bk-name": "Enter a sample name.", "bk-email": "Enter a valid sample email address, such as sample@example.com.", "bk-preview": "Confirm that you are using sample details.", "bk-date": "Choose today or a future date." };
-    message.textContent = errors[invalid.id] || "Check the highlighted field.";
-    message.dataset.error = "true";
-    invalid.setAttribute("aria-invalid", "true");
-    invalid.focus(); return;
-  }
-  message.dataset.error = "false";
-  message.textContent = "Preview complete. Nothing was sent or saved, and no appointment has been booked.";
-  form.reset();
+
+document.addEventListener("submit",e=>{
+ const form=e.target.closest("[data-form]");if(!form)return;e.preventDefault();
+ const message=form.querySelector(".form-msg"),summary=form.querySelector(".error-summary");
+ form.querySelectorAll('[aria-invalid="true"]').forEach(el=>el.removeAttribute("aria-invalid"));form.querySelectorAll(".field-error").forEach(el=>el.textContent="");message.textContent="";
+ const errors={"bk-name":"Enter a sample name.","bk-email":"Enter a valid sample email address, such as sample@example.com.","bk-preview":"Confirm that you are using sample details.","bk-date":"Choose today or a future date."};
+ const invalid=[...form.elements].filter(el=>el.willValidate&&(!el.validity.valid||(el.required&&el.type!=="checkbox"&&!el.value.trim())));
+ if(summary){summary.hidden=!invalid.length;summary.innerHTML="";}
+ if(invalid.length){
+ invalid.forEach(el=>{el.setAttribute("aria-invalid","true");const note=document.getElementById(el.id+"-error");if(note)note.textContent=errors[el.id]||"Check this field.";});
+ if(summary){summary.innerHTML=`<strong>Please check ${invalid.length} ${invalid.length===1?"field":"fields"}.</strong>`+invalid.map(el=>`<a href="#${el.id}" data-error-target="${el.id}">${esc(errors[el.id]||"Check this field.")}</a>`).join("");summary.focus();summary.scrollIntoView({block:"center",behavior:"instant"});}
+ else{message.textContent=errors[invalid[0].id]||"Check the highlighted field.";message.dataset.error="true";invalid[0].focus();}
+ return;
+ }
+ message.dataset.error="false";message.textContent="Preview complete. Nothing was sent or saved, and no appointment has been booked.";form.reset();
 });
 
-
-(function init() {
-  const route = routeFromHash();
-  state = { v: route.v, p: route.p };
-  renderedHash = routeHash(state.v, state.p, route.anchor);
-  try { history.scrollRestoration = "manual"; history.replaceState({ ...route, scrollY: 0 }, "", renderedHash); } catch (error) {}
+function init() {
+  const route = routeFromLocation();
+  state = {v:route.v,p:route.p};
+  renderedUrl = routeUrl(state.v,state.p,route.anchor);
+  try { history.scrollRestoration="manual"; history.replaceState({...route,scrollY:0},"",renderedUrl); } catch (error) {}
   render(route.anchor);
-})();
+}
+if (!window.SERENITE_STATIC_BUILD) init();
