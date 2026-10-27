@@ -1,7 +1,7 @@
 {
   "source_deployment": "8yAXSNHEd7sZ45yeHXWCCHMRXEJS",
-  "revision": "Atelier typography, imagery, navigation and technical SEO",
-  "publication_status": "Source prepared for the user-authorized public design-demo release; deployment receipts are retained outside this checkout.",
+  "revision": "Atelier clinic-focused home and text-only team pages",
+  "publication_status": "Static design-demo source approved for release; building does not publish. Deployment receipts are retained outside this checkout.",
   "files": [
     {
       "path": "img/o/1-7fad0.jpg",
@@ -1203,8 +1203,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 36073,
-      "sha256": "8b96b6264a265912597bb0c8a884a108011d1c11453dcb4cf7a3da99b3127ea4",
+      "bytes": 29314,
+      "sha256": "9229c93e5de2c0f4e3e5339defaa30e6ad2676947be81b3ed0b73c3a79c1009e",
       "recovered_sha256": "6f70d691063cb23d09d1d0c57b5c2a0ec2f3df884296fceb1912f6b01a09c958",
       "previous_sha256": "de9301d63e7cde39d3d65e1ef2721686f00b22213a293512bf9380444c599ce6",
       "generated": true
@@ -1222,14 +1222,14 @@
     },
     {
       "path": "app.js",
-      "bytes": 122168,
-      "sha256": "54e9a49467bd042f79cb64ad5fcf6b46d374b20763ac38e48fbb5980d8b17277",
+      "bytes": 119896,
+      "sha256": "8cc8ec8752575f68fd32e5df94d3f5a37b5f9c0536a170d63d38114484b45fe2",
       "previous_sha256": "72da18a9a84375b0b74fe2d489c0c52f6e9968e5a261f1455ffb5f1bc7cc5c94"
     },
     {
       "path": "styles.css",
-      "bytes": 88397,
-      "sha256": "e2a0177a957772b0d54c10fd8b18be79d4e0c4e5de4e1cc8783ca228e44348f9",
+      "bytes": 89665,
+      "sha256": "dabc3466ec6d58d4d7d29c596ee814b75ee10f7c5aaca755ae9955ab5b2e4f4c",
       "previous_sha256": "adac06b59addf1e2dc74a18a6cdaf94cfba1fc00b2a6460b7082967c5f1a52e0"
     },
     {
@@ -1295,8 +1295,8 @@
     },
     {
       "path": "scripts/build-static.mjs",
-      "bytes": 7520,
-      "sha256": "b9402ea6998a6626e5ef1ee8c3c2dbb224e14c6aff3a09fdc25d1b0a84e8bb20",
+      "bytes": 7522,
+      "sha256": "301067954bce43cb25b9aeaf8610bb43f690f2fb5e39a5dd8718eebc2ce94f40",
       "previous_sha256": "6bc17db39e55ab056b934100a0460e3a9991a5f5ddee14b4372e80471973ae4d"
     },
     {
@@ -1320,286 +1320,286 @@
     {
       "path": "GENERATED-PAGES.json",
       "bytes": 24007,
-      "sha256": "e2fef51a90466f600ff5d6d8612c9c143ceab71d89e212e5547b8248e71e1e7c",
+      "sha256": "75213677f4393d7134318456d3ec88f74b1150c5d3bc37960c0d72f7d0d53572",
       "previous_sha256": "5d6a4dea8fdfccf69d98a7360ed490c7cd39a99bb750ee2eaaac19ea28fee2fb"
     },
     {
       "path": "wellness-clinic-services/morpheus8.html",
-      "bytes": 37298,
-      "sha256": "54c67b439c144080a9cc331804db12e41d44ee552dc6dce3ea591e6f3889d16b",
+      "bytes": 32356,
+      "sha256": "3c1ed1d58fe0e07ed46fa135e34c6dd7f43ce6a43481e9d3235d2e39daac33c9",
       "generated": true,
       "previous_sha256": "8562b49a75f51b291d52d8a73c75e79c1e88092481c7d95f57c6af5f0fa354d6"
     },
     {
       "path": "wellness-clinic-services/attiva.html",
-      "bytes": 36443,
-      "sha256": "67a2a8de98360d794b71c86d2ac24c824d3318ee73d3412d1bc330aa702f99fa",
+      "bytes": 31501,
+      "sha256": "5469276a6e423845ccb411c3559e730f25f70bc8badd741c3fd1c891c32941d3",
       "generated": true,
       "previous_sha256": "2f867fbd32891178925132da20cd112366f97167da1284dd41af6045ffaaaf18"
     },
     {
       "path": "wellness-clinic-services/new-hair-growth-with-exosomes.html",
-      "bytes": 37356,
-      "sha256": "5f979d5669c9b2ce240827c18a5cab952d7532855dea6297bd6ce0f3d4649a1a",
+      "bytes": 32414,
+      "sha256": "916fd68f19394e5f99a808c5685100d0cb1940335b8c3ba67bb308f52c86f797",
       "generated": true,
       "previous_sha256": "abc99cb1bf90070a00fdf50172b2c07b24481e16cd9ea1d8a9d7f07518ee75f1"
     },
     {
       "path": "wellness-clinic-store/serenite-skin-care-products.html",
-      "bytes": 44277,
-      "sha256": "89efcf5605d608a119b920bddefc39be7cfef016d7861df9662f1524bbb350c2",
+      "bytes": 39335,
+      "sha256": "00a98a65cce658902001ed3c22ae6c78ad2ab4d4948ee91114aefc4141eb3f4b",
       "generated": true,
       "previous_sha256": "8e955d6f3295dbbc6d9fc7c574b7226020d7e0e2ea2d62fd138a0233f79b2df0"
     },
     {
       "path": "wellness-clinic-services/lumecca-ipl.html",
-      "bytes": 40507,
-      "sha256": "af30cee07e232b9a678c806494a5562997704ccf21f3c162564e72c6d82e5a2c",
+      "bytes": 35565,
+      "sha256": "4cd234d9c22df352ec7dc1f939334181ac4c3ef8dc5132a65baf50fa6c15bd63",
       "generated": true,
       "previous_sha256": "d892eadc3ea41db88147a3bf91595e18b3226400b38c477550403b6d5baa91a9"
     },
     {
       "path": "wellness-clinic-services/ns-non-surgical-face-lift.html",
-      "bytes": 43029,
-      "sha256": "c63d626fe0ae66edda571256ef2270e7059c1fe44d1ffbb41d01e7e5c5604a4b",
+      "bytes": 38087,
+      "sha256": "66dd40af8cf4d0dafdb96df28858500ae1d60cfd2254a1d1da34c209f1c5ad01",
       "generated": true,
       "previous_sha256": "4323abb44e40ffb0a8f7e98a44ea1be9ba68d8fbfc4ef83738c1f979624fd67e"
     },
     {
       "path": "wellness-clinic-services/body-sculpting-and-body-contouring.html",
-      "bytes": 40137,
-      "sha256": "55a00c1e22fae4d6187cd8cbd2c0ffd3fb85fd112da4b8244618e6da6ec5a83f",
+      "bytes": 35195,
+      "sha256": "73ff2171c213a5d237bd3c74947cdfe3f8d1e38c9422514b11c04175146ba639",
       "generated": true,
       "previous_sha256": "89b4d17bdf2693858c62ad0dfc1400585992cb66950d5300a8ff8ad9d98671ff"
     },
     {
       "path": "wellness-clinic-services/laser-hair-removal.html",
-      "bytes": 39711,
-      "sha256": "494fedf5df35f400d9e0a88d294ac45396a8cda92a98ab607eff147128c58519",
+      "bytes": 34769,
+      "sha256": "e5493a222a8becc9290c44e94f830ae1d2b488e94425915c3c47f32eb26bdb6a",
       "generated": true,
       "previous_sha256": "0bd1309871cf2f2cfe73314b51afb4983af8a79d8ac51b4f069ae4f5a8816ab8"
     },
     {
       "path": "wellness-clinic-services/microneedling.html",
-      "bytes": 42442,
-      "sha256": "c1f9ef5a402d7f6653f56695f53d71bbabce59df8f456a7d07e409fa61501289",
+      "bytes": 37500,
+      "sha256": "6d259c7f5ff39a03f1d36ec65b7322cc19b31f2e3762b387510becfecd0d4672",
       "generated": true,
       "previous_sha256": "58639ef385a76416e50a1aad2856de2bd223b4cc66b4882a8bd8c8ec62e2f253"
     },
     {
       "path": "wellness-clinic-services/pico-laser-tattoo-removal-skin-pigmentation-removal.html",
-      "bytes": 32451,
-      "sha256": "4e011c26707e4c6d0b6b59e23d468387c21fa59040c8ae21a1f3e83e2b3c431e",
+      "bytes": 27509,
+      "sha256": "b7487cb1b82af71a105bce2b574d32b00bb2cb4116ef3ced0071be692087df78",
       "generated": true,
       "previous_sha256": "74b08ca8f5b4c86bf911ab40af627695da46000db42b3aff0d9374efe4a87dc5"
     },
     {
       "path": "wellness-clinic-services/facial-checmical-peel-acne-treatment.html",
-      "bytes": 57897,
-      "sha256": "7c3e305c5483a5baf88f00407b2f0c218e75726ae126a5ef746b41aca89b585d",
+      "bytes": 52955,
+      "sha256": "7150b6c25a4b1d53f0d9e1cb84d7edd8f9b28778e78e21a49b9a2bb55207680e",
       "generated": true,
       "previous_sha256": "14df76f2f24aed4088fd3974a6858d83f80a90c7c630ee03ab7d0b0b13046e21"
     },
     {
       "path": "wellness-clinic-services/lyl-serenite-wellness-program.html",
-      "bytes": 43008,
-      "sha256": "633210571c2ebe1ab088d2d9c87fceda682d34188797328b338e150feacf19c0",
+      "bytes": 38066,
+      "sha256": "62c2633ad939b426ba93f06eb68876b0e63e6e51c84ad50ed01f7665ff67feae",
       "generated": true,
       "previous_sha256": "b385b8a485251266469d268a1f55f1dc9110ab20d4383472c1fcf42905ea0379"
     },
     {
       "path": "wellness-clinic-services/medical-weight-loss.html",
-      "bytes": 43468,
-      "sha256": "351b3a8cbf1d1f3709b05bd771c863dc5f4efea07db344ca66c9ef5d9d6c98bb",
+      "bytes": 38526,
+      "sha256": "9273bf62f5744f28422394ebb650cdc9757f9925199de4653fd3b612e75231e3",
       "generated": true,
       "previous_sha256": "a5d386094f99182652b280c378dfb550ca9fd6b38da58df6668b0eef90623ea4"
     },
     {
       "path": "wellness-clinic-services/bio-identical-hormone-replacement-therapy.html",
-      "bytes": 43324,
-      "sha256": "db1c2591fdf30e664801235eb964e8c8ccf92a0917c34b3754ccc0e2cc649df1",
+      "bytes": 38382,
+      "sha256": "6e7678b5fc2c1139b2e3c48930e39fa81be7d4420399fb4d9369ec6bd02d6407",
       "generated": true,
       "previous_sha256": "3f3ade4feff0528ea7419b3e8ae29f2d476f4deb2743cfddc4cedd4a21740015"
     },
     {
       "path": "wellness-clinic-services/iv-therapy.html",
-      "bytes": 39404,
-      "sha256": "6f442ea85ea319d19fa651701a2fff50a9e5c0c992fd1b5be393ae46e8594e8b",
+      "bytes": 34462,
+      "sha256": "782214ef844f4671c03668cb2862bc7cd79f8cae2b12b19cbbbd738a5a3084ee",
       "generated": true,
       "previous_sha256": "9bc5d40e49f4760010e745b65a17ab11ce77b6058128cae365fccc711ed775ae"
     },
     {
       "path": "wellness-clinic-services/neutraceuticals.html",
-      "bytes": 39342,
-      "sha256": "fd3ada3361746266442081280d65cb4e5d65aaad117f65472a5d2e359e5a4ccd",
+      "bytes": 34400,
+      "sha256": "d8a0aea3640d38d48a43830160ed53d382e3af708f7b4fc6856832843f48dbe4",
       "generated": true,
       "previous_sha256": "e8911294450a5d6b0de6305c8dbe5af5008b823c0dbb58e240a424b46e2e348c"
     },
     {
       "path": "wellness-clinic-services/healthy-gourmet-meals.html",
-      "bytes": 40318,
-      "sha256": "9a7fd38946a869a0360565269ecea89a68f282e6f673f3db11839e9f55b05703",
+      "bytes": 35376,
+      "sha256": "9144596095feff22f748fef14ef9654ec85638c699f98eec66aa42addefeb592",
       "generated": true,
       "previous_sha256": "b866f1a1048ab9b5d8e4d8eef6a95e95c863c502edc9ec41cb8b4e1339b3560d"
     },
     {
       "path": "wellness-clinic-services/sexual-rejuvenation.html",
-      "bytes": 42752,
-      "sha256": "8983c81a1f306dea8b44d78783bdac80e1e54a82b687cebd7491a92f6c89b335",
+      "bytes": 37810,
+      "sha256": "f11b26f681a6f5355c2f846a6cd8c5ca660b066de5c22eb68c934f5fe252a1c2",
       "generated": true,
       "previous_sha256": "0c3d0b548b81806d783d4618ac150194bfd24ed0d5dbb6cb0d3a02b9f0087906"
     },
     {
       "path": "wellness-clinic-store/serenite-hair-care-products.html",
-      "bytes": 43181,
-      "sha256": "5e2cebc54ee0116ae7b1b88dc583c224b064d4af62601441bdfcbca4010c2d1a",
+      "bytes": 38239,
+      "sha256": "dc456584bf1c900072fc14940982a3531a261b5dd53fb12098f48d842e166556",
       "generated": true,
       "previous_sha256": "e3cccfe55e85e04a84735c691512efaee264d534b82f5b8bde476b56236b8569"
     },
     {
       "path": "wellness-clinic-mobile-clinic.html",
-      "bytes": 38743,
-      "sha256": "cacb41848d179a439874bc7170ebfd26428c26af4a8b8b4aae7cf93486d2fbbe",
+      "bytes": 33801,
+      "sha256": "09d7970d98c94508d81b77a38fcea8222062fa0860d6724af7adb5ecce292118",
       "generated": true,
       "previous_sha256": "0ebb468134b1b1370015128a213be1cf8e56ae12dcb4ae9f6ead7fa527a2bd0d"
     },
     {
       "path": "wellness-clinic-pricing.html",
-      "bytes": 34297,
-      "sha256": "39a7a0539b13fc7e74bfdfd00ddc6a39f1fa010d396547145c4d671dc79636c9",
+      "bytes": 29355,
+      "sha256": "558bb33fa9630d982339af987e08180fd96d34b469cdd942c4733a8b2739e4ab",
       "generated": true,
       "previous_sha256": "3c0e5ecc0b1a55bb0b937881b877b92b40489376808a58e43c38ff0af9f236c5"
     },
     {
       "path": "wellness-clinic-membership.html",
-      "bytes": 45278,
-      "sha256": "7b0261ac31d889e0c9f680ce296d943c08a604457910b6e8cfca66695f37a003",
+      "bytes": 40336,
+      "sha256": "a04c80e7793884a553bf69d0ce60d2d836c51912675731842e037ab57313bb78",
       "generated": true,
       "previous_sha256": "7362f32689b64ffaafd716b81a690af153c1cbd6346524f1bcf4404215e4754f"
     },
     {
       "path": "wellness-clinic-news.html",
-      "bytes": 31484,
-      "sha256": "58c16c35dda07b9847bea617200be580a1ea9b242a469077c96bffb0e539a604",
+      "bytes": 26542,
+      "sha256": "cb91cbf08602d3a0ea24211a3c1f3806e402f766c6da24ae0f2820f90c34ad73",
       "generated": true,
       "previous_sha256": "38d28c5041e30eac79f1f833ab05e704ebb11850dda0a51f8b1205df53adf69b"
     },
     {
       "path": "wellness-clinic-key-concepts.html",
-      "bytes": 31188,
-      "sha256": "0b559e2e30e34b14bdd01aa98e1370043bfd3d905fb3d2f1d046989615370f5d",
+      "bytes": 26246,
+      "sha256": "455e485c0522d248fa28bf4be7fd31ac7f7a8b762c52c5f3c15f9ac14ed0f66a",
       "generated": true,
       "previous_sha256": "78e66f87b83b0f7996110952f1d5b78f2a020fd3b741f73f76d72202820214d5"
     },
     {
       "path": "wellness-clinic-location-and-hours.html",
-      "bytes": 29900,
-      "sha256": "74bed35e7f24d528e27f538352d535c95ba0642f49e236156d6be36c73ac6292",
+      "bytes": 24958,
+      "sha256": "8d473f4d128833bb3ca38ef5a7b4eaf7ca4a3b3e43e44b455d0fab0dac2e7f49",
       "generated": true,
       "previous_sha256": "14844278e48bbf43644c2a7ad0cb474531cd8aa15cc4f424ef3801ba6ad8ebaa"
     },
     {
       "path": "wellness-clinic-book-an-appointment.html",
-      "bytes": 30529,
-      "sha256": "7ccbc37b49a0b5aa700ba1563355753a237ab17ef185eae1615e965f7057f9f8",
+      "bytes": 25587,
+      "sha256": "66e136eaef1fb3cf1f23fb4eb8f5ccf443b95bfcaab57105b688e2387ea8cbe5",
       "generated": true,
       "previous_sha256": "31be4c855f7428b3c7564c534c14e062138e546072fad3ef531d72822757ebc3"
     },
     {
       "path": "privacy-policy.html",
-      "bytes": 32734,
-      "sha256": "6482a46a0ed8a76ade6eab6ae0163aba11b3c4374f33493f52758dd6feb1961b",
+      "bytes": 27792,
+      "sha256": "30e5d06ca836c57fbe8f9d58af04a80c95165518880556387ea9def60a7d0d69",
       "generated": true,
       "previous_sha256": "7b0ca73562364fba15fdb5a28e0e5137f073a43fc62ed43a80605a26edc916c5"
     },
     {
       "path": "wellness-clinic-team/dr-heidi-regenass-md.html",
-      "bytes": 34154,
-      "sha256": "237486338268e544b7337b2832f12dd80f291b90d0fbb656997c438f685fd41f",
+      "bytes": 31682,
+      "sha256": "3f16486d5fa79f391b2babe164c893665ddd22a118d08f4cee79b3db8e7085eb",
       "generated": true,
       "previous_sha256": "bda9eeb5d64bf6849a72815251ab7b0249f097e094b142dd43557efaede0c9d1"
     },
     {
       "path": "wellness-clinic-team/ador-mansat-dnp-fnp-c-mba-bsche.html",
-      "bytes": 37270,
-      "sha256": "d819a46f878329a04f665eba2663c81742898acb913a8879b92d86e7bc053310",
+      "bytes": 34783,
+      "sha256": "4d96b2afdf00da304ff9d3fabc2f19ea3a916458c8787cdb01e79a78374b7020",
       "generated": true,
       "previous_sha256": "ebb46f21d0e2f14c3e10f191081f6d2d529859414a443a9dd1775b09ef56b00b"
     },
     {
       "path": "wellness-clinic-team/admin-bel-mba.html",
-      "bytes": 29655,
-      "sha256": "f7addeb8168a72420246dc9e5d554f058af169e3f3aadf6748def97d08cfaf98",
+      "bytes": 27301,
+      "sha256": "baa5424dadce2e687e9f2345df7a242634092d436e7f0a1a4279da4a209440af",
       "generated": true,
       "previous_sha256": "06e6963e29d16688aa383b666b7fd227eda6facb7dd753e137d65b3e25f39836"
     },
     {
       "path": "wellness-clinic-team/rn-arnold-clinical-director.html",
-      "bytes": 29895,
-      "sha256": "e852759ffc4a5b5ac84c982d39487b1e10a3e8f7f1a68e07284cc71dddb9093c",
+      "bytes": 27541,
+      "sha256": "eebc3d8c3686d10f9cb2ea5bf262cad212a808112b7605743ec88ff4553767ba",
       "generated": true,
       "previous_sha256": "40ae50a196190302af1f2086a290d2c0e9daff003ea47a6139479f9e3c3d733b"
     },
     {
       "path": "wellness-clinic-team/lvn-romella-clinical-director.html",
-      "bytes": 29926,
-      "sha256": "ec42bf9449a9edd2767db053c2689b6eaf6216a4efa3f9a29a669ff48c75cc14",
+      "bytes": 27572,
+      "sha256": "da029c864b565d3ee49cfd5de7430a13b7043265d792a14215eec116d0501f5c",
       "generated": true,
       "previous_sha256": "650b378968468228d93a83f32faa62b0d5a07613b2201f5eb366f673d54a3776"
     },
     {
       "path": "wellness-clinic-team/rn-donna-master-injector.html",
-      "bytes": 29846,
-      "sha256": "2d969cae800d9c6df77b85035e64b8dd20083da3f47b291abb8e4680ec2479c9",
+      "bytes": 27492,
+      "sha256": "37604aadd46e684c460b80ebffdb6c67acfe5a59ac243f11df3e4ffef72c5be8",
       "generated": true,
       "previous_sha256": "a0937e3efd370c3cea5c3a2c53d6252fa275bd00e5e72527c2e7ec0c8cd41b67"
     },
     {
       "path": "wellness-clinic-team/rn-ron-clinician.html",
-      "bytes": 29714,
-      "sha256": "abb2ea9e933a1ddb4d2ea60fd4ba2ca86944a847cc1067c670aff434a9dbe385",
+      "bytes": 27360,
+      "sha256": "1e80ccf79cf70f2c2890fb4c7ff9a9c743dc36a4f3ed16cb943257e7327db268",
       "generated": true,
       "previous_sha256": "426d3b4aa30b1097244e49f4aeef3f29927fed5eff7a784a096ccfc84d303085"
     },
     {
       "path": "wellness-clinic-team/rn-ninette-clinician.html",
-      "bytes": 29774,
-      "sha256": "1c0b042837c85742e9b5980ae5f4103c202039c1ad45a6c5f565009deac399a8",
+      "bytes": 27420,
+      "sha256": "cb4b716e8c44c075c07cfb0edc46f1ae86ce519301777cec172b197dd15c6be5",
       "generated": true,
       "previous_sha256": "8fa4f944657b2c7f5f7801ff3efdcd3704073cadabcf2e720089cdd857694a96"
     },
     {
       "path": "wellness-clinic-team/lvn-myrtle-hidalgo-clinician.html",
-      "bytes": 29823,
-      "sha256": "d834f30e1a6f6c4aff8b0862b0a95c92e4ea70c0f5fdabd9158136a400d109db",
+      "bytes": 27469,
+      "sha256": "529cae0738a1f2000dde32a5f2130870555344ea487925c17c5ab6c7f5cc46c3",
       "generated": true,
       "previous_sha256": "5d5b6d21989e6025115e3e6a3b26aaa51a4bc9e32e0454cc5f029bf9ed86b2c9"
     },
     {
       "path": "wellness-clinic-team/ma-matthew.html",
-      "bytes": 29593,
-      "sha256": "5beb8a3c7417b7f0e4beaafd19bb1a39e5b41aefa3253fa37c24b7652429e20f",
+      "bytes": 27239,
+      "sha256": "ce37fab6882f0af6ad66d0181f254df9a4e5d0cde7388ceca9dc9fea79009e64",
       "generated": true,
       "previous_sha256": "3908d412742e60b92da0ec12c71114d844afbc948067696318a4fe697990b65b"
     },
     {
       "path": "wellness-clinic-team/ma-josh.html",
-      "bytes": 29548,
-      "sha256": "8203cc14b850f786e87528956307ee1c96ec1b9d545af5bfef5a147d66b58888",
+      "bytes": 27194,
+      "sha256": "8245be327372f283f15dd36c1a5acefe07b29311b99df3ea59623303cc31cd07",
       "generated": true,
       "previous_sha256": "ac10c4e310963c068e5824f502ed993cd8aec3dd516d2f38aacee3761f7de361"
     },
     {
       "path": "wellness-clinic-team/ma-joyce.html",
-      "bytes": 29563,
-      "sha256": "f828d79770bd5be79ab4fd7ed8b6d1f74b6c275fafda3a46ac14e7b0138c8a4c",
+      "bytes": 27209,
+      "sha256": "97d7425486ee602c1fa501ede9b89a97b72761f6918d88ee977700fbc712f3b3",
       "generated": true,
       "previous_sha256": "a0462845b90d4d62495f537a7937d68650286e7c0c437bed44d415ed101de34e"
     },
     {
       "path": "wellness-clinic-team.html",
-      "bytes": 31136,
-      "sha256": "ef199b01af2b40c5e9dbd1cc7311ff74c9a1d511495b7b8759270a1e9b1c3688",
+      "bytes": 29026,
+      "sha256": "0edf255db70490bea485b96b460a4ff0dc7a4b2dc6008f9f34f717f72fe93b77",
       "generated": true,
       "previous_sha256": "f8ff6effbd79882b5a9e59a0ee87589403a1db72b207642ab2cdbf4e88113c17"
     },
@@ -1620,8 +1620,9 @@
     },
     {
       "path": "site-runtime.js",
-      "bytes": 280678,
-      "sha256": "0f81f5e9b393f0f2fd051f88e597bfc1eb5b3ad3e719bccd32ca05da613c5950"
+      "bytes": 278406,
+      "sha256": "706e98c221e23cae2adbadc6f5e0fcfe6d6219cd8a9e0ce2ed82dad4b2bb72a8",
+      "previous_sha256": "0f81f5e9b393f0f2fd051f88e597bfc1eb5b3ad3e719bccd32ca05da613c5950"
     }
   ]
 }

@@ -1,6 +1,8 @@
 # Serenité — Atelier client preview
 
-Atelier is the main design. The homepage now focuses on signature treatments, the team, a first-visit explanation and a consultation action. The introduction video opens only when requested, with playback controls and keyboard focus handling.
+Atelier is the main design. The homepage focuses on signature treatments, a first-visit explanation and a consultation action. The introduction video opens only when requested, with playback controls and keyboard focus handling.
+
+The approved October 27 revision removes clinician portraits and homepage team cards. Our team opens a separate text-only directory; names, listed credentials, roles and profile biographies remain available. Original image files and recovered source content are preserved. The user authorized committing, pushing and deploying this reviewed version through the existing branch and preview workflow. The replacement opening film remains excluded.
 
 The phone navigation uses a menu instead of a scrolling link row. The client view hides review controls. Use the footer’s **Design review** link (or add ?review=1) to browse all 41 pages (the original 40 plus a team overview) and compare the retained Clinic and Gold Hour designs. The browser Back and Forward buttons follow page navigation.
 

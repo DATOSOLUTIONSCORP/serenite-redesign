@@ -85,8 +85,8 @@ for (const path of [...new Set([...entries.keys(),...added])]) {
   if (path.endsWith('.html') && path!=='page-shell.html') entry.generated=true;
   entries.set(path,entry);
 }
-manifest.revision='Atelier typography, imagery, navigation and technical SEO';
-manifest.publication_status='Source prepared for the user-authorized public design-demo release; deployment receipts are retained outside this checkout.';
+manifest.revision='Atelier clinic-focused home and text-only team pages';
+manifest.publication_status='Static design-demo source approved for release; building does not publish. Deployment receipts are retained outside this checkout.';
 manifest.files=[...entries.values()];
 await writeFile(manifestFile,JSON.stringify(manifest,null,2)+'\n');
 console.log(`Generated ${pages.length} static design-demo pages, metadata and sitemap for ${origin}. No files were published by this build.`);

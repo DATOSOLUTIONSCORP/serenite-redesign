@@ -530,13 +530,8 @@ CARDS.longevity.forEach(c => { GROUP[c[0]] = "Longevity"; });
 const NAV = [
  {label:"Beauty",menu:CARDS.beauty.map(c=>[c[0],c[1]])},
  {label:"Longevity",menu:CARDS.longevity.map(c=>[c[0],c[1]])},
- {label:"Our team",menu:[["team","Meet the whole team"],...TEAM.map(t=>[t[0],t[1]])]},
+ {label:"Our team",p:"team"},
  {label:"Pricing",p:"pricing"},{label:"Visit",p:"location"}
-];
-
-const PEOPLE = [
-  { slug: "t-heidi", name: "Dr. Heidi Regenass, MD", role: "Founder and Medical Director", img: "dr-heidi", bio: "Dr. Regenass brings more than two decades in integrative and functional medicine, nutrition and anti-aging care, with a focus on treating root causes." },
-  { slug: "t-ador", name: "Ador Mansat, DNP, FNP-C", role: "Doctor of Nursing Practice, Family Nurse Practitioner", img: "ador", bio: "Ador has more than 18 years in healthcare, including ICU bedside care, and leads the clinic's longevity and wellness programs." }
 ];
 
 const TIERS = [
@@ -778,9 +773,6 @@ const ICON_RULES = [
 ];
 const iconFor = text => ICON[(ICON_RULES.find(([re])=>re.test(text)) || [null,"info"])[1]];
 const ico = (text, i) => `<span class="ico" aria-hidden="true">${iconFor(text, i)}</span>`;
-const initials = n => n.replace(/^(Dr\.?|RN|LVN|MA|Admin)\s+/i, "").split(",")[0].split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase();
-const TEAM_PHOTO = { "t-heidi": "dr-heidi", "t-ador": "ador" };
-const avatar = (slug, name) => TEAM_PHOTO[slug] ? img(TEAM_PHOTO[slug], name) : `<span class="avatar-initials" aria-hidden="true">${initials(name)}</span>`;
 /* "Welcome to X: The Future of Y" becomes a short headline plus a subtitle; no words are dropped */
 function splitHead(h) {
   const i = h.indexOf(": ");
@@ -883,9 +875,9 @@ function openFly(anchor,html){
  placeBeside(fly);return fly;
 }
 function menuHtml(i){
- const n=NAV[i],cards=Object.fromEntries([...CARDS.beauty,...CARDS.longevity].map(c=>[c[0],c])),team=Object.fromEntries(TEAM.map(t=>[t[0],t]));
+ const n=NAV[i],cards=Object.fromEntries([...CARDS.beauty,...CARDS.longevity].map(c=>[c[0],c]));
  return `<ul class="nav-rich">${n.menu.map(([p,l])=>{
- const c=cards[p],t=team[p],thumb=c?img(H.cardImgs[c[3]],""):t?avatar(p,t[1]):"",meta=c?c[2]:t?t[2]:"";
+ const c=cards[p],thumb=c?img(H.cardImgs[c[3]],""):"",meta=c?c[2]:"";
  return `<li><a href="${esc(routeUrl(state.v,p))}" data-go="${p}"${p===state.p?' aria-current="page"':""}><span class="fly-thumb">${thumb}</span><span class="fly-text"><strong>${esc(l)}</strong>${meta?`<small>${esc(meta)}</small>`:""}</span></a></li>`;
  }).join("")}</ul>`;
 }
@@ -1184,14 +1176,8 @@ function patientReel(cls = "sec-alt") {
   </div></section>`;
 }
 
-function team() {
-  return `<section class="sec" id="team"><div class="wrap">${secHd("Our team", "Meet our professional medical staff", "Meet our esteemed team of licensed medical experts, each dedicated to fostering your well-being through personalized care and comprehensive support. With years of experience and a passion for integrative medicine, our professionals collaborate to craft tailored strategies that address your unique health needs.")}
-    <div class="team">${PEOPLE.map(p => `<div class="person">${img(p.img, p.name)}<div><h3>${p.name}</h3><p class="role">${p.role}</p><p class="muted">${p.bio}</p><p class="gap-top">${go(p.slug, "Read full bio")}</p></div></div>`).join("")}</div>
-    ${teamGrid(TEAM)}</div></section>`;
-}
-
 function teamGrid(list) {
-  return `<div class="team-grid">${list.map(([s, n, r]) => `<a class="member" href="${esc(routeUrl(state.v,s))}" data-go="${s}"><span class="member-ph">${avatar(s, n)}</span><strong>${n}</strong><small>${r}</small></a>`).join("")}</div>`;
+  return `<div class="team-grid team-directory">${list.map(([s, n, r]) => `<a class="member member-text" href="${esc(routeUrl(state.v,s))}" data-go="${s}"><span class="member-copy"><strong>${n}</strong><small>${r}</small></span><span class="member-link">View profile ${ICON.arrow}</span></a>`).join("")}</div>`;
 }
 
 function statsStrip() {
@@ -1398,8 +1384,8 @@ function genericPage(slug) {
 
   if (pg.group === "team") {
     const t = TEAM.find(x => x[0] === slug);
-    const photo = introImgs[0] ? introImgs[0].src : "";
-    return pageHead(pg.title, go("team", "Team"), t ? t[2] : "", photo) + renderSections(secs, { group: "About" }) +
+    const profileSections = secs.map(section => ({ ...section, parts: section.parts.filter(part => part.t !== "img") }));
+    return pageHead(pg.title, go("team", "Team"), t ? t[2] : "") + renderSections(profileSections, { group: "About" }) +
       `<section class="sec sec-alt"><div class="wrap">${secHd("Our team", "Meet the rest of the team")}${teamGrid(TEAM.filter(x => x[0] !== slug))}</div></section>` + cta();
   }
 
@@ -1622,21 +1608,15 @@ function landingPage(p) {
 }
 
 
-function teamIntro() {
-  return `<section class="sec sec-alt team-intro" id="team"><div class="wrap">${secHd("Meet the team", "Care starts with a conversation.", "Get to know the people behind your care before your first visit.")}
-    <div class="team">${PEOPLE.map(p => `<article class="person">${img(p.img, p.name)}<div><h3>${p.name}</h3><p class="role">${p.role}</p><p>${go(p.slug, "Meet " + (p.slug === "t-heidi" ? "Dr. Heidi" : "Ador") + " " + ICON.arrow)}</p></div></article>`).join("")}</div>
-    <p class="gap-top">${go("team", "Explore the rest of the team "+ICON.arrow)}</p>
-  </div></section>`;
-}
 function consultationSteps() {
-  return `<section class="sec"><div class="wrap">${secHd("Your first visit", "A clearer way to choose.")}
+  return `<section class="sec sec-alt" id="first-visit"><div class="wrap">${secHd("Your first visit", "A clearer way to choose.")}
     <ol class="consult-steps"><li><h3>Talk through your goals</h3><p>Start with what matters to you and the questions you want answered.</p></li><li><h3>Understand your options</h3><p>Ask about suitability, possible benefits, risks, recovery and costs.</p></li><li><h3>Choose your next step</h3><p>Take time to consider the plan before deciding whether to proceed.</p></li></ol>
   </div></section>`;
 }
 function page() {
   const p = state.p;
   if (p === "team") return teamOverview();
-  if (p === "home") return homeHero() + trustBar() + featured() + teamIntro() + consultationSteps() + cta();
+  if (p === "home") return homeHero() + trustBar() + featured() + consultationSteps() + cta();
   if (p === "book") return pageHead("Book a consultation", "Let’s talk", "A short request preview, with no commitment to treatment.") + bookingForm() + visit();
   if (LP[p]) return landingPage(p);
   if (p === "pricing") return pricingPage();
