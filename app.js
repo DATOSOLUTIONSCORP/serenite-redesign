@@ -21,7 +21,7 @@ const SITE = {
 /* Videos live in the artifact's asset store; posters are published images. */
 const VID = {
   hero: { src: "/video/hero-bg.mp4", poster: "/img/v/hero-bg.jpg" },
-  popup: { src: "/video/welcome-popup.mp4", poster: "/img/v/welcome-popup.jpg" },
+  popup: { src: "/video/serenite-opening-v19.mp4", poster: "/img/v/serenite-opening-v19.jpg", seconds: 34 },
   attiva: { src: "/video/attiva-promo.mp4", poster: "/img/v/attiva-promo.jpg" },
   music: "/video/background-music.mp4",
   patients: [
@@ -655,7 +655,7 @@ function homeHero() {
     <h1>Look younger.<br><em>Live younger, longer.</em></h1>
     <p class="lead">Serenite brings physician-led aesthetic treatments and wellness care together in one calm, personal clinic.</p>
     <div class="actions">${bookBtn()}${go("home", "Explore treatments "+ICON.arrow, "text-action", "treatments")}</div>
-    <button type="button" class="watch-intro" data-watch-intro>${ICON.play}<span>Watch our introduction <small>30 seconds · play when you’re ready</small></span></button>
+    <button type="button" class="watch-intro" data-watch-intro>${ICON.play}<span>Watch our introduction <small>${VID.popup.seconds} seconds · play when you’re ready</small></span></button>
     <div class="marks"><span>Morpheus8 Center of Excellence</span><span>Attiva Center of Excellence</span></div></div>`;
   return `<section class="lh home-hero"><div class="wrap"><div class="lh-in">${copy}${portrait}</div></div></section>`;
 }
@@ -1230,7 +1230,7 @@ function showPopup(trigger){
  const m=document.createElement("div");m.className="modal";m.setAttribute("role","dialog");m.setAttribute("aria-modal","true");m.setAttribute("aria-labelledby","intro-title");
  m.innerHTML=`<div class="modal-box"><div class="intro-head"><h2 id="intro-title">A short introduction to Serenité</h2><button type="button" class="modal-x" data-close aria-label="Close introduction">${ICON.close}</button></div>
  <div class="intro-media"><video controls playsinline preload="metadata" poster="${VID.popup.poster}" tabindex="0" aria-label="Serenité introduction video"></video><div class="intro-fallback" hidden>${ICON.play}<h3>The introduction couldn’t load.</h3><p>You can retry, or explore our treatments and team.</p></div></div>
- <div class="modal-bar"><p class="intro-status" role="status" aria-live="polite"></p><div class="actions"><button type="button" class="btn btn-primary" data-retry-video hidden>Try again</button><button type="button" class="btn btn-primary" data-close data-book>Book a consultation</button><button type="button" class="btn btn-ghost" data-close>Continue exploring</button></div><p class="intro-disclosure">Third-party appearances in this film do not imply endorsement of Serenité.</p></div></div>`;
+ <div class="modal-bar"><p class="intro-status" role="status" aria-live="polite"></p><div class="actions"><button type="button" class="btn btn-primary" data-retry-video hidden>Try again</button><button type="button" class="btn btn-primary" data-close data-book>Book a consultation</button><button type="button" class="btn btn-ghost" data-close>Continue exploring</button></div><p class="intro-disclosure">Use the player controls to adjust the sound.</p></div></div>`;
  m.querySelector("video").addEventListener("loadedmetadata",()=>introState(m,"ready"));m.querySelector("video").addEventListener("error",()=>introState(m,"error"));
  m.querySelector("video").addEventListener("waiting",()=>introState(m,"loading"));m.querySelector("video").addEventListener("playing",()=>{m.querySelector(".intro-status").textContent="Playing the introduction.";});
  mountDialog(m,trigger);loadIntro(m);

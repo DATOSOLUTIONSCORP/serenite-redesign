@@ -1,7 +1,7 @@
 {
   "source_deployment": "8yAXSNHEd7sZ45yeHXWCCHMRXEJS",
-  "revision": "Atelier reviewed typography, content clarity and interaction refinements",
-  "publication_status": "User-authorized public design-demo release through the existing branch and separate-preview workflow. Building does not publish. Clinician portraits and replacement video remain excluded.",
+  "revision": "Atelier approved V19 opening film with retained typography and interaction refinements",
+  "publication_status": "User-authorized V19 film release through the existing branch and separate-preview workflow. Building does not publish. Clinician portraits remain excluded; introduction playback stays user-initiated.",
   "files": [
     {
       "path": "img/o/1-7fad0.jpg",
@@ -1204,7 +1204,7 @@
     {
       "path": "index.html",
       "bytes": 29347,
-      "sha256": "f45994324d1ba4708b5156c475921ef08332675d5882ebde4c9c6bfe7a52a826",
+      "sha256": "a8e97b49f2215db18d0bfbab0dd987ce00e37256bbda375461cb52c14fad3b7f",
       "recovered_sha256": "6f70d691063cb23d09d1d0c57b5c2a0ec2f3df884296fceb1912f6b01a09c958",
       "previous_sha256": "de9301d63e7cde39d3d65e1ef2721686f00b22213a293512bf9380444c599ce6",
       "generated": true
@@ -1222,8 +1222,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 122524,
-      "sha256": "eaaf7f064ec20d3e9c5853d1841fa10633d2b8734cd606e443779c99589c8252",
+      "bytes": 122538,
+      "sha256": "060d653a5f567fa77251a8c56f658998b0cd0732610f78167dbec6ef36e428f5",
       "previous_sha256": "72da18a9a84375b0b74fe2d489c0c52f6e9968e5a261f1455ffb5f1bc7cc5c94"
     },
     {
@@ -1297,8 +1297,8 @@
     },
     {
       "path": "scripts/build-static.mjs",
-      "bytes": 7653,
-      "sha256": "8becd66c3302baec72aa8fbcac9584d525f149b82bc7fd51fdb4475cc4a8b9a7",
+      "bytes": 7745,
+      "sha256": "ea3791b0e372f42886ab650308e33c31375d364ded891402242cc65ea5a1ffae",
       "previous_sha256": "6bc17db39e55ab056b934100a0460e3a9991a5f5ddee14b4372e80471973ae4d"
     },
     {
@@ -1322,7 +1322,7 @@
     {
       "path": "GENERATED-PAGES.json",
       "bytes": 24027,
-      "sha256": "5e1ebb6e1d7b192768cba588ea511af2e0a596d317e80ea77cbeead269be88cb",
+      "sha256": "c0c17e578f0d85380cf8f1339f1edb19e3bcd8c519742fac04dc80e6335f1598",
       "previous_sha256": "5d6a4dea8fdfccf69d98a7360ed490c7cd39a99bb750ee2eaaac19ea28fee2fb"
     },
     {
@@ -1622,8 +1622,8 @@
     },
     {
       "path": "site-runtime.js",
-      "bytes": 348236,
-      "sha256": "d88f1172e1c58390fb653dca2104896315beb4bfd0513c62ea5ac6f79c1d3573",
+      "bytes": 348250,
+      "sha256": "a91e70a5310ebbcbdbfe322856569d7013dda6a1a14c30f0ae153364e1016890",
       "previous_sha256": "0f81f5e9b393f0f2fd051f88e597bfc1eb5b3ad3e719bccd32ca05da613c5950"
     },
     {
@@ -1631,6 +1631,16 @@
       "bytes": 67179,
       "sha256": "04fa68e80e5358c445879e5b823da72341cb404f4dc1c60d10327da49599054a",
       "previous_sha256": "acbff50fa5de07bf60ffaa2840567817e8197d9f9f2ada87aea58f75f1be9d78"
+    },
+    {
+      "path": "video/serenite-opening-v19.mp4",
+      "bytes": 13561859,
+      "sha256": "bcd1f2ea28c5e12174febb6ca4e774a844eab8f17501a8b8d67aabe59e224e96"
+    },
+    {
+      "path": "img/v/serenite-opening-v19.jpg",
+      "bytes": 78384,
+      "sha256": "9420ebd667a90d17e6b0f6125d1d04148ff322b3ccdf51b4bab1cf800f89a7de"
     }
   ]
 }

@@ -2,11 +2,13 @@
 
 Atelier is the main design. The homepage focuses on signature treatments, a first-visit explanation and a consultation action. The introduction video opens only when requested, with playback controls and keyboard focus handling.
 
-The approved October 27 revision removes clinician portraits and homepage team cards. Our team opens a separate text-only directory; names, listed credentials, roles and profile biographies remain available. Original image files and recovered source content are preserved. The user authorized committing, pushing and deploying this reviewed version through the existing branch and preview workflow. The replacement opening film remains excluded.
+The user approved the V19 editorial opening film on October 27 and requested its addition and deployment to this public demo. The player uses the exact reviewed 34-second, 1920 × 1080 H.264/AAC master at `video/serenite-opening-v19.mp4`, with its piano/ambient soundtrack and a poster extracted from the opening logo. The duration label reads 34 seconds. Playback remains user-initiated, with autoplay off, native sound controls, retry, dismissal and keyboard focus handling. The earlier `video/welcome-popup.mp4` is preserved as a source asset.
 
-The reviewed October 27 release includes the local review fixes and typography refinements. The user authorized committing, pushing and deploying this version through the existing branch and separate-preview workflow. `content-refinements.js` supplies draft copy over the unchanged recovered content: consultation-first treatment wording, explicit Pico price units, a demo-specific privacy notice and short staff role details. The replacement video remains excluded.
+The approved October 27 revision removes clinician portraits and homepage team cards. Our team opens a separate text-only directory; names, listed credentials, roles and profile biographies remain available. Original image files and recovered source content are preserved. The user authorized committing, pushing and deploying the reviewed version through the existing branch and separate-preview workflow.
 
-The typography pass keeps Cormorant Garamond and Jost, with unchanged local font binaries. Their normal variable-weight declarations now match the measured font axes; the separate 500 italic remains. Functional facts and prices use Jost, annual payments have explicit emphasis, mobile price units stay together, and document headings use a clearer scale. Phone tier navigation is a 2×2 grid. Currency grouping spaces are normalized for display without changing any amount. Buttons and form layouts wrap or shrink when text is enlarged. Clinician portraits and the replacement opening film remain excluded.
+The reviewed October 27 release includes the local review fixes and typography refinements. `content-refinements.js` supplies draft copy over the unchanged recovered content: consultation-first treatment wording, explicit Pico price units, a demo-specific privacy notice and short staff role details.
+
+The typography pass keeps Cormorant Garamond and Jost, with unchanged local font binaries. Their normal variable-weight declarations now match the measured font axes; the separate 500 italic remains. Functional facts and prices use Jost, annual payments have explicit emphasis, mobile price units stay together, and document headings use a clearer scale. Phone tier navigation is a 2×2 grid. Currency grouping spaces are normalized for display without changing any amount. Buttons and form layouts wrap or shrink when text is enlarged. Clinician portraits remain excluded.
 
 The phone navigation uses a menu instead of a scrolling link row. The client view hides review controls. Use the footer’s **Design review** link (or add ?review=1) to browse all 41 pages (the original 40 plus a team overview) and compare the retained Clinic and Gold Hour designs. The browser Back and Forward buttons follow page navigation.
 
@@ -41,9 +43,9 @@ The repeatable local release profile is `.codex-qa/profile.json`. Its generated 
 
 ## Refinement, October 26, 2026
 
-The user authorized committing, pushing and deploying this revision to the existing public client demo. The replacement opening film remains excluded until separately reviewed. This release keeps the original introduction and sample-only booking behavior.
+The user authorized committing, pushing and deploying the October 26 revision to the existing public client demo. That release kept the original introduction and sample-only booking behavior. The later approved V19 film release replaces the introduction while retaining the same playback controls and sample-only booking.
 
-The header uses keyboard-accessible native disclosure navigation. Search announces result counts, offers Clear, and provides useful empty-state links. The sample consultation form has linked error summaries, inline errors and preserved input after validation failures. The introduction has loading, ready and failure feedback plus a retry action. It stays user-initiated and retains the original video while the replacement is pending.
+The header uses keyboard-accessible native disclosure navigation. Search announces result counts, offers Clear, and provides useful empty-state links. The sample consultation form has linked error summaries, inline errors and preserved input after validation failures. The introduction has loading, ready and failure feedback plus a retry action. It stays user-initiated.
 
 Atelier retains Cormorant Garamond and Jost. The October 26 pass deduplicated the original font sources into seven byte-identical local WOFF2 files. The current typography pass consolidates the normal Cormorant/Jost declarations into their measured variable ranges, leaving twelve font-face declarations and the same seven files. The original embedded page content and all 202 original media files are preserved.
 
@@ -67,6 +69,6 @@ The current Atelier pass standardizes the existing inline SVG family, visible st
 
 The hero and three featured service illustrations now use unmodified 1920px-wide assets downloaded from the existing clinic website. Source URLs, native dimensions and SHA-256 values are retained in work/atelier-visual-polish-20261026-v1/SOURCE-IMAGES.json outside this checkout. These are illustrative images; no new patient result, staff portrait or clinical approval is implied. Source-limited clinical/staff photographs remain preserved. Original images and videos are unchanged.
 
-This remains a noindex public design demo. The replacement opening video remains excluded until William reviews it. No new UI/icon library, external font request, image generator, analytics or integration was added.
+This remains a noindex public design demo. The opening video is the user-approved V19 film. No new UI/icon library, external font request, image generator, analytics or integration was added.
 
 The static build also creates site-runtime.js from the preserved content, route catalog and application sources. One deferred entry script keeps those dependencies together and prevents partial initialization if separate script loading is interrupted. Edit the source files and rebuild; do not edit the generated runtime.

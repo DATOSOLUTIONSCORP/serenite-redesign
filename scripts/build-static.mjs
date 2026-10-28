@@ -76,7 +76,7 @@ await writeFile(resolve(root,'GENERATED-PAGES.json'),JSON.stringify({mode:'publi
 const manifestFile=resolve(root,'ASSET-MANIFEST.json');
 const manifest=JSON.parse(await readFile(manifestFile,'utf8'));
 const entries=new Map(manifest.files.map(entry=>[entry.path,entry]));
-const added=['site-runtime.js','img/hd/morpheus8-banner.jpg','img/hd/attiva-banner.jpg','img/hd/hair-banner.jpg','content-data.js','content-refinements.js','routes.js','page-shell.html','scripts/build-static.mjs','scripts/preview_server.py','sitemap.xml','404.html','GENERATED-PAGES.json',...pages.map(page=>page.file)];
+const added=['site-runtime.js','img/hd/morpheus8-banner.jpg','img/hd/attiva-banner.jpg','img/hd/hair-banner.jpg','video/serenite-opening-v19.mp4','img/v/serenite-opening-v19.jpg','content-data.js','content-refinements.js','routes.js','page-shell.html','scripts/build-static.mjs','scripts/preview_server.py','sitemap.xml','404.html','GENERATED-PAGES.json',...pages.map(page=>page.file)];
 for (const path of [...new Set([...entries.keys(),...added])]) {
   const bytes=await readFile(resolve(root,path));
   const sha256=createHash('sha256').update(bytes).digest('hex');
@@ -86,8 +86,8 @@ for (const path of [...new Set([...entries.keys(),...added])]) {
   if (path.endsWith('.html') && path!=='page-shell.html') entry.generated=true;
   entries.set(path,entry);
 }
-manifest.revision='Atelier reviewed typography, content clarity and interaction refinements';
-manifest.publication_status='User-authorized public design-demo release through the existing branch and separate-preview workflow. Building does not publish. Clinician portraits and replacement video remain excluded.';
+manifest.revision='Atelier approved V19 opening film with retained typography and interaction refinements';
+manifest.publication_status='User-authorized V19 film release through the existing branch and separate-preview workflow. Building does not publish. Clinician portraits remain excluded; introduction playback stays user-initiated.';
 manifest.files=[...entries.values()];
 await writeFile(manifestFile,JSON.stringify(manifest,null,2)+'\n');
 console.log(`Generated ${pages.length} static design-demo pages, metadata and sitemap for ${origin}. No files were published by this build.`);
