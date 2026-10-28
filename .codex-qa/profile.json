@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "name": "Serenit\u00e9 Atelier public design demo",
+  "category": "public-site",
+  "preflightCommands": [
+    "node --check app.js",
+    "node --check routes.js",
+    "node --check content-data.js",
+    "node --check site-runtime.js",
+    "node --check scripts/build-static.mjs",
+    "git diff --check"
+  ],
+  "buildCommand": "node scripts/build-static.mjs",
+  "startCommand": "python3 scripts/preview_server.py --port 8848",
+  "baseUrl": "http://127.0.0.1:8848",
+  "outputDirectory": ".codex-qa",
+  "routes": [
+    {
+      "path": "/",
+      "label": "Atelier home",
+      "lighthouse": true,
+      "requiredText": [
+        "Look younger.",
+        "Watch our introduction"
+      ]
+    },
+    {
+      "path": "/wellness-clinic-book-an-appointment",
+      "label": "Consultation preview",
+      "lighthouse": false,
+      "requiredText": [
+        "Preview only",
+        "no appointment will be booked"
+      ]
+    },
+    {
+      "path": "/wellness-clinic-services/morpheus8",
+      "label": "Morpheus8",
+      "lighthouse": false
+    },
+    {
+      "path": "/wellness-clinic-services/new-hair-growth-with-exosomes",
+      "label": "Hair-care information",
+      "lighthouse": false
+    },
+    {
+      "path": "/wellness-clinic-team",
+      "label": "Team overview",
+      "lighthouse": false,
+      "requiredText": [
+        "Our team",
+        "Ador"
+      ]
+    },
+    {
+      "path": "/wellness-clinic-pricing",
+      "label": "Pricing",
+      "lighthouse": false
+    }
+  ],
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 844
+    },
+    {
+      "name": "tablet",
+      "width": 820,
+      "height": 1180
+    },
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 800
+    }
+  ],
+  "reducedMotionRoutes": [
+    "/",
+    "/wellness-clinic-team"
+  ],
+  "lighthouse": {
+    "enabled": true,
+    "minimumScores": {
+      "performance": 0.7,
+      "accessibility": 0.9,
+      "best-practices": 0.9,
+      "seo": 0.7
+    }
+  },
+  "security": {
+    "dependencyAudit": false,
+    "trivy": true
+  }
+}
