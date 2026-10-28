@@ -1,4 +1,4 @@
-const C = window.SERENITE_CONTENT;
+const C = { ...window.SERENITE_CONTENT, ...window.SERENITE_REFINEMENTS };
 const ROUTES = window.SERENITE_SITE.routes;
 const H = C._home;
 
@@ -48,7 +48,7 @@ const CARDS = {
     ["bodysculpt", "Body Sculpting and Body Contouring", "From $400", 4, "Refine your physique with our body sculpting and contouring treatments, designed to help you achieve your desired body shape."],
     ["laserhair", "Laser Hair Removal", "From $200", 5, "Explore our laser hair removal options to remove excess hair such as bikini lines and underarms."],
     ["microneedling", "Microneedling", "From $700", 6, "Stimulate collagen production and improve skin texture with this minimally invasive treatment for wrinkles, scars, and enlarged pores."],
-    ["pico", "Pico Laser: Tattoo and Pigmentation Removal", "From $100", 7, "Tattoo removal starts at $100 per square inch. Skin pigmentation removal starts at $200 per session."],
+    ["pico", "Pico Laser: Tattoo and Pigmentation Removal", "Tattoo: from $100 / sq in", 7, "Tattoo removal starts at $100 per square inch. Skin pigmentation removal starts at $200 per session."],
     ["facials", "Facial / Chemical / Carbon Peel / Acne Treatment", "From $250", 8, "Experience the revitalizing benefits of our facial and chemical peels, tailored to refresh and rejuvenate your skin with expert care."],
     ["hair", "New Hair Growth", "From $1,500", 9, "Discover hair restoration options to promote new hair growth and achieve a fuller head of hair."]
   ],
@@ -413,7 +413,7 @@ function relatedPages() {
   return `<section class="sec sec-alt related-pages"><div class="wrap">${secHd("More to explore","Keep useful information close.","Compare the listed services, check costs or meet the team before your consultation.")}<ul class="related-list">${keys.map(key=>`<li>${go(key,esc(ROUTES[key].label)+" "+ICON.arrow)}</li>`).join("")}</ul></div></section>`;
 }
 function siteMarkup() {
-  return rootAssets(header() + `<main id="main-content" tabindex="-1">${breadcrumbs()}${page()}${relatedPages()}</main>` + footer());
+  return rootAssets(header() + `<main id="main-content" data-page="${esc(state.p)}" tabindex="-1">${breadcrumbs()}${page()}${relatedPages()}</main>` + footer());
 }
 
 
@@ -421,7 +421,7 @@ function siteMarkup() {
 
 let fly=null,flyAnchor=null,flyReturnFocus=null;
 function closeFly(restoreFocus=false){
- const back=flyReturnFocus;fly?.remove();fly=null;
+ const back=flyReturnFocus,panel=fly;fly=null;panel?.remove();
  document.querySelectorAll("[data-search]").forEach(el=>el.setAttribute("aria-expanded","false"));
  flyAnchor=null;flyReturnFocus=null;if(restoreFocus&&back?.isConnected)back.focus();
 }
@@ -936,7 +936,9 @@ function genericPage(slug) {
       sub: esc(sh.sub),
       lead: esc(dropBracketed(lead)),
       imgs: introImgs.slice(0, 2).map(p => [p.src, p.alt || pg.title]),
-      facts: [["Starting at", PRICE[slug] || "Ask us"], ["Category", isProduct ? "Serenite product" : (GROUP[slug] || "") + " service"], ["Booking", "By appointment"], ["Location", "Ontario, CA"]],
+      facts: slug === "pico"
+        ? [["Tattoo removal", "From $100 per square inch"], ["Pigmentation removal", "From $200 per session"], ["Booking", "By appointment"], ["Location", "Ontario, CA"]]
+        : [["Starting at", PRICE[slug] || "Ask us"], ["Category", isProduct ? "Serenite product" : (GROUP[slug] || "") + " service"], ["Booking", "By appointment"], ["Location", "Ontario, CA"]],
       badges: [GROUP[slug] || "", "Ontario, CA"],
       pricingLink: false
     });
@@ -969,7 +971,7 @@ function genericPage(slug) {
 function bookingForm(){
  const today=new Date(),minDate=[today.getFullYear(),String(today.getMonth()+1).padStart(2,"0"),String(today.getDate()).padStart(2,"0")].join("-");
  return `<section class="sec" id="appointment"><div class="wrap booking">${secHd("A simple first step","Plan your consultation","Tell the team what you would like to discuss and when you are available.")}
- <p class="demo-note" id="booking-preview"><strong>Preview only — no appointment will be booked.</strong>Use sample details to try this form. Nothing is sent or saved. Please do not enter personal or medical information.</p>
+ <p class="demo-note" id="booking-preview"><strong>Preview only — no appointment will be booked.</strong>Use sample details only. Nothing is sent to the clinic. Your sample entries remain while you explore this tab and clear when you complete or reload the preview. Please do not enter personal or medical information.</p>
  <form class="form booking" data-form="booking" novalidate autocomplete="off" aria-describedby="booking-preview"><div class="error-summary" id="form-errors" role="alert" tabindex="-1" hidden></div>
  <div class="row2"><div class="field"><label for="bk-name">Name (required)</label><input id="bk-name" name="name" type="text" placeholder="Sample name" required aria-describedby="bk-name-error"><p class="field-error" id="bk-name-error"></p></div>
  <div class="field"><label for="bk-email">Email (required)</label><input id="bk-email" name="email" type="email" placeholder="sample@example.com" required aria-describedby="bk-email-error"><p class="field-error" id="bk-email-error"></p></div></div>
@@ -1022,7 +1024,9 @@ function priceLines(p) {
     if (merged.length && !/\$/.test(x)) merged[merged.length - 1] += ", " + x;
     else merged.push(x);
   });
-  return merged.map(x => `<span>${esc(x)}</span>`).join("");
+  // A comma inside a currency amount is a grouping mark, not a price separator.
+  const grouped = line => line.replace(/\$\s*\d[\d,\s]*/g, amount => amount.replace(/,\s+(?=\d{3}\b)/g, ","));
+  return merged.map(x => `<span>${esc(grouped(x))}</span>`).join("");
 }
 
 function parsePlans() {
@@ -1068,7 +1072,7 @@ function pricingPage() {
 function membershipPage() {
   const tiers = parsePlans();
   const id = t => "tier-" + t.name.toLowerCase();
-  return pageHead("Membership", "Clinic", "Annual memberships with a one-year minimum. Each tier gives you a discount on a la carte prices, or a choice of treatment packages worth more than you pay.") +
+  return pageHead("Membership", "Clinic", "Annual memberships with a one-year minimum. Choose a discount on a la carte prices or one of the treatment packages below. Package values are the clinic’s listed values; your annual membership payment is shown separately.") +
     `<section class="sec sec-alt tier-nav-sec"><div class="wrap"><nav class="tier-jump" aria-label="Membership tiers">${tiers.map(t => `<a href="#${id(t)}" data-anchor="${id(t)}">${t.name} <span>${t.monthly} / month</span></a>`).join("")}</nav></div></section>` +
     tiers.map((t, i) => `<section class="sec${i % 2 ? " sec-alt" : ""}" id="${id(t)}"><div class="wrap">
       <div class="tier-band"><div><p class="eyebrow">Annual ${t.name} membership</p><h2>${t.name}</h2></div>
@@ -1079,8 +1083,8 @@ function membershipPage() {
       </div>
       <div class="pkgs">${t.packages.map(k => {
         const save = k.total - t.pay;
-        return `<article class="pkg"><h3>${esc(k.title)}</h3><ul>${k.items.map(it => `<li${it.alt ? ' class="alt"' : ""}><span>${it.alt ? "or " : ""}${esc(it.name)}</span><span class="tnum">${fmt(it.val)}</span></li>`).join("")}</ul>
-          <div class="pkg-foot"><div><span>Value</span><strong class="tnum">${fmt(k.total)}</strong></div><div><span>You pay</span><strong class="tnum">${fmt(t.pay)}</strong></div>${save > 0 ? `<div class="save"><span>You save</span><strong class="tnum">${fmt(save)}</strong></div>` : ""}</div></article>`;
+        return `<article class="pkg"><h3>${esc(k.title)}</h3><ul>${k.items.map(it => `<li${it.alt ? ' class="alt"' : ""}><span>${it.alt ? "or " : ""}${esc(it.name)}</span></li>`).join("")}</ul>
+          <div class="pkg-foot"><div><span>Listed package value</span><strong class="tnum">${fmt(k.total)}</strong></div><div><span>You pay annually</span><strong class="tnum">${fmt(t.pay)}</strong></div>${save > 0 ? `<div class="save"><span>You save</span><strong class="tnum">${fmt(save)}</strong></div>` : ""}</div></article>`;
       }).join("")}</div>
     </div></section>`).join("") + cta() + visit();
 }
@@ -1213,7 +1217,9 @@ function dismissDialog(selector) {
 }
 
 function introState(modal,state){
- const failed=state==="error";modal.querySelector("video").hidden=failed;modal.querySelector(".intro-fallback").hidden=!failed;modal.querySelector("[data-retry-video]").hidden=!failed;
+ const failed=state==="error",video=modal.querySelector("video"),retry=modal.querySelector("[data-retry-video]");
+ if((!failed&&document.activeElement===retry)||(failed&&document.activeElement===video))modal.querySelector(".modal-x").focus({preventScroll:true});
+ video.hidden=failed;modal.querySelector(".intro-fallback").hidden=!failed;retry.hidden=!failed;
  modal.querySelector(".intro-status").textContent=failed?"Video unavailable. You can try again or continue exploring.":state==="ready"?"Ready to play. Select Play to watch the introduction.":"Loading the introduction. You can continue exploring while it loads.";
 }
 function loadIntro(modal){
@@ -1240,6 +1246,27 @@ function toggleMusic(btn) {
 }
 
 /* ---------- render and routing ---------- */
+// Synthetic preview values stay only in this page's memory, never storage or history.
+const bookingFieldIds = ["bk-name","bk-email","bk-service","bk-date","bk-time","bk-preview"];
+let bookingDraft = null;
+function rememberBookingPreview() {
+  const form = document.querySelector('[data-form="booking"]');
+  if (!form) return;
+  bookingDraft = Object.fromEntries(bookingFieldIds.map(id => {
+    const field = form.querySelector("#" + id);
+    return [id, field.type === "checkbox" ? field.checked : field.value];
+  }));
+}
+function restoreBookingPreview() {
+  if (!bookingDraft) return;
+  const form = document.querySelector('[data-form="booking"]');
+  if (!form) return;
+  bookingFieldIds.forEach(id => {
+    const field = form.querySelector("#" + id);
+    if (field.type === "checkbox") field.checked = bookingDraft[id];
+    else field.value = bookingDraft[id];
+  });
+}
 let slideTimer = 0;
 function startSlides() {
   clearInterval(slideTimer);
@@ -1275,6 +1302,7 @@ function chrome() {
 
 
 function render(anchor, options = {}) {
+  rememberBookingPreview();
   closeFly();
   closePopup();
   closeLB();
@@ -1282,6 +1310,7 @@ function render(anchor, options = {}) {
   document.getElementById("review-tools").hidden = new URLSearchParams(location.search).get("review") !== "1";
   site.className = "v-" + state.v;
   site.innerHTML = siteMarkup();
+  restoreBookingPreview();
   updateMetadata();
   chrome();
   const target = anchor && document.getElementById(anchor);
@@ -1308,12 +1337,28 @@ let renderedUrl = "";
 function setView(v, p, anchor = "") {
   if (!VERSIONS[v]) v = "a";
   if (!ROUTES[p]) p = "home";
-  const next = routeUrl(v,p,anchor);
+  const next = routeUrl(v,p,anchor), samePage = v === state.v && p === state.p;
   try {
     history.replaceState({ ...(history.state || {}), scrollY:window.scrollY }, "", location.href);
     if (location.pathname+location.search+location.hash !== next) history.pushState({v,p,anchor,scrollY:0}, "", next);
   } catch (error) { location.assign(next); return; }
   state = {v,p}; renderedUrl = next;
+  if (samePage) {
+    closeFly(); closeMobileMenu();
+    document.querySelectorAll(".nav-group[open]").forEach(group => group.open = false);
+    const target = anchor && document.getElementById(anchor);
+    if (target) {
+      if (target.tagName === "DETAILS") target.open = true;
+      target.scrollIntoView({block:"start",behavior:"instant"});
+    } else if (p === "book") {
+      document.getElementById("bk-name").focus({preventScroll:true});
+      document.getElementById("appointment").scrollIntoView({block:"start",behavior:"instant"});
+    } else {
+      document.getElementById("main-content").focus({preventScroll:true});
+      window.scrollTo({top:0,behavior:"instant"});
+    }
+    return;
+  }
   render(anchor,{focus:true});
 }
 function restoreRoute() {
@@ -1396,7 +1441,10 @@ document.addEventListener("toggle",e=>{
  const d=e.target;if(!(d instanceof Element)||!d.matches(".nav-group[open]"))return;
  closeFly();document.querySelectorAll(".nav-group[open]").forEach(other=>{if(other!==d)other.open=false;});
 },true);
-document.addEventListener("focusout",e=>{const d=e.target.closest?.(".nav-group");if(d&&!d.contains(e.relatedTarget))d.open=false;});
+document.addEventListener("focusout",e=>{
+ const d=e.target.closest?.(".nav-group");if(d&&!d.contains(e.relatedTarget))d.open=false;
+ if(fly&&!fly.contains(e.relatedTarget)&&e.relatedTarget!==flyAnchor&&e.relatedTarget!==flyReturnFocus)closeFly();
+});
 
 document.addEventListener("input", e => { if (e.target.id === "site-search") runSearch(e.target.value); });
 document.addEventListener("change", e => { if (e.target.id === "page-select") setView(state.v, e.target.value); });
@@ -1442,7 +1490,7 @@ document.addEventListener("submit",e=>{
  else{message.textContent=errors[invalid[0].id]||"Check the highlighted field.";message.dataset.error="true";invalid[0].focus();}
  return;
  }
- message.dataset.error="false";message.textContent="Preview complete. Nothing was sent or saved, and no appointment has been booked.";form.reset();
+ message.dataset.error="false";message.textContent="Preview complete. Nothing was sent or saved, and no appointment has been booked.";form.reset();bookingDraft=null;
 });
 
 function init() {

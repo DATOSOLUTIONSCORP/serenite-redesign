@@ -318,7 +318,7 @@ window.SERENITE_SITE = {
       "path": "/privacy-policy",
       "label": "Privacy Policy",
       "title": "Privacy Policy — Serenité Wellness Medicine",
-      "description": "Read the retained Serenité privacy policy. This local design demo does not send or store sample form details.",
+      "description": "Read how the Serenité design preview handles sample form entries and outside links. Do not enter personal or medical information.",
       "group": "Clinic information",
       "related": []
     },

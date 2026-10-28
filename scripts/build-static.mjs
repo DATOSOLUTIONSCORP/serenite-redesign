@@ -21,8 +21,9 @@ const context = vm.createContext({
   window:{SERENITE_STATIC_BUILD:true,addEventListener(){}},
   document:{addEventListener(){},getElementById(){return {hidden:true};}}
 });
-for (const file of ['content-data.js','routes.js','app.js']) vm.runInContext(await readFile(resolve(root,file),'utf8'),context,{filename:file});
-const runtimeSources = await Promise.all(['content-data.js','routes.js','app.js'].map(file=>readFile(resolve(root,file),'utf8')));
+const sourceFiles = ['content-data.js','content-refinements.js','routes.js','app.js'];
+for (const file of sourceFiles) vm.runInContext(await readFile(resolve(root,file),'utf8'),context,{filename:file});
+const runtimeSources = await Promise.all(sourceFiles.map(file=>readFile(resolve(root,file),'utf8')));
 await writeFile(resolve(root,'site-runtime.js'), runtimeSources.join('\n;\n'));
 const routes = vm.runInContext('ROUTES',context);
 const shell = await readFile(resolve(root,'page-shell.html'),'utf8');
@@ -75,7 +76,7 @@ await writeFile(resolve(root,'GENERATED-PAGES.json'),JSON.stringify({mode:'publi
 const manifestFile=resolve(root,'ASSET-MANIFEST.json');
 const manifest=JSON.parse(await readFile(manifestFile,'utf8'));
 const entries=new Map(manifest.files.map(entry=>[entry.path,entry]));
-const added=['site-runtime.js','img/hd/morpheus8-banner.jpg','img/hd/attiva-banner.jpg','img/hd/hair-banner.jpg','content-data.js','routes.js','page-shell.html','scripts/build-static.mjs','scripts/preview_server.py','sitemap.xml','404.html','GENERATED-PAGES.json',...pages.map(page=>page.file)];
+const added=['site-runtime.js','img/hd/morpheus8-banner.jpg','img/hd/attiva-banner.jpg','img/hd/hair-banner.jpg','content-data.js','content-refinements.js','routes.js','page-shell.html','scripts/build-static.mjs','scripts/preview_server.py','sitemap.xml','404.html','GENERATED-PAGES.json',...pages.map(page=>page.file)];
 for (const path of [...new Set([...entries.keys(),...added])]) {
   const bytes=await readFile(resolve(root,path));
   const sha256=createHash('sha256').update(bytes).digest('hex');
@@ -85,8 +86,8 @@ for (const path of [...new Set([...entries.keys(),...added])]) {
   if (path.endsWith('.html') && path!=='page-shell.html') entry.generated=true;
   entries.set(path,entry);
 }
-manifest.revision='Atelier clinic-focused home and text-only team pages';
-manifest.publication_status='Static design-demo source approved for release; building does not publish. Deployment receipts are retained outside this checkout.';
+manifest.revision='Atelier reviewed typography, content clarity and interaction refinements';
+manifest.publication_status='User-authorized public design-demo release through the existing branch and separate-preview workflow. Building does not publish. Clinician portraits and replacement video remain excluded.';
 manifest.files=[...entries.values()];
 await writeFile(manifestFile,JSON.stringify(manifest,null,2)+'\n');
 console.log(`Generated ${pages.length} static design-demo pages, metadata and sitemap for ${origin}. No files were published by this build.`);
